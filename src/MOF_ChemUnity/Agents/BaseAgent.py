@@ -1,0 +1,156 @@
+import pickle
+import os
+from typing import List, Optional
+
+from pydantic import BaseModel, Field
+
+from langchain_openai import ChatOpenAI
+from langchain.prompts import ChatPromptTemplate
+from langchain.vectorstores import FAISS
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain.chains.retrieval import create_retrieval_chain
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_core.runnables import RunnablePassthrough
+
+from utils.DocProcessor import DocProcessor
+
+QA_PROMPT = (
+    "Answer the user question using the information provided in the documents."
+    "Don't make up answer!\n"
+    "Question:\n {question}\n\n Documents:\n {context}"
+)
+
+
+def format_docs(docs):
+    return "\n\n".join(doc.page_content for doc in docs)
+
+
+class BaseAgent:
+    def __init__(
+        self,
+        llm=ChatOpenAI(model="gpt-4o-mini", temperature=0.3),
+        embeddings=OpenAIEmbeddings(model="text-embedding-ada-002"),
+        parser_llm=None,
+        structured_llm: bool = True,
+        processor: Optional[DocProcessor] = None,
+    ):
+        self.llm = llm
+        self.embeddings = embeddings
+        self.parser = parser_llm if parser_llm else llm
+        self.structured_llm = structured_llm
+
+        self.processor = processor if processor else DocProcessor()
+        pass
+
+    def create_vector_store(
+        self,
+        doc_path: str,
+        processor: Optional[DocProcessor] = None,
+        store_vs=False,
+        store_folder: Optional[str] = None,
+    ):
+        if processor:
+            pages = processor.process(doc_path)
+        else:
+            pages = self.processor.process(doc_path)
+
+        faiss_index = FAISS.from_documents(pages, self.embeddings)
+
+        if not store_vs:
+            return faiss_index
+
+        # assuming the following ./parent/documents_folder/docs.ext
+        # creates a new folder ./parent/vs/doc_name/vectorstore
+        file_name = os.path.basename(doc_path).rsplit(".", 1)[0]
+        if not store_folder:
+            dirn = os.path.dirname(doc_path).rsplit("/", 1)[0]
+            store_folder = dirn + "/vs/" + file_name + "/"
+
+        faiss_index.save_local(file_name)
+
+        print(
+            f"Saved vector store for {doc_path} in {store_folder} with name {file_name}"
+        )
+
+        return faiss_index
+
+    def RAG_Chain_Output(
+        self,
+        prompt: str,
+        vectorstore: FAISS,
+        k: int = 9,
+        min_k: int = 2,
+    ):
+        result = self._RetrievalQAChain(
+            prompt,
+            vectorstore,
+            k=k,
+            min_k=min_k,
+            llm=self.llm,
+            search_type="mmr",
+            fetch_k=50,
+            memory=None,
+        )
+
+        return result
+
+    def Parse_Output(self, pydantic_object: BaseModel):
+        if self.structured_llm:
+            return self.parser.with_structured_output(pydantic_object)
+        else:
+            parser = PydanticOutputParser(pydantic_object=pydantic_object)
+
+            formatting_prompt = "You need to parse the user inputted text to fill the specified JSON output schema - only return the JSON output: \
+\nOutput_schema:\n{instructions}\nUser Text:\n{text}"
+
+            formatting_prompt = ChatPromptTemplate.from_template(formatting_prompt)
+            formatting_prompt = formatting_prompt.partial(
+                instructions=parser.get_format_instructions()
+            )
+
+            parsing_chain = (
+                {"text": RunnablePassthrough()}
+                | formatting_prompt
+                | self.parser
+                | parser
+            )
+            return parsing_chain
+
+    def _RetrievalQAChain(
+        self,
+        prompt: str,
+        vectorstore,
+        k,
+        min_k,
+        fetch_k: int,
+        search_type="mmr",
+        memory=None,
+    ):
+        while k >= min_k:
+            try:
+                retriever = vectorstore.as_retriever(
+                    search_type=search_type, search_kwargs={"k": k, "fetch_k": fetch_k}
+                )
+
+                qa_chat_prompt = ChatPromptTemplate.from_template(QA_PROMPT)
+
+                docs_chain = create_stuff_documents_chain(self.llm, qa_chat_prompt)
+                qa_chain = create_retrieval_chain(retriever, docs_chain)
+
+                result = qa_chain.invoke(prompt)
+
+                return (result, retriever.invoke(prompt))
+
+            except Exception as e:
+                print(e)
+                print(
+                    "hitting the context window limit. Adjusting k to try again... \n"
+                )
+                k -= 1
+
+        print("failed to retriever results after multiple attempts")
+        return None
+
+    def get_prompt_for_task(self) -> ChatPromptTemplate:
+        pass
