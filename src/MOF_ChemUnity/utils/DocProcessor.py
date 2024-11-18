@@ -20,10 +20,9 @@ class DocProcessor:
         chunk_size: int = 2000,
         chunk_overlap: int = 200,
         headers: List[str] = [
-            "abstract",
-            "introduction\n",
+            "acknowledgement",
             "references\n",
-            "acknowledgements\n",
+            "acknowledgements",
         ],
     ) -> None:
         self.chunk_size = chunk_size
@@ -37,16 +36,9 @@ class DocProcessor:
 
         text = doc.page_content
 
-        match_indices = [
-            0,
-        ]
+        match_indices = [0,]
         for header in headers if headers else self.headers:
-            match_indices.append(
-                text.lower().find(
-                    header,
-                    max(match_indices),
-                )
-            )
+            match_indices.append(text.lower().find(header,max(match_indices),))
 
         match_indices.append(len(text))
         match_indices.sort(reverse=False)
@@ -72,14 +64,18 @@ class DocProcessor:
             doc = loader.load()
             doc = self.split_text(doc, headers=headers)
 
-            splitter = RecursiveCharacterTextSplitter(
-                chunk_size=chunk_size if chunk_size else self.chunk_size,
-                chunk_overlap=chunk_overlap if chunk_overlap else self.chunk_overlap,
-            )
+        elif extension == "md":
+            loader = UnstructuredMarkdownLoader(file_path = file_name, mode="fast", strategy="fast")
+            
+            doc = loader.load()
+            doc = self.split_text(doc, headers=headers)
 
-            ret_docs = []
-            for i in doc:
-                ret_docs.extend(splitter.create_documents([i.page_content]))
-            return ret_docs
         else:
-            return "File format is not support"
+            print("file is not supported")
+            raise AssertionError()
+
+        splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size if chunk_size else self.chunk_size,
+                                          chunk_overlap=chunk_overlap if chunk_overlap else self.chunk_overlap) 
+        ret_docs = []
+        ret_docs.extend(splitter.create_documents([doc[1].page_content]))
+        return ret_docs
