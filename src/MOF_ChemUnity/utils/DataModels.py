@@ -29,7 +29,7 @@ class Property(BaseModel):
         return compiled_string
 
 class PropertyList(BaseModel):
-    properties: List[self.Property]
+    properties: List[Property]
 
     def __str__(self):
         compiled_string = ""
