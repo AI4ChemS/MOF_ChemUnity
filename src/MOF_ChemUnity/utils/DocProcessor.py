@@ -38,7 +38,9 @@ class DocProcessor:
 
         match_indices = [0,]
         for header in headers if headers else self.headers:
-            match_indices.append(text.lower().find(header,max(match_indices),))
+            header_match_index = text.lower().find(header,max(match_indices))
+            if header_match_index > 0:
+                match_indices.append(header_match_index)
 
         match_indices.append(len(text))
         match_indices.sort(reverse=False)
