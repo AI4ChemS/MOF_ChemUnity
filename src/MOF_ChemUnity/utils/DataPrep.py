@@ -8,8 +8,8 @@ THree instance variables must be declared for this class:
 """
 class Data_Prep:
 
-    def __init__(self, doi_folder_path, csd_info_path, feature_list): 
-        self.doi_folder_path = doi_folder_path
+    def __init__(self, paper_folder_path, csd_info_path, feature_list): 
+        self.paper_folder_path = paper_folder_path
         self.csd_info_path = csd_info_path
         self.feature_list = feature_list
         self.DOI_list = None  
@@ -18,28 +18,37 @@ class Data_Prep:
     The purpose of this method is to organize every DOI that you wish to use for text mining
     The end result will be a pandas dataframe containing DOI, File Name, Publisher, and File Format
     '''
+
     def gather_doi_info(self):
         file_data = []
 
-        for file_name in os.listdir(self.doi_folder_path):
-            file_path = os.path.join(self.doi_folder_path, file_name)
-            if os.path.isfile(file_path):
-                # Extract DOI by replacing underscores with "/"
-                doi = file_name.rsplit('.', 1)[0].replace('_', '/')
+        # Walk through the directory and its subdirectories
+        for root, dirs, files in os.walk(self.paper_folder_path):
+            for file_name in files:
+                file_path = os.path.join(root, file_name)
                 
-                # Extract file format from the file extension
-                file_format = file_name.rsplit('.', 1)[-1]
-                
-                # Append the data to the list
-                file_data.append({
-                    "DOI": doi,
-                    "File Name": file_name,
-                    "File Format": file_format,
-                    "File Path": file_path,
-                })
+                # Check if the file is either .md or .xml
+                if file_name.endswith('.md') or file_name.endswith('.xml'):
+                    # Extract DOI by replacing underscores with "/"
+                    doi = file_name.rsplit('.', 1)[0].replace('_', '/')
+                    
+                    # Extract file format from the file extension
+                    file_format = file_name.rsplit('.', 1)[-1]
+                    
+                    # Append the data to the list
+                    file_data.append({
+                        "DOI": doi,
+                        "File Name": file_name,
+                        "File Format": file_format,
+                        "File Path": file_path,
+                    })
+
+        # Convert the list to a DataFrame
         doi_info_df = pd.DataFrame(file_data)
         self.DOI_list = doi_info_df['DOI']  # Set DOIs as an instance variable here
+        
         return doi_info_df
+
 
     
     '''
@@ -90,6 +99,6 @@ class Data_Prep:
 
         # Merge all information into one dataframe, containing all relevant info for every DOI we wish to process - note, DOIs that are not found within the CSD info .csv file are filtered out here, due to the inner join
         publication_data_df = pd.merge(doi_info_df, csd_info_df, on='DOI', how='inner')
-
         return publication_data_df
+    
 

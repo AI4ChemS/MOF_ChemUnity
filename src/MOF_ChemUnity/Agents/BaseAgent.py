@@ -13,12 +13,12 @@ from langchain.chains.retrieval import create_retrieval_chain
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-from utils.DocProcessor import DocProcessor
+from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
 
 QA_PROMPT = (
     "Answer the user question using the information provided in the documents."
     "Don't make up answer!\n"
-    "Question:\n {question}\n\n Documents:\n {context}"
+    "Question:\n {input}\n\n Documents:\n {context}"
 )
 
 
@@ -87,7 +87,6 @@ class BaseAgent:
             vectorstore,
             k=k,
             min_k=min_k,
-            llm=self.llm,
             search_type="mmr",
             fetch_k=50,
             memory=None,
@@ -134,11 +133,11 @@ class BaseAgent:
                 )
 
                 qa_chat_prompt = ChatPromptTemplate.from_template(QA_PROMPT)
-
+                print(qa_chat_prompt)
                 docs_chain = create_stuff_documents_chain(self.llm, qa_chat_prompt)
                 qa_chain = create_retrieval_chain(retriever, docs_chain)
 
-                result = qa_chain.invoke(prompt)
+                result = qa_chain.invoke({"input": prompt})
 
                 return (result, retriever.invoke(prompt))
 

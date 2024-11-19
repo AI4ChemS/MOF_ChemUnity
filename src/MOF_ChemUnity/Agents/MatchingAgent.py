@@ -1,7 +1,7 @@
 from src.MOF_ChemUnity.utils.DataModels import MOFRefCode, MOFRefCodeList, RefCodeJustification
-from MOF_ChemUnity.Matching_Prompts import MATCH_REFCODES, CHECK_JUSTIFICATION, RECHECK, MATCH_REFCODES_SHORT, CHECK_JUSTIFICATION_SHORT
-from utils.DocProcessor import DocProcessor
-import BaseAgent
+from src.MOF_ChemUnity.Matching_Prompts import MATCH_REFCODES, CHECK_JUSTIFICATION, RECHECK, MATCH_REFCODES_SHORT, CHECK_JUSTIFICATION_SHORT
+from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
+from src.MOF_ChemUnity.Agents.BaseAgent import BaseAgent
 
 from os import path
 from typing import List, Optional
@@ -27,10 +27,10 @@ class MatchingAgent(BaseAgent):
 
     
     # This function is used to format the csd data in a clearer way - this is used before the info is sent into the prompt
-    def pretty_csd_data(self) -> str:
+    def pretty_csd_data(self,csd_data) -> str:
         result = ""
-        for key, value in self.csd_data.items():
-            result += f'-CSD Reference Code: {key}:'
+        for key, value in csd_data.items():
+            result += f'-CSD Code: {key}:'
             result += value.__str__().replace('{', '[').replace('}',']')
             result += '\n'
         return result
@@ -54,8 +54,9 @@ class MatchingAgent(BaseAgent):
         print("-"*14+f"{paper_file.split('/')[-1]}"+"-"*14)
         print("Action: read_doc")
 
+
         # Step 1: Reading the document
-        (answer1, docs) = self.RAG_Chain_Output(prompt = read_prompt.format(self.pretty_csd_data()))
+        (answer1, docs) = self.RAG_Chain_Output(prompt = read_prompt.format(csd_ref_codes = self.pretty_csd_data(csd_data)), vectorstore=vs)
 
         print("\nResult: ")
         print(answer1["result"])

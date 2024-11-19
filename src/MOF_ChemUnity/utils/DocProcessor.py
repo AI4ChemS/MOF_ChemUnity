@@ -67,10 +67,10 @@ class DocProcessor:
             doc = self.split_text(doc, headers=headers)
 
         elif extension == "md":
-            loader = UnstructuredMarkdownLoader(file_path = file_name, mode="fast", strategy="fast")
+            loader = UnstructuredMarkdownLoader(file_path = file_name, mode="single", strategy="fast")
             
             doc = loader.load()
-            doc = self.split_text(doc, headers=headers)
+            doc = self.split_text(doc[0], headers=headers)
 
         else:
             print("file is not supported")
