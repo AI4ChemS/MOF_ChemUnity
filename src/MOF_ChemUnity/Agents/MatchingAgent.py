@@ -5,8 +5,7 @@ from src.MOF_ChemUnity.Agents.BaseAgent import BaseAgent
 
 from os import path
 from typing import List, Optional
-from langchain.embeddings import OpenAIEmbeddings
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 
 
@@ -17,12 +16,14 @@ class MatchingAgent(BaseAgent):
     """
     
     def __init__(self, 
-                llm=ChatOpenAI(model="gpt-4o-mini", temperature=0.3),
-                embeddings=OpenAIEmbeddings(model="text-embedding-ada-002"),
+                llm=None,
+                embeddings=None,
                 parser_llm=None,
                 structured_llm=True,
                 processor=None):
         # Initialize BaseAgent instance
+        self.llm = llm if llm else ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+        self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         super().__init__(llm, embeddings, parser_llm, structured_llm, processor)
 
     
@@ -59,10 +60,10 @@ class MatchingAgent(BaseAgent):
         (answer1, docs) = self.RAG_Chain_Output(prompt = read_prompt.format(csd_ref_codes = self.pretty_csd_data(csd_data)), vectorstore=vs)
 
         print("\nResult: ")
-        print(answer1["result"])
+        print(answer1["answer"])
 
         # Step 2: Parse Output using Pydantic
-        list_mofs = parser.invoke(f"Parse the following text into the structured output\nText:\n{answer1['result']}")
+        list_mofs = parser.invoke(f"Parse the following text into the structured output\nText:\n{answer1['answer']}")
 
         print("\nParsed Result:")
         for mof in list_mofs.mofs:

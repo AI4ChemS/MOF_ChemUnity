@@ -3,13 +3,12 @@ from os import path
 from typing import Dict, List, Optional
 from thefuzz import fuzz
 
-from langchain_openai import ChatOpenAI
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
-import BaseAgent
-from utils.DocProcessor import DocProcessor
-from utils.DataModels import Property, Verification, PropertyList
+from src.MOF_ChemUnity.Agents.BaseAgent import BaseAgent
+from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
+from src.MOF_ChemUnity.utils.DataModels import Property, Verification, PropertyList
 
 PROPERTIES = ["chemical formula", "density", "crystal system", "cell volume", "space group", "molecular weight", "material color", 
          "decomposition temperature", "magnetic susceptibility", "surface area", "pore volume", "pore diameter", "porosity", "topology",
@@ -19,13 +18,15 @@ PROPERTIES = ["chemical formula", "density", "crystal system", "cell volume", "s
 class ExtractionAgent(BaseAgent):
     def __init__(
             self,
-            llm=ChatOpenAI(model="gpt-4", temperature=0.1),
-            embeddings=OpenAIEmbeddings(model="text-embedding-ada-002"),
+            llm=None,
+            embeddings=None,
             parser_llm=None,
             structured_llm: bool = True,
             processor: Optional[DocProcessor] = None,
             properties: Optional[List[str]] = None):
 
+        self.llm = llm if llm else ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+        self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         super().__init__(llm, embeddings, parser_llm, structured_llm, processor)
 
         if not properties:
@@ -38,7 +39,7 @@ class ExtractionAgent(BaseAgent):
 
     def filter_properties(
             self,
-            extracted_props: List[Property],
+            extracted_props: PropertyList,
             props_filter: Optional[List[str]] = None,
             threshold: int = 90):
         """This function filters the extracted properties list based on the props_filter list given.
@@ -60,7 +61,7 @@ class ExtractionAgent(BaseAgent):
         while(i<len(props)):
             max_score = -1
             max_index = -1
-            for j, v in enumerate(extracted_props):
+            for j, v in enumerate(extracted_props.properties):
                 # This matching strategy compares the token sets to each other (Order doesn't matter).
                 # It needs to be changed if there are properties that have the same token set but different order.
                 score = fuzz.token_set_ratio(props[i].lower(), v.name.lower())
@@ -117,9 +118,9 @@ class ExtractionAgent(BaseAgent):
             (answer1, docs) = self.RAG_Chain_Output(read_prompts[i].format(MOF_name=MOF), vector_store)
         
             print("LLM Output: ")
-            print(answer1["result"])
+            print(answer1["answer"])
 
-            property = parser.invoke(f"Parse the following text into the structured output.\Text:\n{answer1['result']}")
+            property = parser.invoke(f"Parse the following text into the structured output.\Text:\n{answer1['answer']}")
 
             print("\nParsed Output:")
             print(property)
@@ -143,10 +144,10 @@ class ExtractionAgent(BaseAgent):
             (answer3, docs) = self.RAG_Chain_Output(recheck_prompts[i].format(MOF_name=MOF, output=property, Property_name=specific_property), vector_store)
 
             print("LLM Output from Rechecking: ")
-            print(answer3["result"])
+            print(answer3["answer"])
 
 
-            property = parser.invoke(f"Parse the following text into the structured output.\Text:\n{answer3['result']}")
+            property = parser.invoke(f"Parse the following text into the structured output.\Text:\n{answer3['answer']}")
             print("\nParsed Output:")
             print(property)
 
@@ -155,7 +156,7 @@ class ExtractionAgent(BaseAgent):
         if ret_docs:
             return specific_property_return, docs
         else:
-            return specific_properties, None
+            return specific_property_return, None
     
 
     def property_extraction(
@@ -177,9 +178,9 @@ class ExtractionAgent(BaseAgent):
         (answer1, docs) = self.RAG_Chain_Output(read_prompt.format(MOF_name=names), vector_store)
 
         print("\nResult: ")
-        print(answer1["result"])
+        print(answer1["answer"])
 
-        list_properties = parser.invoke(f"Parse the following text into the structured output\nText:\n{answer1['result']}")
+        list_properties = parser.invoke(f"Parse the following text into the structured output\nText:\n{answer1['answer']}")
 
         print("\nParsed Result: ")
         print(list_properties)
@@ -228,7 +229,7 @@ class ExtractionAgent(BaseAgent):
             general_response = self.property_extraction(MOF, read_prompt, vector_store, ret_docs, filtered, filter, fuzz_threshold)
 
         if CoV:
-            specific_resposne = self.extraction_CoV(MOF, vector_store, specific_properties, **specific_properties_prompts, ret_docs)
+            specific_resposne = self.extraction_CoV(MOF, vector_store, specific_properties, **specific_properties_prompts, ret_docs=ret_docs)
             return general_response, specific_resposne
         
         return general_response

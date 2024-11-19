@@ -4,10 +4,9 @@ from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.prompts import ChatPromptTemplate
 from langchain.vectorstores import FAISS
-from langchain.embeddings import OpenAIEmbeddings
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain_core.output_parsers import PydanticOutputParser
@@ -18,7 +17,7 @@ from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
 QA_PROMPT = (
     "Answer the user question using the information provided in the documents."
     "Don't make up answer!\n"
-    "Question:\n {input}\n\n Documents:\n {context}"
+    "Question:\n{input}\n\n Documents:\n{context}"
 )
 
 
@@ -29,15 +28,15 @@ def format_docs(docs):
 class BaseAgent:
     def __init__(
         self,
-        llm=ChatOpenAI(model="gpt-4o-mini", temperature=0.3),
-        embeddings=OpenAIEmbeddings(model="text-embedding-ada-002"),
+        llm = None,
+        embeddings= None,
         parser_llm=None,
         structured_llm: bool = True,
         processor: Optional[DocProcessor] = None,
     ):
-        self.llm = llm
-        self.embeddings = embeddings
-        self.parser = parser_llm if parser_llm else llm
+        self.llm = llm if llm else ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+        self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
+        self.parser = parser_llm if parser_llm else self.llm
         self.structured_llm = structured_llm
 
         self.processor = processor if processor else DocProcessor()
@@ -133,7 +132,7 @@ class BaseAgent:
                 )
 
                 qa_chat_prompt = ChatPromptTemplate.from_template(QA_PROMPT)
-                print(qa_chat_prompt)
+
                 docs_chain = create_stuff_documents_chain(self.llm, qa_chat_prompt)
                 qa_chain = create_retrieval_chain(retriever, docs_chain)
 
