@@ -22,7 +22,7 @@ class MatchingAgent(BaseAgent):
                 structured_llm=True,
                 processor=None):
         # Initialize BaseAgent instance
-        self.llm = llm if llm else ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+        self.llm = llm if llm else ChatOpenAI(model="gpt-4o", temperature=0)
         self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         super().__init__(llm, embeddings, parser_llm, structured_llm, processor)
 

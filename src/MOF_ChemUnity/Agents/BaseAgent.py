@@ -34,7 +34,7 @@ class BaseAgent:
         structured_llm: bool = True,
         processor: Optional[DocProcessor] = None,
     ):
-        self.llm = llm if llm else ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+        self.llm = llm if llm else ChatOpenAI(model="gpt-4o", temperature=0)
         self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         self.parser = parser_llm if parser_llm else self.llm
         self.structured_llm = structured_llm
@@ -59,17 +59,21 @@ class BaseAgent:
         if not store_vs:
             return faiss_index
 
-        # assuming the following ./parent/documents_folder/docs.ext
-        # creates a new folder ./parent/vs/doc_name/vectorstore
+        # Generate the storage folder path
         file_name = os.path.basename(doc_path).rsplit(".", 1)[0]
         if not store_folder:
             dirn = os.path.dirname(doc_path).rsplit("/", 1)[0]
-            store_folder = dirn + "/vs/" + file_name + "/"
+            store_folder = os.path.join(dirn, "vs", file_name)
 
-        faiss_index.save_local(file_name)
+        # Ensure the folder exists
+        if not os.path.exists(store_folder):
+            os.makedirs(store_folder)
+
+        # Save the vector store
+        faiss_index.save_local(store_folder)
 
         print(
-            f"Saved vector store for {doc_path} in {store_folder} with name {file_name}"
+            f"Saved vector store for {doc_path} in {store_folder}"
         )
 
         return faiss_index

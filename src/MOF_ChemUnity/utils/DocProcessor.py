@@ -79,5 +79,6 @@ class DocProcessor:
         splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size if chunk_size else self.chunk_size,
                                           chunk_overlap=chunk_overlap if chunk_overlap else self.chunk_overlap) 
         ret_docs = []
-        ret_docs.extend(splitter.create_documents([doc[1].page_content]))
+        ret_docs.extend(splitter.create_documents([doc[0].page_content]))
+        print(f"\n{ret_docs}\n")
         return ret_docs
