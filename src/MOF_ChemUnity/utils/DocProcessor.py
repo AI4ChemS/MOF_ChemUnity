@@ -17,8 +17,8 @@ from langchain_community.document_loaders import (
 class DocProcessor:
     def __init__(
         self,
-        chunk_size: int = 2000,
-        chunk_overlap: int = 200,
+        chunk_size: int = 8000,
+        chunk_overlap: int = 1000,
         headers: List[str] = [
             "acknowledgement",
             "references\n",
