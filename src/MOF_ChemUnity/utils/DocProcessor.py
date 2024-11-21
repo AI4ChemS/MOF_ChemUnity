@@ -1,9 +1,10 @@
 from typing import List, Optional
+from copy import deepcopy
 
 from langchain.schema import Document
 from langchain.document_loaders.base import BaseLoader
 
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import (
     PDFPlumberLoader,
@@ -29,6 +30,37 @@ class DocProcessor:
         self.chunk_overlap = chunk_overlap
         self.headers = headers
         pass
+    
+    def filter_documents(
+        self, documents: List[Document], search_strings: List[str]
+    ) -> List[Document]:
+        """
+        Filters documents based on the presence of search strings.
+        use this if you wish to remove "Acknowledgments or "References"
+        in a long research article.
+
+        Parameters:
+        documents : List[Document]
+            List of documents to filter.
+        search_strings : List[str]
+            List of strings to search for.
+
+        Returns:
+        List[Document]
+            List of filtered documents.
+        """
+        filtered_documents = deepcopy(documents)  # Create a deep copy of documents
+        for i, doc in enumerate(filtered_documents):
+            if self.find_in_document(doc, search_strings):
+                filtered_documents[i].page_content = self.cut_text(
+                    filtered_documents[i].page_content,
+                    keywords=search_strings,
+                )
+                filtered_documents = filtered_documents[: i + 1]
+                break
+        return filtered_documents
+
+
 
     def split_text(self, doc: Document, headers: List[str] = None) -> List[Document]:
         if not self.headers and not headers:
@@ -67,16 +99,18 @@ class DocProcessor:
             doc = self.split_text(doc, headers=headers)
 
         elif extension == "md":
-            loader = UnstructuredMarkdownLoader(file_path = file_name, mode="single", strategy="fast")
+            loader = UnstructuredMarkdownLoader(file_path = file_name)
             
             doc = loader.load()
-            doc = self.split_text(doc[0], headers=headers)
+            #doc = self.split_text(doc[0], headers=headers)
+            sliced_pages = self.filter_documents(doc, headers)
+            print(sliced_pages)
 
         else:
             print("file is not supported")
             raise AssertionError()
 
-        splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size if chunk_size else self.chunk_size,
+        splitter = CharacterTextSplitter(chunk_size=chunk_size if chunk_size else self.chunk_size,
                                           chunk_overlap=chunk_overlap if chunk_overlap else self.chunk_overlap) 
         ret_docs = []
         ret_docs.extend(splitter.create_documents([doc[0].page_content]))
