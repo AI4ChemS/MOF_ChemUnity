@@ -3,6 +3,8 @@ import os
 from typing import List, Optional
 
 from pydantic import BaseModel, Field
+from langchain.chains import RetrievalQA
+
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.prompts import ChatPromptTemplate
@@ -12,7 +14,7 @@ from langchain.chains.retrieval import create_retrieval_chain
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
+from src.MOF_ChemUnity.utils.DocProcessor import LoadDoc
 
 QA_PROMPT = (
     "Answer the user question using the information provided in the documents."
@@ -32,27 +34,27 @@ class BaseAgent:
         embeddings= None,
         parser_llm=None,
         structured_llm: bool = True,
-        processor: Optional[DocProcessor] = None,
+        processor: Optional[LoadDoc] = None,
     ):
         self.llm = llm if llm else ChatOpenAI(model="gpt-4o", temperature=0)
         self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         self.parser = parser_llm if parser_llm else self.llm
         self.structured_llm = structured_llm
 
-        self.processor = processor if processor else DocProcessor()
+        self.processor = processor 
         pass
 
     def create_vector_store(
         self,
         doc_path: str,
-        processor: Optional[DocProcessor] = None,
+        processor: Optional[LoadDoc] = None,
         store_vs=False,
         store_folder: Optional[str] = None,
     ):
-        if processor:
-            pages = processor.process(doc_path)
-        else:
-            pages = self.processor.process(doc_path)
+
+        processor = LoadDoc(file_name=doc_path, encoding="utf8")
+        pages = processor.process(['references ', 'acknowledgement', 'acknowledgments', 'references\n'],
+                                             chunk_size=8000, chunk_overlap=1000, chunking_type="fixed-size")
 
         faiss_index = FAISS.from_documents(pages, self.embeddings)
 
@@ -142,6 +144,14 @@ class BaseAgent:
 
                 result = qa_chain.invoke({"input": prompt})
 
+                qa_prompt = "Answer the user question using the information provided in the documents. Don't make up answer!\n \
+Question:\n {question}\n\n Documents:\n {context}"
+
+                qa_prompt = ChatPromptTemplate.from_template(qa_prompt)
+
+                qa_chain = RetrievalQA.from_chain_type(llm=self.llm, retriever=retriever, memory=memory, chain_type="stuff")
+
+                result = qa_chain.invoke(prompt)
                 return (result, retriever.invoke(prompt))
 
             except Exception as e:

@@ -1,6 +1,6 @@
 from src.MOF_ChemUnity.utils.DataModels import MOFRefCode, MOFRefCodeList, RefCodeJustification
-from src.MOF_ChemUnity.Matching_Prompts import MATCH_REFCODES, CHECK_JUSTIFICATION, RECHECK, MATCH_REFCODES_SHORT, CHECK_JUSTIFICATION_SHORT
-from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
+from src.MOF_ChemUnity.Matching_Prompts import MATCH_REFCODES, MATCH_REFCODES_SHORT
+from src.MOF_ChemUnity.utils.DocProcessor import LoadDoc
 from src.MOF_ChemUnity.Agents.BaseAgent import BaseAgent
 
 from os import path
@@ -22,7 +22,7 @@ class MatchingAgent(BaseAgent):
                 structured_llm=True,
                 processor=None):
         # Initialize BaseAgent instance
-        self.llm = llm if llm else ChatOpenAI(model="gpt-4o", temperature=0)
+        self.llm = llm if llm else ChatOpenAI(model="gpt-4o", temperature=0, seed=43)
         self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         super().__init__(llm, embeddings, parser_llm, structured_llm, processor)
 
@@ -43,13 +43,8 @@ class MatchingAgent(BaseAgent):
             vs = FAISS.load_local(vector_store, OpenAIEmbeddings(model = 'text-embedding-ada-002'))
         else:
             vs = self.create_vector_store(paper_file, store_vs=store_vs)   
-        
-        # Define Parsers
-        single_parser = self.Parse_Output(MOFRefCode)
 
         parser = self.Parse_Output(MOFRefCodeList)
-
-        bool_parser = self.Parse_Output(RefCodeJustification)
 
         # Begin Process
         print("-"*14+f"{paper_file.split('/')[-1]}"+"-"*14)
@@ -60,10 +55,10 @@ class MatchingAgent(BaseAgent):
         (answer1, docs) = self.RAG_Chain_Output(prompt = read_prompt.format(csd_ref_codes = self.pretty_csd_data(csd_data)), vectorstore=vs)
 
         print("\nResult: ")
-        print(answer1["answer"])
+        print(answer1["result"])
 
         # Step 2: Parse Output using Pydantic
-        list_mofs = parser.invoke(f"Parse the following text into the structured output\nText:\n{answer1['answer']}")
+        list_mofs = parser.invoke(f"Parse the following text into the structured output\nText:\n{answer1['result']}")
 
         print("\nParsed Result:")
         for mof in list_mofs.mofs:
