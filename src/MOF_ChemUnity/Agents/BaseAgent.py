@@ -17,7 +17,7 @@ from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
 QA_PROMPT = (
     "Answer the user question using the information provided in the documents."
     "Don't make up answer!\n"
-    "Question:\n{input}\n\n Documents:\n{context}"
+    "Documents:\n{context}\n\n Question:\n{input}"
 )
 
 
@@ -38,7 +38,6 @@ class BaseAgent:
         self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         self.parser = parser_llm if parser_llm else self.llm
         self.structured_llm = structured_llm
-
         self.processor = processor if processor else DocProcessor()
         pass
 
@@ -90,7 +89,7 @@ class BaseAgent:
             vectorstore,
             k=k,
             min_k=min_k,
-            search_type="mmr",
+            search_type="similarity",
             fetch_k=50,
             memory=None,
         )
@@ -126,7 +125,7 @@ class BaseAgent:
         k,
         min_k,
         fetch_k: int,
-        search_type="mmr",
+        search_type="similarity",
         memory=None,
     ):
         while k >= min_k:

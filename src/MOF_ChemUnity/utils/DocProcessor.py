@@ -1,9 +1,11 @@
 from typing import List, Optional
+from copy import deepcopy
+
 
 from langchain.schema import Document
 from langchain.document_loaders.base import BaseLoader
 
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import (
     PDFPlumberLoader,
@@ -30,35 +32,133 @@ class DocProcessor:
         self.headers = headers
         pass
 
-    def split_text(self, doc: Document, headers: List[str] = None) -> List[Document]:
-        if not self.headers and not headers:
-            return [doc]
+    # Used in filter_documents
+    @staticmethod
+    def find_in_document(document: Document, search_strings: List[str]) -> bool:
+        """
+        Searches for the given strings in the document content.
 
-        text = doc.page_content
+        Parameters:
+        document : Document
+            Document in which to search.
+        search_strings : List[str]
+            List of strings to search for.
 
-        match_indices = [0,]
-        for header in headers if headers else self.headers:
-            header_match_index = text.lower().find(header,max(match_indices))
-            if header_match_index > 0:
-                match_indices.append(header_match_index)
+        Returns:
+        bool
+            True if any of the search strings are found, False otherwise.
+        """
+        return any(
+            search_string.lower() in document.page_content.lower()
+            for search_string in search_strings
+        )
+    
+    # Used in filter_documents
+    @staticmethod
+    def cut_text(text: str, keywords: List[str]) -> str:
+        """
+        Cuts the given text up to the first found keyword.
 
-        match_indices.append(len(text))
-        match_indices.sort(reverse=False)
+        Parameters:
+        text : str
+            The text to be cut.
+        keywords : List[str]
+            List of keywords to find in the text.
 
-        return [
-            Document(page_content=text[match_indices[i] : match_indices[i + 1]])
-            for i in range(len(match_indices) - 1)
+        Returns:
+        str
+            The cut text.
+        """
+        lower_text = text.lower()
+        indices = [
+            lower_text.find(keyword)
+            for keyword in keywords
+            if lower_text.find(keyword) != -1
         ]
+        min_index = min(indices)
+        return text[:min_index].strip()  # remove any trailing spaces
+    
+    def filter_documents(
+        self, documents: List[Document], search_strings: List[str]
+    ) -> List[Document]:
+        """
+        Filters documents based on the presence of search strings.
+        use this if you wish to remove "Acknowledgments or "References"
+        in a long research article.
+
+        Parameters:
+        documents : List[Document]
+            List of documents to filter.
+        search_strings : List[str]
+            List of strings to search for.
+
+        Returns:
+        List[Document]
+            List of filtered documents.
+        """
+        filtered_documents = deepcopy(documents)  # Create a deep copy of documents
+        for i, doc in enumerate(filtered_documents):
+            if self.find_in_document(doc, search_strings):
+                filtered_documents[i].page_content = self.cut_text(
+                    filtered_documents[i].page_content,
+                    keywords=search_strings,
+                )
+                filtered_documents = filtered_documents[: i + 1]
+                break
+        return filtered_documents
 
     def process(
         self,
         file_name: str,
-        headers: Optional[List[str]] = None,
-        chunk_size: Optional[int] = None,
-        chunk_overlap: Optional[int] = None,
     ) -> List[Document] | str:
+        
+        '''
+        The process function prepares the input file for vectore storage. 
+        This includes loading the file based off its location, and initially splitting the text using "load_and_split".
+        This will use a RecursiveCharacterTextSplitter to split a file up based off of its section headers.
+        Following this, irrelevant text is filtered out based off given "headers" that are irrelevant.
+        Lastly, the text is furhter split down using the CharacterTextSplitter.
+        '''
 
+        # Check file extension, assign appropriate loader, load and split text
         extension = file_name.split(".")[-1].lower()
+        if extension == "pdf":
+            self.loader = PDFPlumberLoader(file_path=file_name, extract_images=False)
+
+        elif extension == "md":
+            self.loader = UnstructuredMarkdownLoader(file_path = file_name)
+                        
+        else:
+            print("file is not supported")
+            raise AssertionError()
+        
+        self.pages = self.loader.load_and_split()
+        
+        # Filter documents using the provided "headers" as filter words
+        sliced_pages = self.filter_documents(self.pages, self.headers)
+        
+        # If a chunk size is provided, split the documents up further
+        text_splitter = CharacterTextSplitter(
+            chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap
+        ) 
+
+        sliced_pages = text_splitter.split_documents(sliced_pages)
+
+        return sliced_pages
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""        extension = file_name.split(".")[-1].lower()
 
         if extension == "pdf":
             loader = PDFPlumberLoader(file_path=file_name, extract_images=False)
@@ -67,7 +167,7 @@ class DocProcessor:
             doc = self.split_text(doc, headers=headers)
 
         elif extension == "md":
-            loader = UnstructuredMarkdownLoader(file_path = file_name, mode="single", strategy="fast")
+            loader = UnstructuredMarkdownLoader(file_path = file_name)
             
             doc = loader.load()
             doc = self.split_text(doc[0], headers=headers)
@@ -76,8 +176,8 @@ class DocProcessor:
             print("file is not supported")
             raise AssertionError()
 
-        splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size if chunk_size else self.chunk_size,
+        splitter = CharacterTextSplitter(chunk_size=chunk_size if chunk_size else self.chunk_size,
                                           chunk_overlap=chunk_overlap if chunk_overlap else self.chunk_overlap) 
         ret_docs = []
         ret_docs.extend(splitter.create_documents([doc[0].page_content]))
-        return ret_docs
+        return ret_docs"""

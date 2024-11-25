@@ -40,7 +40,8 @@ class MatchingAgent(BaseAgent):
     def agent_response(self, csd_data, paper_file, read_prompt=MATCH_REFCODES, vector_store=None, ret_docs = False, store_vs = True):
         # Set up vector store
         if vector_store:
-            vs = FAISS.load_local(vector_store, OpenAIEmbeddings(model = 'text-embedding-ada-002'))
+            print('Loading Pre-Existing Vector Store')
+            vs = FAISS.load_local(vector_store, OpenAIEmbeddings(model = 'text-embedding-ada-002'), allow_dangerous_deserialization = True)
         else:
             vs = self.create_vector_store(paper_file, store_vs=store_vs)   
         
