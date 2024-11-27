@@ -1,5 +1,12 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = [
+  "setuptools>=61.0",
+  "langchain",
+  "langchain_openai",
+  "langchain_community",
+  "thefuzz",
+  "pydantic",
+  "unstructured"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -20,6 +27,7 @@ license = {text = "MIT license"}
 dependencies = [
   
 ]
+requires-python = ">=3.8"
 
 [project.optional-dependencies]
 dev = [
