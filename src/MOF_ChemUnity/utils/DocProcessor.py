@@ -135,8 +135,19 @@ class DocProcessor:
         self.pages = self.loader.load_and_split()
         
         # Filter documents using the provided "headers" as filter words
-        sliced_pages = self.filter_documents(self.pages, self.headers)
-        
+        try:
+            # Attempt to filter the documents
+            sliced_pages = self.filter_documents(self.pages, self.headers)
+            
+            # Check if the entire page_content got filtered out - this will be the case if a filter word like "references" appears first in the document
+            if not sliced_pages[0].page_content.strip():
+                print("Filtering out irrelvant sections resulted in empty page_content. Unfiltered pages will be used instead.")
+                sliced_pages = self.pages
+        except Exception as e:
+            # Handle potential exceptions from the filter_documents method
+            print(f"An error occurred while filtering documents: {e}")
+            sliced_pages = self.pages  # Fall back to original pages in case of an exception
+
         # If a chunk size is provided, split the documents up further
         text_splitter = CharacterTextSplitter(
             chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap
