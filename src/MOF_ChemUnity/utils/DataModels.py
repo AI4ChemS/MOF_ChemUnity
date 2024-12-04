@@ -17,7 +17,7 @@ class Property(BaseModel):
     value: str = Field(description="the value of the property. Saved as text!")
     units: str = Field(description="the units associated with the value for this property")
     condition: str = Field(description="the condition at which the value is observe/collected")
-    summary: str = Field(description="the original text that talks about this property")
+    summary: str = Field(description="the quotes from the original text that talk about this property")
 
     def __str__(self):
         compiled_string = ""

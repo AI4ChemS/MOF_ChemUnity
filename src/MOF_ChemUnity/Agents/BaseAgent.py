@@ -2,6 +2,7 @@ import pickle
 import os
 from typing import List, Optional
 
+from openai import RateLimitError
 from pydantic import BaseModel, Field
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -83,6 +84,7 @@ class BaseAgent:
         vectorstore: FAISS,
         k: int = 9,
         min_k: int = 2,
+        pydantic_output: Optional[BaseModel] = None
     ):
         result = self._RetrievalQAChain(
             prompt,
@@ -92,6 +94,7 @@ class BaseAgent:
             search_type="similarity",
             fetch_k=50,
             memory=None,
+            pydantic_output=pydantic_output
         )
 
         return result
@@ -126,6 +129,7 @@ class BaseAgent:
         min_k,
         fetch_k: int,
         search_type="similarity",
+        pydantic_output: Optional[BaseModel] = None,
         memory=None,
     ):
         while k >= min_k:
@@ -136,14 +140,27 @@ class BaseAgent:
 
                 qa_chat_prompt = ChatPromptTemplate.from_template(QA_PROMPT)
 
-                docs_chain = create_stuff_documents_chain(self.llm, qa_chat_prompt)
-                qa_chain = create_retrieval_chain(retriever, docs_chain)
+                if pydantic_output:
+                    llm = self.Parse_Output(pydantic_output)
+                    qa_chain = (
+                    {
+                        "context": retriever | format_docs,
+                        "input": RunnablePassthrough(),
+                    }
+                    | qa_chat_prompt 
+                    | llm)
+                    result = qa_chain.invoke(prompt)
+                else:
+                    llm = self.llm
 
-                result = qa_chain.invoke({"input": prompt})
+                    docs_chain = create_stuff_documents_chain(llm, qa_chat_prompt)
+                    qa_chain = create_retrieval_chain(retriever, docs_chain)
+
+                    result = qa_chain.invoke({"input": prompt})
 
                 return (result, retriever.invoke(prompt))
 
-            except Exception as e:
+            except RateLimitError as e:
                 print(e)
                 print(
                     "hitting the context window limit. Adjusting k to try again... \n"

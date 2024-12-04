@@ -31,7 +31,7 @@ class ExtractionAgent(BaseAgent):
 
         self.llm = llm if llm else ChatOpenAI(model="gpt-4o", temperature=0.1)
         self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
-        super().__init__(llm, embeddings, parser_llm, structured_llm)
+        super().__init__(llm, embeddings, parser_llm, structured_llm, processor= processor)
 
         if not properties:
             self.properties = PROPERTIES
@@ -129,14 +129,9 @@ class ExtractionAgent(BaseAgent):
         for i, specific_property in enumerate(specific_properties):
 
             print(f"Reading to find the {specific_property} of {MOF} specifically")
-            (answer1, docs) = self.RAG_Chain_Output(read_prompts[i].format(MOF_name=MOF), vector_store)
+            (property, docs) = self.RAG_Chain_Output(read_prompts[i].format(MOF_name=MOF), vector_store, pydantic_output=Property)
         
-            print("LLM Output: ")
-            print(answer1["answer"])
-
-            property = parser.invoke(f"Parse the following text into the structured output.\Text:\n{answer1['answer']}")
-
-            print("\nParsed Output:")
+            print("LLM Structured Output: ")
             print(property)
         
             if (property.value.lower() == "not provided"):
@@ -146,8 +141,7 @@ class ExtractionAgent(BaseAgent):
 
             print("\nVerifying the extraction:")
 
-            answer2 = self.llm.invoke(verification_prompts[i].format(output=property, Property_name=specific_property, MOF_name=MOF))
-            verification = verification_parser.invoke(f"Parse the following text into the structured output.\nText:\n{answer2.content}")
+            verification = verification_parser.invoke(verification_prompts[i].format(output=property, Property_name=specific_property, MOF_name=MOF))
 
             if(verification.valid):
                 specific_property_return.append(property)
@@ -155,14 +149,9 @@ class ExtractionAgent(BaseAgent):
 
             print("\nReading the document again to find a different justification/label")
 
-            (answer3, docs) = self.RAG_Chain_Output(recheck_prompts[i].format(MOF_name=MOF, output=property, Property_name=specific_property), vector_store)
+            (property, docs) = self.RAG_Chain_Output(recheck_prompts[i].format(MOF_name=MOF, output=property, Property_name=specific_property), vector_store, pydantic_output=Property)
 
-            print("LLM Output from Rechecking: ")
-            print(answer3["answer"])
-
-
-            property = parser.invoke(f"Parse the following text into the structured output.\Text:\n{answer3['answer']}")
-            print("\nParsed Output:")
+            print("LLM Structured Output from Rechecking: ")
             print(property)
 
             specific_property_return.append(property)
@@ -234,8 +223,8 @@ class ExtractionAgent(BaseAgent):
         if not vector_store:
             vector_store = self.create_vector_store(paper_file_name, store_vs=store_vs)
         elif type(vector_store) is str:
-            if path.isfile(vector_store):
-                vector_store = FAISS.load_local(vector_store, local_vector_store_embeddings if local_vector_store_embeddings else self.embeddings)
+            if path.isdir(vector_store):
+                vector_store = FAISS.load_local(vector_store, local_vector_store_embeddings if local_vector_store_embeddings else self.embeddings, allow_dangerous_deserialization=True)
             else:
                 vector_store = self.create_vector_store(paper_file_name, store_vs=store_vs, store_folder=vector_store)
 
