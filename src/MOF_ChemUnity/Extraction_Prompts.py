@@ -9,7 +9,7 @@ Your output should have the following format for each property and its value:
     -Conditions: the experimental conditions that this value was observed at.
     -Summary: The exact sentences from the provided text that mention the MOF Name and this property."""
 
-VERIFICATION = """Do the below justification sentences actually talk about the {Property_name} of the {MOF_name}?
+VERIFICATION = """You are an expert in chemistry. Do the below justification sentences actually talk about the {Property_name} of the {MOF_name}?
 
 Extracted Output: {output}
 
@@ -19,9 +19,11 @@ Start your answer clearly with "Valid" or "Invalid".
 """
 
 RECHECK = """You are an expert chemist. In the document find the {Property_name} of the MOF with the following Names and Coreferences: {MOF_name}.
-Previously, you suggested the following extraction which was INCORRECT:
+Your previous output is incorrect, find a different justification and/or label (you cannot use your previous output or base your answer on the same sentences as the previous output; use "not provided" if you cannot find anything else)
 
-Previous Extraction: {output}
+Previous Extraction:
+1. Water stability of the MOF: {label}
+2. Justification sentences: {sent}
 
 {RECHECK_INSTRUCTIONS}
 """

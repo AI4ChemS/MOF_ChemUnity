@@ -130,6 +130,7 @@ class ExtractionAgent(BaseAgent):
 
             print(f"Reading to find the {specific_property} of {MOF} specifically")
             (property, docs) = self.RAG_Chain_Output(read_prompts[i].format(MOF_name=MOF), vector_store, pydantic_output=Property)
+            property.condition = ""
         
             print("LLM Structured Output: ")
             print(property)
@@ -149,7 +150,8 @@ class ExtractionAgent(BaseAgent):
 
             print("\nReading the document again to find a different justification/label")
 
-            (property, docs) = self.RAG_Chain_Output(recheck_prompts[i].format(MOF_name=MOF, output=property, Property_name=specific_property), vector_store, pydantic_output=Property)
+            (property, docs) = self.RAG_Chain_Output(recheck_prompts[i].format(MOF_name=MOF, Property_name=specific_properties[i], label=property.value, sent=property.summary), vector_store, pydantic_output=Property)
+            property.condition = ""
 
             print("LLM Structured Output from Rechecking: ")
             print(property)
