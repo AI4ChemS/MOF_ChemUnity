@@ -1,5 +1,7 @@
 from typing import List, Optional
 from copy import deepcopy
+import os
+import sys
 
 
 from langchain.schema import Document
@@ -14,6 +16,8 @@ from langchain_community.document_loaders import (
     UnstructuredHTMLLoader,
     TextLoader,
 )
+
+from src.MOF_ChemUnity.utils.XML_to_MD import XMLToMD
 
 
 class DocProcessor:
@@ -76,7 +80,7 @@ class DocProcessor:
             if lower_text.find(keyword) != -1
         ]
         min_index = min(indices)
-        return text[:min_index].strip()  # remove any trailing spaces
+        return text[:min_index].strip()  # remove any trailing spacesself.loader = 
     
     def filter_documents(
         self, documents: List[Document], search_strings: List[str]
@@ -127,7 +131,33 @@ class DocProcessor:
 
         elif extension == "md":
             self.loader = UnstructuredMarkdownLoader(file_path = file_name)
+        
+        elif extension == "xml":
+        # if extension is .xml - we have to first convert the xml to a md file, then load it with the UnstructuredMarkdownLoader
+
+            # Check if the input file path contains the expected 'XML' folder
+            if "/XML/" not in file_name:
+                print("Error: The input file is not located in a parent folder named 'XML'.")
+                print("Please ensure all XML files are organized in a folder named 'XML' with subdirectories as needed.")
+                print("All corresponding Markdown files will be placed in a similar structure under a folder named 'MD'.")
+                sys.exit(1)  # Exit the program with an error code
+
+            # Dynamically create the output directory for Markdown files
+            md_base_dir = file_name.replace("/XML/", "/MD/")  # Replace the 'XML' base directory with 'MD'
+            output_subdir = os.path.dirname(md_base_dir)  # Extract the subdirectory path for the output
+            os.makedirs(output_subdir, exist_ok=True)  # Create the directory only if it doesn't already exist
+
+            # Define the output Markdown file path
+            md_file_location = os.path.join(output_subdir, os.path.basename(file_name).replace(".tei.xml", ".md"))
+
+            # Process the XML file
+            xml_processor = XMLToMD()
+            xml_processor.tei_to_markdown(file_name, md_file_location)
+
+            print(f"Converted '{file_name}' to Markdown at '{md_file_location}'")
                         
+            #Now we can instantiate the UnstructuredMarkdownLoader
+            self.loader = UnstructuredMarkdownLoader(file_path=md_file_location)
         else:
             print("file is not supported")
             raise AssertionError()

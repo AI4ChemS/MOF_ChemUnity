@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import xml.etree.ElementTree as ET
 """
 THree instance variables must be declared for this class:
 1 - doi_folder_path: The path to the folder containing all of the .pdf, .xml, you wish to process
@@ -14,6 +15,43 @@ class Data_Prep:
         self.feature_list = feature_list
         self.DOI_list = None  
 
+    
+    '''
+    The purpose of this method is to extract DOI from XML files. This is necessary due to the naming convention of the files.
+    Markdown files are named by their DOI's - .xml files are now
+    '''
+
+
+
+    def doi_from_xml(self, file_path):
+        """
+        Extracts the DOI from an XML file containing a <idno type="doi"> tag.
+
+        Args:
+            file_path (str): Path to the XML file.
+
+        Returns:
+            str or None: The DOI if found, otherwise None.
+        """
+        try:
+            # Parsing the XML file
+            tree = ET.parse(file_path)
+            root = tree.getroot()
+
+            # Defining the namespace
+            namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+
+            # Finding the <idno type="doi"> tag
+            idno_tag = root.find(".//tei:idno[@type='doi']", namespaces)
+            if idno_tag is not None:
+                return idno_tag.text  # Return the DOI
+
+        except ET.ParseError:
+            print(f"Error parsing XML file, could not find DOI: {file_path}")
+        
+        return None
+
+    
     '''
     The purpose of this method is to organize every DOI that you wish to use for text mining
     The end result will be a pandas dataframe containing DOI, File Name, Publisher, and File Format
@@ -28,10 +66,10 @@ class Data_Prep:
                 file_path = os.path.join(root, file_name)
                 
                 # Check if the file is either .md or .xml
-                if file_name.endswith('.md') or file_name.endswith('.xml'):
-                    # Extract DOI by replacing underscores with "/"
+                if file_name.endswith('.md'):
+                    # Extract DOI from file name by replacing underscores with "/"
                     doi = file_name.rsplit('.', 1)[0].replace('_', '/')
-                    
+
                     # Extract file format from the file extension
                     file_format = file_name.rsplit('.', 1)[-1]
                     
@@ -42,6 +80,22 @@ class Data_Prep:
                         "File Format": file_format,
                         "File Path": file_path,
                     })
+
+                    
+                elif file_name.endswith('.xml'):
+                    # Extract doi from xml tag
+                    doi = self.doi_from_xml(file_path)
+                    # Extract file format from the file extension
+                    file_format = file_name.rsplit('.', 1)[-1]
+                    
+                    # Append the data to the list
+                    file_data.append({
+                        "DOI": doi,
+                        "File Name": file_name,
+                        "File Format": file_format,
+                        "File Path": file_path,
+                })
+                    
 
         # Convert the list to a DataFrame
         doi_info_df = pd.DataFrame(file_data)
