@@ -125,12 +125,14 @@ class ExtractionAgent(BaseAgent):
         specific_property_return = []
         parser = self.Parse_Output(Property)
         verification_parser = self.Parse_Output(Verification)
+        names = " ---".join([f"name {i+1}: {name.replace('{', ']').replace('}', ']')}" for i, name in enumerate(MOF.split("<|>"))])
         
         for i, specific_property in enumerate(specific_properties):
 
             print(f"Reading to find the {specific_property} of {MOF} specifically")
-            (property, docs) = self.RAG_Chain_Output(read_prompts[i].format(MOF_name=MOF), vector_store, pydantic_output=Property)
+            (property, docs) = self.RAG_Chain_Output(read_prompts[i].format(MOF_name=names), vector_store, pydantic_output=Property)
             property.condition = ""
+            property.name = specific_property
         
             print("LLM Structured Output: ")
             print(property)
@@ -142,7 +144,7 @@ class ExtractionAgent(BaseAgent):
 
             print("\nVerifying the extraction:")
 
-            verification = verification_parser.invoke(verification_prompts[i].format(output=property, Property_name=specific_property, MOF_name=MOF))
+            verification = verification_parser.invoke(verification_prompts[i].format(output=property, Property_name=specific_property, MOF_name=names))
 
             if(verification.valid):
                 specific_property_return.append(property)
@@ -150,8 +152,9 @@ class ExtractionAgent(BaseAgent):
 
             print("\nReading the document again to find a different justification/label")
 
-            (property, docs) = self.RAG_Chain_Output(recheck_prompts[i].format(MOF_name=MOF, Property_name=specific_properties[i], label=property.value, sent=property.summary), vector_store, pydantic_output=Property)
+            (property, docs) = self.RAG_Chain_Output(recheck_prompts[i].format(MOF_name=names, Property_name=specific_properties[i], label=property.value, sent=property.summary), vector_store, pydantic_output=Property)
             property.condition = ""
+            property.name = specific_property
 
             print("LLM Structured Output from Rechecking: ")
             print(property)
