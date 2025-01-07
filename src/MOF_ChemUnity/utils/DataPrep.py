@@ -23,9 +23,12 @@ class Data_Prep:
 
 
 
+    import xml.etree.ElementTree as ET
+
     def doi_from_xml(self, file_path):
         """
-        Extracts the DOI from an XML file containing a <idno type="doi"> tag.
+        Extracts the DOI from an XML file, first attempting to extract it from the TEI namespace, 
+        and if not found, falling back to the xocs:doi format.
 
         Args:
             file_path (str): Path to the XML file.
@@ -38,13 +41,17 @@ class Data_Prep:
             tree = ET.parse(file_path)
             root = tree.getroot()
 
-            # Defining the namespace
+            # First, try extracting DOI from the TEI namespace
             namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
-
-            # Finding the <idno type="doi"> tag
             idno_tag = root.find(".//tei:idno[@type='doi']", namespaces)
             if idno_tag is not None:
-                return idno_tag.text  # Return the DOI
+                return idno_tag.text  # Return the DOI found in the TEI namespace
+            
+            # Add the xocs namespace to the namespaces dictionary
+            namespaces.update({'xocs': 'http://www.elsevier.com/xml/xocs/dtd'})  # Add the xocs namespace
+            xocs_doi_tag = root.find(".//xocs:doi", namespaces)
+            if xocs_doi_tag is not None:
+                return xocs_doi_tag.text  # Return the DOI found in the xocs:doi tag
 
         except ET.ParseError:
             print(f"Error parsing XML file, could not find DOI: {file_path}")

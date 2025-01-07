@@ -17,8 +17,9 @@ from langchain_community.document_loaders import (
     TextLoader,
 )
 
-from src.MOF_ChemUnity.utils.XML_to_MD import XMLToMD
-
+import xml.etree.ElementTree as ET
+from src.MOF_ChemUnity.utils.XML_to_MD import TEI_Parser
+from src.MOF_ChemUnity.utils.XML_to_MD import Elsevier_Parser
 
 class DocProcessor:
     def __init__(
@@ -147,16 +148,46 @@ class DocProcessor:
             output_subdir = os.path.dirname(md_base_dir)  # Extract the subdirectory path for the output
             os.makedirs(output_subdir, exist_ok=True)  # Create the directory only if it doesn't already exist
 
-            # Define the output Markdown file path
-            md_file_location = os.path.join(output_subdir, os.path.basename(file_name).replace(".tei.xml", ".md"))
+            # Parse the XML file to check for namespaces
+            try:
+                tree = ET.parse(file_name)
+                root = tree.getroot()
 
-            # Process the XML file
-            xml_processor = XMLToMD()
-            xml_processor.tei_to_markdown(file_name, md_file_location)
+                # Define the TEI and Elsevier namespaces
+                namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+                
+                # Try extracting DOI from the TEI namespace
+                idno_tag = root.find(".//tei:idno[@type='doi']", namespaces)
+                if idno_tag is not None:
+                    # If TEI namespace is found, use the TEI parser
+                    print(f"Detected TEI XML format in '{file_name}'")
+                    md_file_location = os.path.join(output_subdir, os.path.basename(file_name).replace(".tei.xml", ".md"))
+                    xml_processor = TEI_Parser()
+                    xml_processor.xml_to_markdown(file_name, md_file_location)
+                    print(f"Converted '{file_name}' to Markdown at '{md_file_location}'")
+                
+                else:
+                    # If no DOI in TEI, try the Elsevier namespace
+                    namespaces.update({'xocs': 'http://www.elsevier.com/xml/xocs/dtd'})  # Add the Elsevier namespace
+                    xocs_doi_tag = root.find(".//xocs:doi", namespaces)
+                    if xocs_doi_tag is not None:
+                        # If Elsevier namespace is found, use the Elsevier parser
+                        print(f"Detected Elsevier XML format in '{file_name}'")
+                        md_file_location = os.path.join(output_subdir, os.path.basename(file_name).replace(".xml", ".md"))
+                        xml_processor = Elsevier_Parser()  # Assume Elsevier_Parser is defined elsewhere
+                        xml_processor.xml_to_markdown(file_name, md_file_location)
+                        print(f"Converted '{file_name}' to Markdown at '{md_file_location}'")
 
-            print(f"Converted '{file_name}' to Markdown at '{md_file_location}'")
-                        
-            #Now we can instantiate the UnstructuredMarkdownLoader
+                    else:
+                        # If neither namespace is found
+                        print(f"Error: No recognized DOI tag found in '{file_name}'")
+                        sys.exit(1)  # Exit with an error code if neither namespace is found
+
+            except Exception as e:
+                print(f"Error processing the XML file '{file_name}': {e}")
+                sys.exit(1)
+
+            # Now we can instantiate the UnstructuredMarkdownLoader
             self.loader = UnstructuredMarkdownLoader(file_path=md_file_location)
         else:
             print("file is not supported")
