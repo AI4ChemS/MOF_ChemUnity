@@ -1,6 +1,7 @@
 from genericpath import isfile
 from os import path
 from typing import Dict, List, Optional
+from pydantic import BaseModel
 from thefuzz import fuzz
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -176,12 +177,13 @@ class ExtractionAgent(BaseAgent):
             filtered: bool = True,
             filter: Optional[List[str]] = None,
             standard_map: Optional[Dict[str, List[str]]] = None,
-            threshold: int = 90):
+            threshold: int = 90,
+            structured_output: BaseModel = PropertyList):
         
-        parser = self.Parse_Output(PropertyList)
+        parser = self.Parse_Output(structured_output)
 
         print("Action: reading the document")
-        names = " ---".join([f"name {i+1}: {name.replace('{', ']').replace('}', ']')}" for i, name in enumerate(MOF.split("<|>"))])
+        names = " ---".join([f"name {i+1}: {name.replace('{', '[').replace('}', ']')}" for i, name in enumerate(MOF.split("<|>"))])
         print(f"finding all properties of {names}")
 
         (answer1, docs) = self.RAG_Chain_Output(read_prompt.format(MOF_name=names), vector_store)
@@ -223,7 +225,8 @@ class ExtractionAgent(BaseAgent):
             store_vs: bool = False,
             CoV: bool = False,
             skip_general: bool = False,
-            fuzz_threshold: int = 90):
+            fuzz_threshold: int = 90,
+            gen_extraction_structure: BaseModel = PropertyList):
         
         if not vector_store:
             vector_store = self.create_vector_store(paper_file_name, store_vs=store_vs)
@@ -236,7 +239,7 @@ class ExtractionAgent(BaseAgent):
         general_response = None
 
         if not skip_general: 
-            general_response = self.property_extraction(MOF, read_prompt, vector_store, ret_docs, filtered, filter, standard_map, fuzz_threshold)
+            general_response = self.property_extraction(MOF, read_prompt, vector_store, ret_docs, filtered, filter, standard_map, fuzz_threshold, gen_extraction_structure)
 
         if CoV:
             specific_resposne = self.extraction_CoV(MOF, vector_store, specific_properties, **specific_properties_prompts, ret_docs=ret_docs)

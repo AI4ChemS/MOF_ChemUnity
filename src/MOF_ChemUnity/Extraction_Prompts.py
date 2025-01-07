@@ -27,3 +27,15 @@ Previous Extraction:
 
 {RECHECK_INSTRUCTIONS}
 """
+
+APPLICATION = """You are an expert in coordinated chemistry and Metal Organic Frameworks (MOF). This document below talks about different MOFs. I need you to help find the application for the following single MOF and its Coreferences" {MOF_name}.
+Please extract the application that the author mentions in the documents. The application is a classification for a material or a general field of application of materials. 
+Try to use field-related applications, for example, do not say gas adsorption. Instead specify which gas.
+Do not hallucinate please. Studies on specific properties are not applications.
+
+You have the following options for output:
+
+1. If you find applications, format the output with the following:
+    1.  -Application: The application that the authors say this MOF is being investigated/recommended for. If not found, say "Not Provided"
+        -Recommendation: Is the MOF good in this application or bad. If the authors say that this MOF is good for the application, say RECOMMENDED. If it is bad, say NOT RECOMMENDED. If the authors do not mention a recommendation, then say INVESTIGATED. This should say "Not Provided" if the application is not provided.
+        -Justification: You need to extract the exact sentences from the documents that mention the application. And the sentences that provide the recommendation """

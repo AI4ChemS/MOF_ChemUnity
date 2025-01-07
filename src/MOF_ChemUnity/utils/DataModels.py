@@ -41,3 +41,22 @@ class PropertyList(BaseModel):
 
 class Verification(BaseModel):
     valid: bool = Field(description="Whether the output indicates a valid (true) or invalid (false)")
+
+class Application(BaseModel):
+    application_name: str = Field(description="The application name that is found for the MOF. This should be as breif as possible. Do not use acronyms or abreviations without the full name")
+    recommendation: str = Field(description="This the author recommendation, NOT YOURS. Can be one of the following values: Recommended, Not Recommended, Investigated, Not Provided")
+    justification: str = Field(description="All of the exact sentences that were used to obtain the knowledge and answer the user questions about the application and recommendation")
+
+    def __str__(self):
+        return f"Application: {self.application_name}\nAuthor Recommendation: {self.recommendation}\nExact Sentences: {self.justification}"
+    
+class ListApplications(BaseModel):
+    app_list: List[Application]
+
+    def __str__(self):
+        compiled_string = ""
+
+        for i, app in enumerate(self.app_list):
+            compiled_string +=f"{i+1}- {app}\n"
+        
+        return compiled_string
