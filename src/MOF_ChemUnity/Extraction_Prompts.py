@@ -9,7 +9,7 @@ Your output should have the following format for each property and its value:
     -Conditions: the experimental conditions that this value was observed at.
     -Summary: The exact sentences from the provided text that mention the MOF Name and this property."""
 
-VERIFICATION = """You are an expert in chemistry. Do the below justification sentences actually talk about the {Property_name} of the {MOF_name}?
+VERIFICATION = """You are an expert in chemistry. Do the below justification sentences actually talk about the {Property_name}?
 
 Extracted Output: {output}
 
