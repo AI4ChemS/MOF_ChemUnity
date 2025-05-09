@@ -1,0 +1,3222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Triple-Wavelength-Region Luminescence Sensing Based
+on a Color-Tunable Emitting Lanthanide Metal Organic Framework</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>American
+Chemical Society</publisher>
+            <availability>
+               <p>
+                  <s>American Chemical Society</s>
+               </p>
+            </availability>
+            <date type="e-published" when="2018-05-15">2018</date>
+            <date when="2018-06-05">2018</date>
+            <date type="Copyright" when="2018">2018</date>
+         </publicationStmt>
+         <notesStmt>
+            <note type="content-type">research-article</note>
+            <note type="publication-type">journal</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblStruct>
+               <analytic>
+                  <title level="a" type="main">Triple-Wavelength-Region Luminescence Sensing Based
+on a Color-Tunable Emitting Lanthanide Metal Organic Framework</title>
+                  <author xml:id="author-0000">
+                     <persName>
+                        <surname>Wang</surname>
+                        <forename type="first">Xin-yu</forename>
+                     </persName>
+                     <affiliation>
+                        <orgName type="institution">Key Laboratory of Functional Inorganic
+Material Chemistry (MOE)</orgName>
+                        <orgName type="institution">School of Chemistry
+and Materials Science</orgName>
+                        <settlement>Harbin</settlement>
+                        <address>
+                           <country key=""/>
+                        </address>
+                     </affiliation>
+                  </author>
+                  <author xml:id="author-0001">
+                     <persName>
+                        <surname>Yao</surname>
+                        <forename type="first">Xu</forename>
+                     </persName>
+                     <affiliation>
+                        <orgName type="institution">Key Laboratory of Functional Inorganic
+Material Chemistry (MOE)</orgName>
+                        <orgName type="institution">School of Chemistry
+and Materials Science</orgName>
+                        <settlement>Harbin</settlement>
+                        <address>
+                           <country key=""/>
+                        </address>
+                     </affiliation>
+                  </author>
+                  <author role="corresp" xml:id="author-0002">
+                     <persName>
+                        <surname>Huang</surname>
+                        <forename type="first">Qiang</forename>
+                     </persName>
+                     <affiliation>
+                        <orgName type="institution">Key Laboratory of Functional Inorganic
+Material Chemistry (MOE)</orgName>
+                        <orgName type="institution">School of Chemistry
+and Materials Science</orgName>
+                        <settlement>Harbin</settlement>
+                        <address>
+                           <country key=""/>
+                        </address>
+                     </affiliation>
+                     <email>gmli@hlju.edu.cn</email>
+                     <email>huangqiang@hlju.edu.cn</email>
+                  </author>
+                  <author xml:id="author-0003">
+                     <persName>
+                        <surname>Li</surname>
+                        <forename type="first">Yu-xin</forename>
+                     </persName>
+                     <affiliation>
+                        <orgName type="institution">Key Laboratory of Functional Inorganic
+Material Chemistry (MOE)</orgName>
+                        <orgName type="institution">School of Chemistry
+and Materials Science</orgName>
+                        <settlement>Harbin</settlement>
+                        <address>
+                           <country key=""/>
+                        </address>
+                     </affiliation>
+                  </author>
+                  <author xml:id="author-0004">
+                     <persName>
+                        <surname>An</surname>
+                        <forename type="first">Guang-hui</forename>
+                     </persName>
+                     <affiliation>
+                        <orgName type="institution">Key Laboratory of Functional Inorganic
+Material Chemistry (MOE)</orgName>
+                        <orgName type="institution">School of Chemistry
+and Materials Science</orgName>
+                        <settlement>Harbin</settlement>
+                        <address>
+                           <country key=""/>
+                        </address>
+                     </affiliation>
+                  </author>
+                  <author role="corresp" xml:id="author-0005">
+                     <persName>
+                        <surname>Li</surname>
+                        <forename type="first">Guang-ming</forename>
+                     </persName>
+                     <affiliation>
+                        <orgName type="institution">Key Laboratory of Functional Inorganic
+Material Chemistry (MOE)</orgName>
+                        <orgName type="institution">School of Chemistry
+and Materials Science</orgName>
+                        <settlement>Harbin</settlement>
+                        <address>
+                           <country key=""/>
+                        </address>
+                     </affiliation>
+                     <email>gmli@hlju.edu.cn</email>
+                     <email>huangqiang@hlju.edu.cn</email>
+                  </author>
+                  <idno type="doi">10.1021/acs.analchem.8b00494</idno>
+               </analytic>
+               <monogr>
+                  <title level="j" type="main">Analytical
+Chemistry</title>
+                  <title level="j" type="abbrev">Anal. Chem.</title>
+                  <idno type="publisher-id">ac</idno>
+                  <idno type="coden">ancham</idno>
+                  <idno type="ISSN">0003-2700</idno>
+                  <idno type="ISSN">1520-6882</idno>
+                  <imprint>
+                     <publisher>American
+Chemical Society</publisher>
+                     <date type="e-published" when="2018-05-15">2018</date>
+                     <date when="2018-06-05">2018</date>
+                     <biblScope unit="vol">90</biblScope>
+                     <biblScope unit="issue">11</biblScope>
+                     <biblScope from="6675" unit="page">6675</biblScope>
+                     <biblScope to="6682" unit="page">6682</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+            <p>
+               <s>A series of isomorphic lanthanide metal–organic frameworks (Ln-MOFs), namely [Ln­(dcbba)­(DMF) <hi rend="subscript">2</hi> ] <hi rend="subscript">
+                     <hi rend="italic">n</hi>
+                  </hi> ·H <hi rend="subscript">2</hi> O·0.5DMF [Ln = La ( <hi rend="bold">1</hi> ), Eu ( <hi rend="bold">2</hi> ) and Tb ( <hi rend="bold">3</hi> ); H <hi rend="subscript">3</hi> dcbba = 4-(3, 5-dicarboxylatobenzyloxy)­benzoic acid; DMF = <hi rend="italic">N</hi> , <hi rend="italic">N</hi> ′-dimethylformamide] have been designed and synthesized by the solvothermal reactions of H <hi rend="subscript">3</hi> dcbba and La­(NO <hi rend="subscript">3</hi> ) <hi rend="subscript">3</hi> ·6H <hi rend="subscript">2</hi> O. Single-crystal X-ray diffraction analysis reveals that the complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> exhibit a (3,6)-connected open framework structure with binuclear [Ln <hi rend="subscript">2</hi> (COO) <hi rend="subscript">6</hi> ] <hi rend="subscript">
+                     <hi rend="italic">n</hi>
+                  </hi> secondary building units as 6-connected nodes and H <hi rend="subscript">3</hi> dcbba ligands as 3-connected nodes.</s>
+               <s>The isostructural mixed La/Eu/Tb-dcbba ( <hi rend="bold">4</hi> ) was obtained via the in-suit doping of different Ln <hi rend="superscript">3+</hi> ions into the host framework, which is able to emit pure orange, white, and blue light when excited at 300, 305, and 350 nm, respectively.</s>
+               <s>Subsequently, a novel and multifunctional sensing process was designed based on the excitation wavelength sensitive color tunable luminescent sample <hi rend="bold">4</hi> , which can detect HS <hi rend="superscript">–</hi> ions, THF (tetrahydrofuran), and Ag <hi rend="superscript">+</hi> ions via different luminescence color change mechanisms.</s>
+               <s>The remarkable color change, excellent selectivity, and high sensitivity further indicate the promise of this type of multifunctional luminescent materials for the sensing of anion, cation, and organic small molecule.</s>
+            </p>
+         </abstract>
+         <abstract>
+            <p>
+               <s>
+                  <graphic url="ac-2018-00494g_0010.tif"/>
+               </s>
+            </p>
+         </abstract>
+         <abstract>
+            <p>
+               <s>
+                  <graphic url="ac-2018-00494g_0009.tif"/>
+               </s>
+            </p>
+         </abstract>
+         <textClass ana="subject">
+            <keywords scheme="document-type-name">
+               <term>Article</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2018-01-30">Received</change>
+         <change when="2018-05-15">Accepted</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div xml:id="sec1">
+            <p>
+               <s>Lanthanide metal–organic frameworks (Ln-MOFs), the perfect unity of the porosity of MOFs and the high efficient luminescence of lanthanide ions, have received increasing attention in recent years.</s>
+               <s>
+                  <name type="bibref-group">
+                     <ref target="#ref1" type="bibr"/>−<ref target="#ref2" type="bibr"/>
+                     <ref target="#ref3" type="bibr"/>
+                     <ref target="#ref4" type="bibr"/>
+                  </name> By the rational designs of synthesis and measurement routes, Ln-MOFs as the platform can hold up diverse luminescence process for different demands, including the Ln <hi rend="superscript">3+</hi> ions tuned ligand-centered emission, <name type="bibref-group">
+                     <ref target="#ref5" type="bibr"/>−<ref target="#ref6" type="bibr"/>
+                     <ref target="#ref7" type="bibr"/>
+                  </name> columinescence of ligand and Ln <hi rend="superscript">3+</hi> ions, <name type="bibref-group">
+                     <ref target="#ref8" type="bibr"/>−<ref target="#ref9" type="bibr"/>
+                     <ref target="#ref10" type="bibr"/>
+                     <ref target="#ref11" type="bibr"/>
+                  </name> as well as the characteristic emission of Ln <hi rend="superscript">3+</hi> ions.</s>
+               <s>
+                  <name type="bibref-group">
+                     <ref target="#ref12" type="bibr"/>−<ref target="#ref13" type="bibr"/>
+                     <ref target="#ref14" type="bibr"/>
+                  </name> Therefore, a color-tunable luminescence or white-light emission can be obtained predictably by reasonable modification of the energy transfer process which occurs in the interior of the frameworks.</s>
+               <s>
+                  <name type="bibref-group">
+                     <ref target="#ref15" type="bibr"/>,<ref target="#ref16" type="bibr"/>
+                  </name> A mass of color-tunable or white-light materials were designed based on the in-suit doping different Ln <hi rend="superscript">3+</hi> ions into the host MOFs or by the postsynthetic modification (PSM) of the frameworks and have performed an extremely important function in areas of lighting and display.</s>
+               <s>
+                  <name type="bibref-group">
+                     <ref target="#ref17" type="bibr"/>−<ref target="#ref18" type="bibr"/>
+                     <ref target="#ref19" type="bibr"/>
+                     <ref target="#ref20" type="bibr"/>
+                  </name> However, the applications of the color-tunable or white-light materials in other aspects also need to be urgently developed.</s>
+            </p>
+            <p>
+               <s>In the past few years, Ln-MOFs have been frequently employed for the sensing of anions and cations, organic small molecules, or temperature due to their unique photoluminescent properties and high recognition capability for guest molecules.</s>
+               <s>
+                  <name type="bibref-group">
+                     <ref target="#ref21" type="bibr"/>−<ref target="#ref22" type="bibr"/>
+                     <ref target="#ref23" type="bibr"/>
+                     <ref target="#ref24" type="bibr"/>
+                     <ref target="#ref25" type="bibr"/>
+                     <ref target="#ref26" type="bibr"/>
+                     <ref target="#ref27" type="bibr"/>
+                     <ref target="#ref28" type="bibr"/>
+                     <ref target="#ref29" type="bibr"/>
+                     <ref target="#ref30" type="bibr"/>
+                  </name> However, the majority of sensing signal responses are based on the monotonous enhancement or quenching of luminescent intensity, which is generally influenced by environmental interference, including the system noise, excitation power fluctuations, light source, etc. <name type="bibref-group">
+                     <ref target="#ref31" type="bibr"/>,<ref target="#ref32" type="bibr"/>
+                  </name> The luminescence-color change (LCC) sensing approach can effectively avoid these drawbacks in comparison with the traditional turn-on/-off sensing.</s>
+               <s>Recently, some LCC sensors based on lanthanide coordination polymers (LnCPs) have been reported.</s>
+               <s>
+                  <name type="bibref-group">
+                     <ref target="#ref33" type="bibr"/>−<ref target="#ref34" type="bibr"/>
+                     <ref target="#ref35" type="bibr"/>
+                  </name> For example, a white-light-emitting lanthanide coordination polymer that could be effectively applied to the detection of Ag <hi rend="superscript">+</hi> and Mn <hi rend="superscript">2+</hi> ions by way of the LCC process with unique higher selectivity and sensitivity has been reported in our previous work.</s>
+               <s>It represents the first white-light-emitting material at the luminescent sensing territory.</s>
+               <s>
+                  <ref target="#ref36" type="bibr"/> Similarly, some mixed-component Ln-MOFs have also been employed as the LCC platform for the realization of ratiometric sensing, e.g., Zaworotko et al. have reported mixed-crystal variants Eu <hi rend="subscript">
+                     <hi rend="italic">x</hi>
+                  </hi> Tb <hi rend="subscript">1–<hi rend="italic">x</hi>
+                  </hi> ZMOF (ZMOF = zeolite metal–organic framework) for the LCC sensing of LPA (lysophosphatidic acid, a biomarker for ovarian cancer and other gynecologic cancers).</s>
+               <s>
+                  <ref target="#ref37" type="bibr"/> Although some LCC paths can be realized by exactly adjusting the multiple energy transfer process among the different components, the misty sensing mechanism and simplex sensing property is still a great barrier for the development of this type of sensor.</s>
+            </p>
+            <p>
+               <s>To the best of our knowledge, multifunctional luminescence sensors based on the LCC process of color tunable material have never been explored.</s>
+               <s>Herein, a triple-wavelength-region sensing procedure was designed and utilized as a trifunctional LCC path for the detection of anions, cations, and organic small molecules.</s>
+               <s>In this system, La <hi rend="superscript">3+</hi> , Eu <hi rend="superscript">3+</hi> , and Tb <hi rend="superscript">3+</hi> ions are three independent luminescence centers, which can perform a synergism effect on the final luminescence color.</s>
+               <s>Along with the change of the energy transfer paths from ligand to metal (LMET) or from Ln <hi rend="superscript">3+</hi> ions to other Ln <hi rend="superscript">3+</hi> ions (MMET), the corresponding luminescent color from the sample was changed too.</s>
+               <s>When complex <hi rend="bold">4</hi> was excited at 300, 305, and 350 nm, the specific energy transfer mechanism provides a diverse LCC sensing process for HS <hi rend="superscript">–</hi> ions, THF, and Ag <hi rend="superscript">+</hi> ions, respectively.</s>
+               <s>Notably, complex <hi rend="bold">4</hi> is the first example of a color-tunable emitting material being used for luminescent sensing applications as well as the first multifunctional material that can sense anions, cations, and organic small molecules.</s>
+            </p>
+         </div>
+         <div xml:id="sec2">
+            <head>Experimental
+Section</head>
+            <div xml:id="sec2.1">
+               <head>Materials
+and Instrumentations</head>
+               <p>
+                  <s>Ln­(NO <hi rend="subscript">3</hi> ) <hi rend="subscript">3</hi> ·6H <hi rend="subscript">2</hi> O was obtained by the reactions of Ln <hi rend="subscript">2</hi> O <hi rend="subscript">3</hi> and nitric acid.</s>
+                  <s>The DBCCA ligand and other chemicals were purchased from commercial sources and used without purification.</s>
+                  <s>FT-IR spectra were collected on a PerkinElmer Spectrum 100 spectrophotometer by using KBr disks in the range of 4000–500 cm <hi rend="superscript">–1</hi> .</s>
+                  <s>UV spectra were recorded on a Perkin–Elmer Lambda 35 spectrometer (in DMAC).</s>
+                  <s>Thermogravimetric analyses (TGA) were conducted on a PerkinElmer STA 6000 in the temperature range of 30–800 °C with a heating rate of 10 °C min <hi rend="superscript">–1</hi> .</s>
+                  <s>Powder X-ray diffraction (PXRD) data were performed on a Rigaku D/Max-3B X-ray diffractometer with Cu Kα as the radiation source (λ = 0.15406 nm) in the angular range 2θ = 5–50° at room temperature.</s>
+                  <s>Elemental analyses of C, H, O, and N for desolvent samples <hi rend="bold">1</hi> – <hi rend="bold">4</hi> were collected on a PerkinElmer 2400 analyzer.</s>
+                  <s>Inductively coupled plasma atomic emission spectroscopy (ICP-AES) was performed on a HK-2000 spectrometer.</s>
+                  <s>The La/Eu/Tb ratios of complex <hi rend="bold">4</hi> were determined by ICP analysis.</s>
+                  <s>The photoluminescence (PL) spectra were measured with an Edinburgh FLS 920 fluorescence spectrophotometer.</s>
+                  <s>The corrected spectra were obtained via a calibration curve supplied with the instrument.</s>
+                  <s>Luminescence lifetimes were recorded on a single photon counting spectrometer from Edinburgh Instrument (FLS 920) with microsecond pulse lamp as the excitation.</s>
+                  <s>The absolute quantum yield was calculated using the following expression: <formula n="1" rend="display" xml:id="eq1"/> where <hi rend="italic">L</hi>
+                     <hi rend="subscript">emission</hi> is the emission spectrum of the sample, collected using the sphere, <hi rend="italic">E</hi>
+                     <hi rend="subscript">sample</hi> is the spectrum of the incidence light used to excite the sample, collected using the sphere, and <hi rend="italic">E</hi>
+                     <hi rend="subscript">reference</hi> is the spectrum of the light used for excitation with only the reference in the sphere.</s>
+               </p>
+            </div>
+            <div xml:id="sec2.2">
+               <head>Synthesis
+of Complexes <hi rend="bold">1</hi>–<hi rend="bold">4</hi>
+               </head>
+               <p>
+                  <s>Complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> were synthesized by solvothermal reactions of Ln­(NO <hi rend="subscript">3</hi> ) <hi rend="subscript">3</hi> ·6H <hi rend="subscript">2</hi> O (Ln = La, Eu, and Tb; 0.1 mmol), H <hi rend="subscript">3</hi> L ligand (0.1 mmol, 32 mg), DMF (3.5 mL), and water (1.5 mL) prepared in a Teflon-lined autoclave at 100 °C for 48 h and then cooled to room temperature gradually.</s>
+                  <s>The resulting colorless crystals were filtrated and washed by DMF and water several times.</s>
+                  <s>The yields were 70%, 65%, and 61% for <hi rend="bold">1</hi> – <hi rend="bold">3</hi> (based on H <hi rend="subscript">3</hi> dcbba), respectively.</s>
+               </p>
+               <div xml:id="sec2.2.1">
+                  <head>{[La­(DCBBA)­(DMF)<hi rend="subscript">2</hi>]<hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi>·H<hi rend="subscript">2</hi>O·0.5DMF}<hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi> (<hi rend="bold">1</hi>)</head>
+                  <p>
+                     <s>Elemental analysis (%): Calcd for C <hi rend="subscript">22</hi> H <hi rend="subscript">21</hi> LaN <hi rend="subscript">2</hi> O <hi rend="subscript">9</hi> (desolvent samples; <hi rend="italic">M</hi>
+                        <hi rend="subscript">r</hi> = 596.32),</s>
+                     <s>C 44.31, H 3.55, N 4.70, O 24.15; found: C 44.09, H 3.50, N 4.58, O 24.11.</s>
+                     <s>IR (KBr, cm <hi rend="superscript">–1</hi> ): 3456 (m), 3074 (w), 2932 (m), 1661 (s), 1389 (s), 1241 (m), 1110 (w), 1012 (w), 849 (w), 783 (m), 690 (m).</s>
+                     <s>UV/vis [ACN, λ]: 216 nm.</s>
+                  </p>
+               </div>
+               <div xml:id="sec2.2.2">
+                  <head>{[Eu­(DCBBA)­(DMF)<hi rend="subscript">2</hi>]<hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi>·H<hi rend="subscript">2</hi>O·0.5DMF}<hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi> (<hi rend="bold">2</hi>)</head>
+                  <p>
+                     <s>Elemental analysis (%): Calcd for C <hi rend="subscript">22</hi> H <hi rend="subscript">23</hi> EuN <hi rend="subscript">2</hi> O <hi rend="subscript">9</hi> (desolvent samples; <hi rend="italic">M</hi>
+                        <hi rend="subscript">r</hi> = 611.39),</s>
+                     <s>C 43.22, H 3.79, N 4.58, O 23.55; found: C 43.14, H 3.61, N 4.60, O 23.46.</s>
+                     <s>IR (KBr, cm <hi rend="superscript">–1</hi> ): 3463 (m), 3061 (w), 2923 (m), 1678 (s), 1391 (s), 1236 (m), 1131 (w), 1023 (w), 856 (w), 778 (m), 681 (m).</s>
+                     <s>UV/vis [ACN, λ]: 216 nm.</s>
+                  </p>
+               </div>
+               <div xml:id="sec2.2.3">
+                  <head>{[Tb­(DCBBA)­(DMF)<hi rend="subscript">2</hi>]<hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi>·H<hi rend="subscript">2</hi>O·0.5DMF}<hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi> (<hi rend="bold">3</hi>)</head>
+                  <p>
+                     <s>Elemental analysis (%): Calcd for C <hi rend="subscript">22</hi> H <hi rend="subscript">23</hi> TbN <hi rend="subscript">2</hi> O <hi rend="subscript">9</hi> (desolvent samples; <hi rend="italic">M</hi>
+                        <hi rend="subscript">r</hi> = 618.35),</s>
+                     <s>C 42.73, H 3.75, N 4.53, O 23.29; found: C 42.69, H 3.67, N 4.62 O 23.14.</s>
+                     <s>IR (KBr, cm <hi rend="superscript">–1</hi> ): 3471 (m), 3065 (w), 2947 (m), 1696 (s), 1393 (s), 1267 (m), 1168 (w), 1009 (w), 873 (w), 785 (m), 693 (m).</s>
+                     <s>UV/vis [ACN, λ]: 216 nm.</s>
+                  </p>
+                  <p>
+                     <s>Complex <hi rend="bold">4</hi> was synthesized by a room temperature reaction.</s>
+                     <s>A mixture of lanthanide nitrate (0.4 mmol; La/Eu/Tb = 0.88:0.02:0.10),</s>
+                     <s>H <hi rend="subscript">3</hi> L (0.4 mmol), DMF (3.5 mL), and H <hi rend="subscript">2</hi> O (1.5 mL) was added to a round-bottom flask with a magneton and allowed to stir at room temperature for 24 h.</s>
+                     <s>The resulting white powder was filtrated and washed with DMF several times.</s>
+                     <s>The yield was 70% for <hi rend="bold">4</hi> (based on H <hi rend="subscript">3</hi> L).</s>
+                     <s>For complex <hi rend="bold">4</hi> , the molar ratios of the different Ln <hi rend="superscript">3+</hi> ions are mainly identical to that of the mixture of lanthanide nitrate, which were completely demonstrated by ICP, distinctly revealing that in situ doping of the lanthanide ions was successful ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Table S1</ref> ).</s>
+                     <s>In addition, the identical structures of complexes <hi rend="bold">1</hi> – <hi rend="bold">4</hi> are demonstrated by the corresponding PXRD patterns too ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S4</ref> ).</s>
+                  </p>
+               </div>
+            </div>
+            <div xml:id="sec2.3">
+               <head>Luminescence
+Sensing Experiments</head>
+               <p>
+                  <s>To obtain a stable suspension, the crystal samples of the complex were finely ground and desolved in DMF forming a 0.2 mg/mL suspension by ultrasonication treatment for 30 min.</s>
+                  <s>Then the stable suspension was applied for luminescence sensing analyses at room temperature.</s>
+                  <s>For the sensing experiments of anions and cations, different anions and cations aqueous solutions (1 × 10 <hi rend="superscript">–4</hi> M) were added to the suspension (2 mL) with the same quantity to examine the potential of complex <hi rend="bold">4</hi> to selectively recognize anions and cations.</s>
+                  <s>For the sensing of small organic molecules, these SOMs were slowly introduced into the DMF suspension (2 mL).</s>
+                  <s>The slit widths of excitation and emission were kept the same all of the time.</s>
+               </p>
+            </div>
+            <div xml:id="sec2.4">
+               <head>X-ray
+Crystallographic Analysis</head>
+               <p>
+                  <s>Crystal data for complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> were collected on an Oxford Xcalibur Gemini Ultra diffractometer using graphite-monochromated Mo Kα radiation (λ = 0.71073 Å) at room temperature.</s>
+                  <s>Structures of complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> were solved by using Patterson methods (SHELXS-97), expanded using Fourier methods, and refined using SHELXL-97 (full-matrix least-squares on F2) and WinGX v1.70.01 programs packages.</s>
+                  <s>
+                     <ref target="#ref38" type="bibr"/> All non-hydrogen atoms were refined anisotropically.</s>
+                  <s>Empirical absorption corrections based on equivalent reflections were applied.</s>
+                  <s>For complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> , the contribution of highly disordered anions/solvent molecules were treated as diffuse using the SQUEEZE procedure implemented in the PLATON program.</s>
+                  <s>
+                     <ref target="#ref39" type="bibr"/> The resulting new files were applied to further refine the structures.</s>
+                  <s>The SQUEEZE results are consistent with TG and elemental analysis, which indicates that there are half of the DMF and one water molecule in a structure unit as free guest.</s>
+                  <s>These solvent molecules are added in the molecular formula.</s>
+                  <s>The crystal data and structure refinements of complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> are summarized in <ref target="#tbl1" type="table">Table <ref target="#tbl1" type="table"/>
+                     </ref> .</s>
+                  <s>Crystallographic data for complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> have been deposited in the Cambridge Crystallographic Data Center with CCDC nos.</s>
+                  <s>1818054-1818056.</s>
+               </p>
+               <table cols="0" rend="float" rows="0" xml:id="tbl1">
+                  <head type="label">1</head>
+                  <head type="caption-title">Crystal Data and
+Structure Refinement for Complexes <hi rend="bold">1</hi>–<hi rend="bold">3</hi>
+                  </head>
+                  <head> 
+                              1
+                              2
+                              3
+                           </head>
+                  <row>
+                     <cell>empirical
+formula</cell>
+                     <cell>C<hi rend="subscript">23.5</hi>H<hi rend="subscript">26.5</hi>LaN<hi rend="subscript">2.5</hi>O<hi rend="subscript">10.5</hi>
+                     </cell>
+                     <cell>C<hi rend="subscript">23.5</hi>H<hi rend="subscript">28.5</hi>EuN<hi rend="subscript">2.5</hi>O<hi rend="subscript">10.5</hi>
+                     </cell>
+                     <cell>C<hi rend="subscript">23.5</hi>H<hi rend="subscript">28.5</hi>TbN<hi rend="subscript">2.5</hi>O<hi rend="subscript">10.5</hi>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>formula weight</cell>
+                     <cell>650.88</cell>
+                     <cell>665.95</cell>
+                     <cell>672.91</cell>
+                  </row>
+                  <row>
+                     <cell>crystal system</cell>
+                     <cell>monoclinic</cell>
+                     <cell>monoclinic</cell>
+                     <cell>monoclinic</cell>
+                  </row>
+                  <row>
+                     <cell>space group</cell>
+                     <cell>
+                        <hi rend="italic">C</hi>2<hi rend="italic">/c</hi>
+                     </cell>
+                     <cell>
+                        <hi rend="italic">C</hi>2<hi rend="italic">/c</hi>
+                     </cell>
+                     <cell>
+                        <hi rend="italic">C</hi>2<hi rend="italic">/c</hi>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <hi rend="italic">a</hi>/Å</cell>
+                     <cell>28.492 (5)</cell>
+                     <cell>28.220 (5)</cell>
+                     <cell>28.614 (5)</cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <hi rend="italic">b</hi>/Å</cell>
+                     <cell>14.539 (5)</cell>
+                     <cell>14.540 (5)</cell>
+                     <cell>14.383 (5)</cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <hi rend="italic">c</hi>/Å</cell>
+                     <cell>13.492 (5)</cell>
+                     <cell>13.394 (5)</cell>
+                     <cell>13.644 (5)</cell>
+                  </row>
+                  <row>
+                     <cell>α (deg)</cell>
+                     <cell>90</cell>
+                     <cell>90</cell>
+                     <cell>90</cell>
+                  </row>
+                  <row>
+                     <cell>Β (deg)</cell>
+                     <cell>101.870 (5)</cell>
+                     <cell>100.648 (5)</cell>
+                     <cell>97.284 (5)</cell>
+                  </row>
+                  <row>
+                     <cell>γ (deg)</cell>
+                     <cell>90</cell>
+                     <cell>90</cell>
+                     <cell>90</cell>
+                  </row>
+                  <row>
+                     <cell>volume (Å<hi rend="superscript">3</hi>)</cell>
+                     <cell>5470 (3)</cell>
+                     <cell>5401 (2)</cell>
+                     <cell>5570 (2)</cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <hi rend="italic">Z</hi>
+                     </cell>
+                     <cell>8</cell>
+                     <cell>8</cell>
+                     <cell>8</cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <hi rend="italic">D</hi>
+                        <hi rend="subscript">c</hi> (g cm<hi rend="superscript">–3</hi>)</cell>
+                     <cell>1.448</cell>
+                     <cell>1.504</cell>
+                     <cell>1.475</cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <hi rend="italic">T</hi> (K)</cell>
+                     <cell>293 (2)</cell>
+                     <cell>293 (2)</cell>
+                     <cell>293 (2)</cell>
+                  </row>
+                  <row>
+                     <cell>λ (Mo Kα) (Å)</cell>
+                     <cell>0.71073</cell>
+                     <cell>0.71073</cell>
+                     <cell>0.71073</cell>
+                  </row>
+                  <row>
+                     <cell>reflections collected</cell>
+                     <cell>4796</cell>
+                     <cell>4749</cell>
+                     <cell>4901</cell>
+                  </row>
+                  <row>
+                     <cell>μ (mm<hi rend="superscript">–1</hi>)</cell>
+                     <cell>1.608</cell>
+                     <cell>2.370</cell>
+                     <cell>2.585</cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <hi rend="italic">F</hi>(000)</cell>
+                     <cell>2368.0</cell>
+                     <cell>2432.0</cell>
+                     <cell>2448.0</cell>
+                  </row>
+                  <row>
+                     <cell>final <hi rend="italic">R</hi>
+                        <hi rend="subscript">1</hi>
+                        <ref target="#t1fn1" type="table-fn"/>, <hi rend="italic">wR</hi>
+                        <hi rend="subscript">2</hi>
+                        <ref target="#t1fn2" type="table-fn"/>[<hi rend="italic">I</hi> &gt; 2σ(<hi rend="italic">I</hi>)]</cell>
+                     <cell>0.0303,
+0.0732</cell>
+                     <cell>0.0449, 0.1084</cell>
+                     <cell>0.0275, 0.0693</cell>
+                  </row>
+                  <row>
+                     <cell>final <hi rend="italic">R</hi>
+                        <hi rend="subscript">1</hi>
+                        <ref target="#t1fn1" type="table-fn"/>, <hi rend="italic">wR</hi>
+                        <hi rend="subscript">2</hi>
+                        <ref target="#t1fn2" type="table-fn"/>(all data)</cell>
+                     <cell>0.0349, 0.0763</cell>
+                     <cell>0.0491, 0.1119</cell>
+                     <cell>0.0330, 0.0743</cell>
+                  </row>
+                  <row>
+                     <cell>GOF on <hi rend="italic">F</hi>
+                        <hi rend="superscript">2</hi>
+                     </cell>
+                     <cell>1.107</cell>
+                     <cell>1.074</cell>
+                     <cell>1.004</cell>
+                  </row>
+                  <note type="table-wrap-foot">
+                     <note place="inline" xml:id="t1fn1">
+                        <ref>a</ref>
+                        <p>
+                           <hi rend="italic">R</hi>
+                           <hi rend="subscript">1</hi> =
+Σ<hi rend="superscript">
+                              <hi rend="bold">||</hi>
+                           </hi>
+                           <hi rend="italic">F</hi>
+                           <hi rend="subscript">0</hi>| – <hi rend="superscript">|</hi>
+                           <hi rend="italic">F</hi>
+                           <hi rend="subscript">c</hi>
+                           <hi rend="superscript">
+                              <hi rend="bold">||</hi>
+                           </hi>/Σ|<hi rend="italic">F</hi>
+                           <hi rend="subscript">0</hi>|.</p>
+                     </note>
+                     <note place="inline" xml:id="t1fn2">
+                        <ref>b</ref>
+                        <p>w<hi rend="italic">R</hi>
+                           <hi rend="subscript">2</hi> =
+Σ­[<hi rend="italic">w</hi>(<hi rend="italic">F</hi>
+                           <hi rend="subscript">0</hi>
+                           <hi rend="superscript">2</hi> – <hi rend="italic">F</hi>
+                           <hi rend="subscript">c</hi>
+                           <hi rend="superscript">2</hi>)<hi rend="superscript">2</hi>]/ Σ­[<hi rend="italic">w</hi>(<hi rend="italic">F</hi>
+                           <hi rend="subscript">0</hi>
+                           <hi rend="superscript">2</hi>)<hi rend="superscript">2</hi>]<hi rend="superscript">1/2</hi>.</p>
+                     </note>
+                  </note>
+               </table>
+            </div>
+         </div>
+         <div xml:id="sec3">
+            <head>Results
+and Discussion</head>
+            <div xml:id="sec3.1">
+               <head>Crystal
+Structure Analysis of Complexes <hi rend="bold">1</hi>–<hi rend="bold">3</hi>
+               </head>
+               <p>
+                  <s>X-ray crystallographic analysis reveals complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> are isostructural with a <hi rend="italic">C</hi> 2/ <hi rend="italic">c</hi> space group.</s>
+                  <s>In a typical structure of complex <hi rend="bold">1</hi> , each asymmetric unit consists of one crystallographically independent La <hi rend="superscript">3+</hi> ion, one deprotonated dcbba ligand, and two coordinated DMF molecules ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S5a</ref> ).</s>
+                  <s>Each La <hi rend="superscript">3+</hi> ion is nine-coordinated by seven oxygen atoms from carboxyls of five H <hi rend="subscript">3</hi> dcbba ligends and two oxygen atoms from two DMF molecules ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S5b</ref> ).</s>
+                  <s>Meanwhile, the neighboring La <hi rend="superscript">3+</hi> ions were bridged through oxygen atoms from the carboxylate groups of branched organic ligand and further form the [La <hi rend="subscript">2</hi> (COO) <hi rend="subscript">6</hi> ] <hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi> secondary building unit (SBUs; <ref target="#fig1" type="fig">Figure <ref target="#fig1" type="fig"/>
+                     </ref> a).</s>
+                  <s>The neighboring dinuclear [La <hi rend="subscript">2</hi> (COO) <hi rend="subscript">6</hi> ] <hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi> units were connected by L <hi rend="superscript">3–</hi> in ( <hi rend="italic">k</hi>
+                     <hi rend="subscript">1</hi> - <hi rend="italic">k</hi>
+                     <hi rend="subscript">1</hi> -μ <hi rend="subscript">2</hi> )-( <hi rend="italic">k</hi>
+                     <hi rend="subscript">1</hi> - <hi rend="italic">k</hi>
+                     <hi rend="subscript">1</hi> -μ <hi rend="subscript">1</hi> )-μ <hi rend="subscript">3</hi> mode forming a 1D chain ( <ref target="#fig1" type="fig">Figure <ref target="#fig1" type="fig"/>
+                     </ref> c).</s>
+                  <s>The adjacent 1D chains were linked by the isophthalic sections of ligand L <hi rend="superscript">3–</hi> in ( <hi rend="italic">k</hi>
+                     <hi rend="subscript">1</hi> - <hi rend="italic">k</hi>
+                     <hi rend="subscript">2</hi> -μ <hi rend="subscript">3</hi> ) mode forming a 2D network ( <ref target="#fig1" type="fig">Figure <ref target="#fig1" type="fig"/>
+                     </ref> d).</s>
+                  <s>The adjacent 2D networks further accumulation into 3D frameworks in the vertical direction ( <ref target="#fig1" type="fig">Figure <ref target="#fig1" type="fig"/>
+                     </ref> e).</s>
+                  <s>Notably, the framework exhibits an open 1D window with the size of about 9.8 × 9.5 Å <hi rend="superscript">2</hi> (opposite distance of O7 to O7 and C14 to C14).</s>
+                  <s>PLATON calculation shows that there is about 18.7% accessible volume of the unit cell volume when the guest molecules were removed.</s>
+                  <s>From a topological point of view, the dcbba ligand bridge three carboxylate groups can be considered as a 3-connected node, and the dinuclear [La <hi rend="subscript">2</hi> (COO) <hi rend="subscript">6</hi> ] <hi rend="subscript">
+                        <hi rend="italic">n</hi>
+                     </hi> SBUs connected by six carboxylate groups can be considered as a 6-connected node.</s>
+                  <s>As a result, the framework can be viewed as a (3,6)-connected 3D topology, and the structure of complex <hi rend="bold">1</hi> can be simplified as a new topology with the topological point symbol of {4 <hi rend="superscript">2</hi> ·6} <hi rend="subscript">2</hi> {4 <hi rend="superscript">4</hi> ·6 <hi rend="superscript">2</hi> ·8 <hi rend="superscript">7</hi> ·10 <hi rend="superscript">2</hi> } calculated with TOPOS.</s>
+                  <s>
+                     <ref target="#ref40" type="bibr"/>
+                  </s>
+               </p>
+               <figure xml:id="fig1">
+                  <head type="label">1</head>
+                  <figDesc>
+                     <div>
+                        <p>
+                           <s>(a) Coordination environment of central La <hi rend="superscript">3+</hi> ions in complex <hi rend="bold">1</hi> with hydrogen atoms omitted for clarity.</s>
+                           <s>(b) Coordination mode of H <hi rend="subscript">3</hi> dcbba ligand.</s>
+                           <s>(c) 1D chain.</s>
+                           <s>(d) 2D network.</s>
+                           <s>(e) 3D framework.</s>
+                        </p>
+                     </div>
+                  </figDesc>
+                  <graphic url="ac-2018-00494g_0001.tif"/>
+               </figure>
+            </div>
+            <div xml:id="sec3.2">
+               <head>Luminescence
+Properties of Complexes <hi rend="bold">1</hi>–<hi rend="bold">3</hi>
+               </head>
+               <p>
+                  <s>The solid-state 3D luminescent spectra of free ligand and complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> were conducted at room temperature.</s>
+                  <s>As shown in <ref target="#fig2" type="fig">Figure <ref target="#fig2" type="fig"/>
+                     </ref> , the dcbba ligand exhibited strong blue-green emission with the broad emission band from 400 to 500 nm when excited at 300–380 nm.</s>
+                  <s>Similarly, complex <hi rend="bold">1</hi> exhibits Ln <hi rend="superscript">3+</hi> ions tuned ligand-centered emission around 400–550 nm upon being excited at 300–380 nm.</s>
+                  <s>However, the emission intensity exhibited an obvious enhancement with the increasing excitation wavelength.</s>
+                  <s>On the contrary, complex <hi rend="bold">2</hi> completely exhibits a characteristic emission of Eu <hi rend="superscript">3+</hi> ions at 593, 616, 650, and 699 nm, respectively, which corresponds to the <hi rend="superscript">5</hi> D <hi rend="subscript">0</hi> → <hi rend="superscript">7</hi> F <hi rend="subscript">
+                        <hi rend="italic">J</hi>
+                     </hi> ( <hi rend="italic">J</hi> = 1–4) transitions of the Eu <hi rend="superscript">3+</hi> ion upon being excited at 300–380 nm.</s>
+                  <s>The lifetime and quantum yield for complex <hi rend="bold">2</hi> are τ = 1.25 ms (Ex = 368 nm) and Φ = 28.36%</s>
+                  <s>( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S6b</ref> ).</s>
+                  <s>Similarly, complex <hi rend="bold">3</hi> exhibits four peaks at 490, 544, 582, and 621 nm corresponding to the <hi rend="superscript">5</hi> D <hi rend="subscript">4</hi> → <hi rend="superscript">7</hi> F <hi rend="subscript">J</hi> ( <hi rend="italic">J</hi> = 6–3) transitions of the Tb <hi rend="superscript">3+</hi> ion ( <ref target="#fig3" type="fig">Figure <ref target="#fig3" type="fig"/>
+                     </ref> a).</s>
+                  <s>The quantum yield and lifetime are 1.28 ms and 25.11%, respectively ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S6c</ref> ).</s>
+                  <s>The long luminescence lifetimes and high quantum yields of complexes <hi rend="bold">2</hi> and <hi rend="bold">3</hi> suggest that the energy transfer between the H <hi rend="subscript">3</hi> dcbba ligand and lanthanide ions is effective ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Table S2</ref> ).</s>
+               </p>
+               <figure xml:id="fig2">
+                  <head type="label">2</head>
+                  <figDesc>
+                     <div>
+                        <p>
+                           <s>3D solid state emission spectra of dcbba ligand (a) and complex <hi rend="bold">1</hi> (b), complex <hi rend="bold">2</hi> (c), and complex <hi rend="bold">3</hi> (d).</s>
+                        </p>
+                     </div>
+                  </figDesc>
+                  <graphic url="ac-2018-00494g_0002.tif"/>
+               </figure>
+               <figure xml:id="fig3">
+                  <head type="label">3</head>
+                  <figDesc>
+                     <div>
+                        <p>
+                           <s>(a) Emission spectra of the suspension of complex <hi rend="bold">4</hi> with excitation wavelengths varying from 300 to 350 nm.</s>
+                           <s>Inset: the corresponding luminescence photograph when excited with a Xe lamp at 300, 305, and 350 nm.</s>
+                           <s>(b) The corresponding CIE coordinates.</s>
+                        </p>
+                     </div>
+                  </figDesc>
+                  <graphic url="ac-2018-00494g_0003.tif"/>
+               </figure>
+            </div>
+            <div xml:id="sec3.3">
+               <head>Color-Tunable
+Luminescence and White-Light</head>
+               <p>
+                  <s>To design novel multiple-waveband response luminescent material and explore the multifunctional luminescent sensing application, primarily, an excitation wavelength sensitive color tunable luminescent sample should be afforded.</s>
+                  <s>For the coordination system of the metal–organic ligand, the most direct and efficient path is the in-suit doping of the trichromatic.</s>
+                  <s>
+                     <name type="bibref-group">
+                        <ref target="#ref41" type="bibr"/>−<ref target="#ref42" type="bibr"/>
+                        <ref target="#ref43" type="bibr"/>
+                     </name> Considering that complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> are isostructural and exhibit pure blue, red, and green emission, respectively, the color-tunable and white-light emission sample would be possible via the multiple and synergetic energy transfer between ligand and metal (LMET) or between different lanthanide metal ions (MMET).</s>
+                  <s>In fact, an excitation wavelength-dependent color-tunable luminescent complex <hi rend="bold">4</hi> has been realized by the doping of La <hi rend="superscript">3+</hi> , Eu <hi rend="superscript">3+</hi> , and Tb <hi rend="superscript">3+</hi> ions into the host frameworks, and the PXRD measure exhibiting the framework structure of complex <hi rend="bold">4</hi> is isostructural with complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> .</s>
+                  <s>As shown in <ref target="#fig3" type="fig">Figure <ref target="#fig3" type="fig"/>
+                     </ref> , when excited at 300 nm, an orange emission can be observed with CIE coordinates of (0.442, 0.439).</s>
+                  <s>Since the emission spectra of complex <hi rend="bold">1</hi> exhibit the broad emission around at 400–550 nm, it is should be pointed out that when the codoping complex <hi rend="bold">4</hi> was excited at 300 nm there was not an obvious broad LC emission observed in the emission spectra of complex <hi rend="bold">4</hi> , but the sharp emission peak at 544 nm still remained and, with a stronger intensity, seems to indicate that the emission peak at 544 nm should be attributed to characteristic transitions of Tb <hi rend="superscript">3+</hi> ions rather than La <hi rend="superscript">3+</hi> ions.</s>
+                  <s>With the excitation wavelength increase, the emission intensity of the blue component augments gradually and the characteristic emissions of Eu <hi rend="superscript">3+</hi> and Tb <hi rend="superscript">3+</hi> ions were decreased continually.</s>
+                  <s>Thus, a white emission with CIE coordinates of (0.330, 0.339) was observed when excited at 305 nm.</s>
+                  <s>When varying the excitation wavelength to 350 nm, the blue emission with CIE coordinates of (0.202, 0.173) from ligand becomes dominated.</s>
+                  <s>Obviously, a smooth process of tunable colors from orange to white to blue has been obtained by the adjustment of the excitation wavelength, implying that complex <hi rend="bold">4</hi> is a possible candidate as multifunctional luminescent sensing materials.</s>
+               </p>
+            </div>
+            <div xml:id="sec3.4">
+               <head>Triple-Waveband
+Response Luminescent Sensing</head>
+               <p>
+                  <s>Complex <hi rend="bold">4</hi> shows a fluent luminescence-color change (LCC) process when the excitation wavelength varies from 300 to 350 nm.</s>
+                  <s>It inspires a series of novel ideas for LCC luminescent sensing: (1) the boring luminescence enhancement or quenching can be replaced by LCC so that the interference from the environment can be avoided; (2) the design of different LCC processes may meet new potential application for color-tunable luminescence materials; (3) multifunctional luminescent sensing materials will possibly be fabricated based on the multiple LCC processes.</s>
+                  <s>Therefore, the LCC sensing processes were studied with the excitation toward 300 nm (orange), 305 nm (white), and 350 nm (blue), respectively.</s>
+               </p>
+               <p>
+                  <s>First, the selective tests toward the anion were analyzed when the suspension of complex <hi rend="bold">4</hi> (0.2 mg/mL) was excited at 300 nm.</s>
+                  <s>The emission spectra of the suspension containing variable anion aqueous solutions of Na <hi rend="subscript">
+                        <hi rend="italic">x</hi>
+                     </hi> X (X = PO <hi rend="subscript">4</hi>
+                     <hi rend="superscript">3–</hi> , Br <hi rend="superscript">–</hi> , ClO <hi rend="subscript">4</hi>
+                     <hi rend="superscript">–</hi> , SO <hi rend="subscript">3</hi>
+                     <hi rend="superscript">2–</hi> , I <hi rend="superscript">–</hi> , HCO <hi rend="subscript">3</hi>
+                     <hi rend="superscript">–</hi> , CO <hi rend="subscript">3</hi>
+                     <hi rend="superscript">2–</hi> , NO <hi rend="subscript">2</hi>
+                     <hi rend="superscript">–</hi> , CrO <hi rend="subscript">4</hi>
+                     <hi rend="superscript">2–</hi> , MoO <hi rend="subscript">4</hi>
+                     <hi rend="superscript">2–</hi> , SiO <hi rend="subscript">3</hi>
+                     <hi rend="superscript">2–</hi> , HSO <hi rend="subscript">3</hi>
+                     <hi rend="superscript">–</hi> , F <hi rend="superscript">–</hi> , and HS <hi rend="superscript">–</hi> , <hi rend="italic">x</hi> = 1–3) were recorded.</s>
+                  <s>The ratios of the <hi rend="superscript">5</hi> D <hi rend="subscript">4</hi> → <hi rend="superscript">7</hi> F <hi rend="subscript">5</hi> transition intensities of Tb <hi rend="superscript">3+</hi> ions ( <hi rend="italic">I</hi>
+                     <hi rend="subscript">544</hi> ) and <hi rend="superscript">5</hi> D <hi rend="subscript">0</hi> → <hi rend="superscript">7</hi> F <hi rend="subscript">2</hi> transition intensities of Eu <hi rend="superscript">3+</hi> ions ( <hi rend="italic">I</hi>
+                     <hi rend="subscript">616</hi> ) were applied to evaluate the LCC process.</s>
+                  <s>As shown in <ref target="#fig4" type="fig">Figure <ref target="#fig4" type="fig"/>
+                     </ref> and <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Table S3</ref> , the luminescence spectra of the blank sample and the majority of anion ions@complex <hi rend="bold">4</hi> remain almost the same in terms of the ratios of <hi rend="italic">I</hi>
+                     <hi rend="subscript">544</hi> / <hi rend="italic">I</hi>
+                     <hi rend="subscript">616</hi> being about 1.</s>
+                  <s>However, the luminescence spectra of HS <hi rend="superscript">–</hi> @complex <hi rend="bold">4</hi> show obvious LCC phenomenon compared to other X <hi rend="superscript">
+                        <hi rend="italic">x</hi>–</hi> @complex <hi rend="bold">4</hi> systems with the ratios of <hi rend="italic">I</hi>
+                     <hi rend="subscript">544</hi> / <hi rend="italic">I</hi>
+                     <hi rend="subscript">616</hi> closing to 1.4, exhibiting obvious LCC from orange to green.</s>
+                  <s>The sensing properties of complex <hi rend="bold">4</hi> to HS <hi rend="superscript">–</hi> ions were further investigated by the quantitative fluorescence titration experiments.</s>
+                  <s>According to <ref target="#fig4" type="fig">Figure <ref target="#fig4" type="fig"/>
+                     </ref> b, the intensity of <hi rend="italic">I</hi>
+                     <hi rend="subscript">544</hi> showed negligible change when the content of HS <hi rend="superscript">–</hi> ions was increased gradually.</s>
+                  <s>However, the intensity of <hi rend="italic">I</hi>
+                     <hi rend="subscript">616</hi> shown evidently decreases, exhibiting obvious LCC phenomenon from orange to blue.</s>
+                  <s>The excellent selectivity and visible LCC phenomenon boost the potential application on detecting HS <hi rend="superscript">–</hi> ions via the LCC process.</s>
+               </p>
+               <figure xml:id="fig4">
+                  <head type="label">4</head>
+                  <figDesc>
+                     <div>
+                        <p>
+                           <s>(a) Emission spectra of X <hi rend="superscript">
+                                 <hi rend="italic">x</hi>–</hi> @complex <hi rend="bold">4</hi> excited at 300 nm (inset: the corresponding CIE coordinates change of HS <hi rend="superscript">–</hi> @complex <hi rend="bold">4</hi> ).</s>
+                           <s>(b) Emission spectra of complex <hi rend="bold">4</hi> toward different concentration HS <hi rend="superscript">–</hi> ions (inset: the corresponding luminescence photograph with HS <hi rend="superscript">–</hi> ions concentration from 0 to 400 μM).</s>
+                        </p>
+                     </div>
+                  </figDesc>
+                  <graphic url="ac-2018-00494g_0004.tif"/>
+               </figure>
+               <p>
+                  <s>Second, the suspension of complex <hi rend="bold">4</hi> shows a white-light emission with CIE coordinates of (0.330, 0.339) upon the excitation at 305 nm.</s>
+                  <s>To further investigate the LCC sensing ability of complex <hi rend="bold">4</hi> excited 305 nm, it was employed for the sensing of small organic molecules (SOMs).</s>
+                  <s>As shown in <ref target="#fig5" type="fig">Figure <ref target="#fig5" type="fig"/>
+                     </ref> , the THF@complex <hi rend="bold">4</hi> exhibits a distinct LCC process compared with other SOMs.</s>
+                  <s>The concentration dependence analysis shows that the luminescent intensities of <hi rend="italic">I</hi>
+                     <hi rend="subscript">544</hi> (green) and <hi rend="italic">I</hi>
+                     <hi rend="subscript">616</hi> (red) gradually decrease and the intensity of the ligand-center (blue) evidently increases with increasing THF content, which results in a LCC process from white to violet.</s>
+                  <s>Notably, the LCC phenomenon can be observed easily even when the content of THF is lower than 20 μL, further confirming that complex <hi rend="bold">4</hi> can acts as a highly selective and sensitive LCC sensor for THF.</s>
+                  <s>To the best of our knowledge, complex <hi rend="bold">4</hi> is the first example of a luminescent sensor for THF based on Ln-MOFs.</s>
+               </p>
+               <figure xml:id="fig5">
+                  <head type="label">5</head>
+                  <figDesc>
+                     <div>
+                        <p>
+                           <s>(a) Emission spectra of various SOMs@complex <hi rend="bold">4</hi> excited at 305 nm (100 μL).</s>
+                           <s>(b) Emission spectra of complex <hi rend="bold">4</hi> upon incremental addition of THF (insets: the corresponding CIE coordinates and photography).</s>
+                        </p>
+                     </div>
+                  </figDesc>
+                  <graphic url="ac-2018-00494g_0005.tif"/>
+               </figure>
+               <p>
+                  <s>Third, the blue emission from the ligand becomes dominated when complex <hi rend="bold">4</hi> was excited at 350 nm.</s>
+                  <s>Based on the previously reports, several transition metal ions can be used as the sensitizer for lanthanide ions emission, which result in a more excellent energy transfer from ligands to Ln <hi rend="superscript">3+</hi> ions.</s>
+                  <s>
+                     <name type="bibref-group">
+                        <ref target="#ref44" type="bibr"/>−<ref target="#ref45" type="bibr"/>
+                        <ref target="#ref46" type="bibr"/>
+                        <ref target="#ref47" type="bibr"/>
+                     </name> In other words, the weak characteristic emission for complex <hi rend="bold">4</hi> excited at 350 nm will be possibly restored when certain transition metal ions were introduced into the suspension system, and a LCC process will be inspired finally.</s>
+                  <s>To confirm this hypothesis, various metal cation aqueous solutions of X­(NO <hi rend="subscript">3</hi> ) <hi rend="subscript">
+                        <hi rend="italic">x</hi>
+                     </hi> (100 μM, X = Zn <hi rend="superscript">2+</hi> , Ca <hi rend="superscript">2+</hi> , Pb <hi rend="superscript">2+</hi> , Al <hi rend="superscript">3+</hi> , Hg <hi rend="superscript">2+</hi> , Na <hi rend="superscript">+</hi> , Mg <hi rend="superscript">2+</hi> , NH <hi rend="subscript">4</hi>
+                     <hi rend="superscript">+</hi> , Ba <hi rend="superscript">2+</hi> , K <hi rend="superscript">+</hi> , Cr <hi rend="superscript">3+</hi> , Ni <hi rend="superscript">2+</hi> , Cd <hi rend="superscript">2+</hi> , Ag <hi rend="superscript">+</hi> , Fe <hi rend="superscript">3+</hi> , Co <hi rend="superscript">2+</hi> , and Cu <hi rend="superscript">2+</hi> , <hi rend="italic">x</hi> = 1–3) have been added into the suspension of complex <hi rend="bold">4</hi> .</s>
+                  <s>As shown in <ref target="#fig6" type="fig">Figure <ref target="#fig6" type="fig"/>
+                     </ref> a, the LCC features for X <hi rend="superscript">
+                        <hi rend="italic">x</hi>+</hi> @complex <hi rend="bold">4</hi> depend largely on the nature of the metal cations.</s>
+                  <s>Several familiar quenchers, such as Fe <hi rend="superscript">3+</hi> , Co <hi rend="superscript">2+</hi> , and Cu <hi rend="superscript">2+</hi> ions, exhibit drastic quenching effects, which have been frequently reported previously.</s>
+                  <s>In contrast, the luminescent color of Ag <hi rend="superscript">+</hi> @complex <hi rend="bold">4</hi> exhibits obvious LCC from blue to green.</s>
+                  <s>This result implies that complex <hi rend="bold">4</hi> can be used as a sensor to selectively detect Ag <hi rend="superscript">+</hi> ions by the LCC process when complex <hi rend="bold">4</hi> was excited at 350 nm.</s>
+                  <s>The sensing properties of complex <hi rend="bold">4</hi> toward Ag <hi rend="superscript">+</hi> ions were further carried out by monitoring a series of emissions of complex <hi rend="bold">4</hi> with gradually increased Ag <hi rend="superscript">+</hi> ions concentration excited at 350 nm.</s>
+                  <s>With the increasing concentration of Ag <hi rend="superscript">+</hi> ions, remarkably, the ligand-center emission of complex <hi rend="bold">4</hi> was continuously quenched.</s>
+                  <s>However, the intensity of characteristic emission for Tb <hi rend="superscript">3+</hi> ions was restored.</s>
+                  <s>It should be noticed that there is not evident enhancement on the characteristic emission for Eu <hi rend="superscript">3+</hi> ions, which might be attributed to the fact that the energy transfer process from Tb <hi rend="superscript">3+</hi> to Eu <hi rend="superscript">3+</hi> was interrupted because of the existence of Ag <hi rend="superscript">+</hi> ions.</s>
+               </p>
+               <figure xml:id="fig6">
+                  <head type="label">6</head>
+                  <figDesc>
+                     <div>
+                        <p>
+                           <s>(a) Emission spectra of various X <hi rend="superscript">
+                                 <hi rend="italic">x</hi>+</hi> @complex <hi rend="bold">4</hi> excited at 350 nm (100 μL).</s>
+                           <s>(b) Emission spectra of complex <hi rend="bold">4</hi> upon incremental addition of Ag <hi rend="superscript">+</hi> ions (insets: the corresponding CIE coordinates and photography).</s>
+                        </p>
+                     </div>
+                  </figDesc>
+                  <graphic url="ac-2018-00494g_0006.tif"/>
+               </figure>
+               <p>
+                  <s>In addition, the stability and recyclability of the complex <hi rend="bold">4</hi> LCC sensing has been conducted through recycling experiments.</s>
+                  <s>Upon the suspension of complex <hi rend="bold">4</hi> , it was centrifuged, filtered, and washed several times with DMF.</s>
+                  <s>The relative intensity between LC emission, <hi rend="italic">I</hi>
+                     <hi rend="subscript">544</hi> and <hi rend="italic">I</hi>
+                     <hi rend="subscript">616</hi> , in the emission spectra of the regenerative suspension was almost invariable even after being used for four repeated cycles ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S12–14</ref> ).</s>
+                  <s>The corresponding PXRD patterns support that the crystal structures remained after the recycling experiments.</s>
+                  <s>( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S11</ref> )</s>
+               </p>
+            </div>
+            <div xml:id="sec3.5">
+               <head>Mechanism
+of LCC Sensing</head>
+               <p>
+                  <s>The mechanism of the LCC sensing of complex <hi rend="bold">4</hi> was proposed according to the experiments.</s>
+                  <s>First, the PXRD patterns of complex <hi rend="bold">4</hi> before and after luminescent sensing HS <hi rend="superscript">–</hi> ions, THF, and Ag <hi rend="superscript">+</hi> ions were still identical with that of the simulated pattern, implying that the luminescence color change did not stem from the breakdown of the host framework ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S11</ref> ).</s>
+                  <s>Therefore, the LCC phenomenon of complex <hi rend="bold">4</hi> can possibly be attributed to the following reasons: certain ions may form the weak interactions with the benzene rings of ligand, such as the hydrogen bonds or π interactions; the competed photon absorption might exist between analytes and ligand; and the efficiency of intersystem crossing of S1 to T1 is likely to be promoted due to the unique properties of analytes, such as the heavy-atom effect of Ag <hi rend="superscript">+</hi> ions.</s>
+                  <s>In order to confirm these hypotheses, some necessary experiments were carried out.</s>
+               </p>
+               <p>
+                  <s>Complex <hi rend="bold">4</hi> was conducted by the in-suit doping of La <hi rend="superscript">3+</hi> , Eu <hi rend="superscript">3+</hi> , and Tb <hi rend="superscript">3+</hi> ions with a molar ratio of La <hi rend="subscript">0.88</hi>
+                  </s>
+                  <s>/Eu <hi rend="subscript">0.02</hi>
+                  </s>
+                  <s>/Tb <hi rend="subscript">0.10</hi> .</s>
+                  <s>Although the contents of the Tb <hi rend="superscript">3+</hi> ions is almost five times that of the Eu <hi rend="superscript">3+</hi> ions, the characteristic peaks of Eu <hi rend="superscript">3+</hi> ions at 616 nm were stronger than those of Tb <hi rend="superscript">3+</hi> ions at 544 nm when complex <hi rend="bold">4</hi> was excited at 300 nm, which can be attributed to an energy transfer from Tb <hi rend="superscript">3+</hi> to Eu <hi rend="superscript">3+</hi> ions ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Scheme S1</ref> ).</s>
+                  <s>
+                     <name type="bibref-group">
+                        <ref target="#ref19" type="bibr"/>,<ref target="#ref41" type="bibr"/>,<ref target="#ref48" type="bibr"/>
+                     </name> Although the La <hi rend="superscript">3+</hi> ions contributed a main content with 88% in complex <hi rend="bold">4</hi> , the La <hi rend="superscript">3+</hi> ions are unable for transferring the energy to the Eu <hi rend="superscript">3+</hi> ions due to the fact that there is no energy transfer between ligand and La <hi rend="superscript">3+</hi> ions.</s>
+                  <s>With the gradual increase of HS <hi rend="superscript">–</hi> ions, the intensity of <hi rend="italic">I</hi>
+                     <hi rend="subscript">544</hi> shows negligible change, but the intensity of <hi rend="italic">I</hi>
+                     <hi rend="subscript">616</hi> shows an evident decrease, indicated that the energy transfer process from Tb <hi rend="superscript">3+</hi> to Eu <hi rend="superscript">3+</hi> ions was disturbed continuously.</s>
+                  <s>
+                     <name type="bibref-group">
+                        <ref target="#ref49" type="bibr"/>,<ref target="#ref50" type="bibr"/>
+                     </name> We easily speculate that there are weak interactions (such as hydrogen bonds) existing between HS <hi rend="superscript">–</hi> ions and the other sections of frameworks.</s>
+                  <s>It may further break the energy transfer from Tb <hi rend="superscript">3+</hi> to Eu <hi rend="superscript">3+</hi> ions, which results in the decreasing emission of Eu <hi rend="superscript">3+</hi> ions ( <ref target="#fig7" type="fig">Figure <ref target="#fig7" type="fig"/>
+                     </ref> ).</s>
+                  <s>In order to verify these hypotheses, the energy transfer process located in the single-lanthanide MOF and the mixed sample of Eu-MOF and Tb-MOF (molar ratio was 1:5) were investigated ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figure S8</ref> ).</s>
+                  <s>In the single phase and mixed phase systems, there are almost no changes for the luminescence intensity of Tb <hi rend="superscript">3+</hi> and Eu <hi rend="superscript">3+</hi> ions observed, implying that the weak interactions between HS <hi rend="superscript">–</hi> ions and the framework did not effect energy transfer efficiency from ligand to Ln <hi rend="superscript">3+</hi> ions.</s>
+                  <s>Thus the energy transfer from Tb <hi rend="superscript">3+</hi> to Eu <hi rend="superscript">3+</hi> ions is not going to happen in this mixed system too.</s>
+                  <s>So we can summarize that the energy transfer from Tb <hi rend="superscript">3+</hi> to Eu <hi rend="superscript">3+</hi> ions can be produced in the intra framework only.</s>
+                  <s>Therefore, the in-suit doping complex <hi rend="bold">4</hi> can be an ideal sensor for the sensing of HS <hi rend="superscript">–</hi> ions.</s>
+               </p>
+               <figure xml:id="fig7">
+                  <head type="label">7</head>
+                  <figDesc>
+                     <div>
+                        <p>
+                           <s>Schematic illustrations of the mechanism of complex <hi rend="bold">4</hi> detecting HS <hi rend="superscript">–</hi> ions.</s>
+                        </p>
+                     </div>
+                  </figDesc>
+                  <graphic url="ac-2018-00494g_0007.tif"/>
+               </figure>
+               <p>
+                  <s>For the LCC sensing when complex <hi rend="bold">4</hi> was excited at 305 and 350 nm, some underlying mechanisms were raised.</s>
+                  <s>For the sensing of THF, the ligands-center emission evidently increases and the characteristic of Ln <hi rend="superscript">3+</hi> ions gradually decreases, indicating the antenna affect was weakened.</s>
+                  <s>In contrast, the luminescence spectra of complex <hi rend="bold">4</hi> toward Ag <hi rend="superscript">+</hi> ions show that the antenna affect was amplified with the increasing Ag <hi rend="superscript">+</hi> ions concentration.</s>
+                  <s>To further testify to the underlying mechanism, the luminescence emission peaks analyses for THF@complex <hi rend="bold">4</hi> and Ag <hi rend="superscript">+</hi> @complex <hi rend="bold">4</hi> toward various concentrations were carried out ( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Figures S9 and S10</ref> and <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">Tables S4 and S5</ref> ).</s>
+                  <s>With the presence of THF, the ligand-center emission produced a blue shift, implying an increase in the energy level of the π* energy of the ligand, leading to a disturbance in the energy transfer from the π* orbits to the lanthanide ions, which results in the ligand-center emission dominating the emission spectra and the LCC from white to violet.</s>
+                  <s>On the contrary, a red shift of the ligand-center emission would be introduced when Ag <hi rend="superscript">+</hi> ions were added into the suspension of complex <hi rend="bold">4</hi> , suggesting an enhance in the π* orbits of the ligand.</s>
+                  <s>The more becomingly match between the π* orbits of the ligand and the resonance energy level of the Ln <hi rend="superscript">3+</hi> ions will boost up the more highly efficiency energy transfer from the ligand to the Ln <hi rend="superscript">3+</hi> ions.</s>
+                  <s>Therefore, in the presence of Ag <hi rend="superscript">+</hi> ions, complex <hi rend="bold">4</hi> exhibited stronger characteristic emissions of Ln <hi rend="superscript">3+</hi> ions and weaker ligand-center emission, which leads to a LCC process from blue to green ( <ref target="#sch1" type="scheme">Scheme <ref target="#sch1" type="scheme"/>
+                     </ref> ).</s>
+                  <s>
+                     <name type="bibref-group">
+                        <ref target="#ref36" type="bibr"/>,<ref target="#ref51" type="bibr"/>
+                     </name>
+                  </s>
+               </p>
+               <figure xml:id="sch1">
+                  <head type="label">1</head>
+                  <head type="caption-title">Effect of THF (a) and Ag<hi rend="superscript">+</hi> (b)
+Ions on the Ligand to Metal
+Energy Transfer</head>
+                  <graphic url="ac-2018-00494g_0008.tif"/>
+               </figure>
+               <p>
+                  <s>Although some other analytes may also form an interaction with the framework or affect the energy level of the ligand, the properties difference of these analytes, such as the electronic absorption/donation ability, the electronegativity, the polarity, the absorbance of the solvent, etc., will affect the final luminescence emission results.</s>
+                  <s>
+                     <ref target="#ref52" type="bibr"/> In a word, the physical and chemical properties of the framework and analytes produce a synergistic effect on the luminescence performance of the complex.</s>
+                  <s>Therefore, the dominating factors were discussed in more detail in this work.</s>
+               </p>
+            </div>
+         </div>
+         <div xml:id="sec4">
+            <head>Conclusions</head>
+            <p>
+               <s>Reactions of H <hi rend="subscript">3</hi> dcbba and Ln­(NO <hi rend="subscript">3</hi> ) <hi rend="subscript">3</hi> ·6H <hi rend="subscript">2</hi> O afford a series of isostructural lanthanide metal–organic frameworks <hi rend="bold">1</hi> – <hi rend="bold">3</hi> .</s>
+               <s>The identical structures of complexes <hi rend="bold">1</hi> – <hi rend="bold">3</hi> provides a chance to afford isomorphic mixed La/Eu/Tb-dcbba ( <hi rend="bold">4</hi> ) via the in-suit doping of different Ln <hi rend="superscript">3+</hi> ions into the host framework.</s>
+               <s>Based on the regulation of the energy transfer efficiency from ligand to metal, a novel and multifunctional sensing process was designed, which can detect HS <hi rend="superscript">–</hi> ions, THF, and Ag <hi rend="superscript">+</hi> ions via different LCC processes.</s>
+               <s>The remarkable color change, excellent selectivity, and high sensitivity verify that this type of color-tunable luminescence material can be a promising sensor for anions, cations, or organic small molecules.</s>
+               <s>To the best of our knowledge, complex <hi rend="bold">4</hi> is the first multifunctional material that can sense anions, cations, and organic small molecules.</s>
+               <s>This approach may provide potential multifunctional materials for luminescent sensing application.</s>
+            </p>
+         </div>
+      </body>
+      <back>
+         <p>
+            <s>The Supporting Information is available free of charge on the <ref target="http://pubs.acs.org">ACS Publications website</ref> at DOI: <ref target="http://pubs.acs.org/doi/abs/10.1021/acs.analchem.8b00494">10.1021/acs.analchem.8b00494</ref> .</s>
+            <list type="label" xml:id="silist">
+               <item>
+                  <p>
+                     <s>UV, IR, TG, and PXRD data.</s>
+                     <s>( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_001.pdf">PDF</ref> )</s>
+                  </p>
+               </item>
+               <item>
+                  <p>
+                     <s>CIF files for the corresponding compounds.</s>
+                     <s>( <ref target="http://pubs.acs.org/doi/suppl/10.1021/acs.analchem.8b00494/suppl_file/ac8b00494_si_002.zip">ZIP</ref> )</s>
+                  </p>
+               </item>
+            </list>
+         </p>
+         <p>
+            <s>The authors declare no competing financial interest.</s>
+         </p>
+         <div type="acknowledgements">
+            <p>
+               <s>This work is financially supported by the National Natural Science Foundation of China (Nos.</s>
+               <s>51472076, 51473046, and 21501051) and Heilongjiang University (YJSCX2017-053HLJU).</s>
+            </p>
+         </div>
+         <div type="references">
+            <listBibl>
+               <biblStruct type="journal" xml:id="ref1">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Cui</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yue</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Qian</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/cr200101d</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem. Rev.</title>
+                     <imprint>
+                        <date type="year" when="2012">2012</date>
+                        <biblScope unit="vol">112</biblScope>
+                        <biblScope from="1126" unit="page">1126</biblScope>
+                        <biblScope to="1162" unit="page">1162</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref2">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chrzanowski</surname>
+                           <forename type="first">M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Ma</surname>
+                           <forename type="first">S.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1016/j.ccr.2015.05.005</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Coord. Chem. Rev.</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">307</biblScope>
+                        <biblScope from="106" unit="page">106</biblScope>
+                        <biblScope to="129" unit="page">129</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref3">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Cui</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Qian</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1016/j.ccr.2013.10.023</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Coord. Chem. Rev.</title>
+                     <imprint>
+                        <date type="year" when="2014">2014</date>
+                        <biblScope unit="vol">273-274</biblScope>
+                        <biblScope from="76" unit="page">76</biblScope>
+                        <biblScope to="86" unit="page">86</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref4">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wen</surname>
+                           <forename type="first">H.-M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cui</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Qian</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1016/j.progpolymsci.2015.04.008</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Prog. Polym. Sci.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">48</biblScope>
+                        <biblScope from="40" unit="page">40</biblScope>
+                        <biblScope to="84" unit="page">84</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref5">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Yao</surname>
+                           <forename type="first">Q.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Bermejo Gómez</surname>
+                           <forename type="first">A.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Su</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Pascanu</surname>
+                           <forename type="first">V.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yun</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zheng</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liu</surname>
+                           <forename type="first">L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Abdelhamid</surname>
+                           <forename type="first">H. N.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/acs.chemmater.5b01711</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem. Mater.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">27</biblScope>
+                        <biblScope from="5332" unit="page">5332</biblScope>
+                        <biblScope to="5339" unit="page">5339</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref6">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Tang</surname>
+                           <forename type="first">Q.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liu</surname>
+                           <forename type="first">S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liu</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>He</surname>
+                           <forename type="first">D.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Miao</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Ji</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zheng</surname>
+                           <forename type="first">Z.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/ic402228g</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Inorg. Chem.</title>
+                     <imprint>
+                        <date type="year" when="2014">2014</date>
+                        <biblScope unit="vol">53</biblScope>
+                        <biblScope from="289" unit="page">289</biblScope>
+                        <biblScope to="293" unit="page">293</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref7">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">P.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>An</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yao</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/acs.cgd.7b00112</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Cryst. Growth Des.</title>
+                     <imprint>
+                        <date type="year" when="2017">2017</date>
+                        <biblScope unit="vol">17</biblScope>
+                        <biblScope from="2178" unit="page">2178</biblScope>
+                        <biblScope to="2185" unit="page">2185</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref8">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Han</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">P.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Sun</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>An</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yao</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C7DT00215G</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Dalton.
+Trans.</title>
+                     <imprint>
+                        <date type="year" when="2017">2017</date>
+                        <biblScope unit="vol">46</biblScope>
+                        <biblScope from="4642" unit="page">4642</biblScope>
+                        <biblScope to="4653" unit="page">4653</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref9">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Feng</surname>
+                           <forename type="first">C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Sun</surname>
+                           <forename type="first">J. W.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">P. F.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">Y. X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liu</surname>
+                           <forename type="first">T. Q.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Sun</surname>
+                           <forename type="first">Q. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">G. M.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C4DT03457K</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Dalton. Trans.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">44</biblScope>
+                        <biblScope from="4640" unit="page">4640</biblScope>
+                        <biblScope to="4647" unit="page">4647</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref10">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Yang</surname>
+                           <forename type="first">Q. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wu</surname>
+                           <forename type="first">K.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Jiang</surname>
+                           <forename type="first">J. J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Hsu</surname>
+                           <forename type="first">C. W.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Pan</surname>
+                           <forename type="first">M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lehn</surname>
+                           <forename type="first">J. M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Su</surname>
+                           <forename type="first">C. Y.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C4CC01763C</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem.
+Commun.</title>
+                     <imprint>
+                        <date type="year" when="2014">2014</date>
+                        <biblScope unit="vol">50</biblScope>
+                        <biblScope from="7702" unit="page">7702</biblScope>
+                        <biblScope to="7704" unit="page">7704</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref11">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Du</surname>
+                           <forename type="first">B. B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhu</surname>
+                           <forename type="first">Y. X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Pan</surname>
+                           <forename type="first">M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yue</surname>
+                           <forename type="first">M. Q.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Hou</surname>
+                           <forename type="first">Y. J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wu</surname>
+                           <forename type="first">K.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">L. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yin</surname>
+                           <forename type="first">S. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Fan</surname>
+                           <forename type="first">Y. N.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Su</surname>
+                           <forename type="first">C. Y.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C5CC04468E</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem.
+Commun.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">51</biblScope>
+                        <biblScope from="12533" unit="page">12533</biblScope>
+                        <biblScope to="12536" unit="page">12536</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref12">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">W.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Hu</surname>
+                           <forename type="first">Z.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Uvdal</surname>
+                           <forename type="first">K.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1016/j.ccr.2014.10.006</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Coord. Chem. Rev.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">284</biblScope>
+                        <biblScope from="206" unit="page">206</biblScope>
+                        <biblScope to="235" unit="page">235</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref13">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Binnemans</surname>
+                           <forename type="first">K.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1016/j.ccr.2015.02.015</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Coord. Chem. Rev.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">295</biblScope>
+                        <biblScope from="1" unit="page">1</biblScope>
+                        <biblScope to="45" unit="page">45</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref14">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Niu</surname>
+                           <forename type="first">W. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Sun</surname>
+                           <forename type="first">J. W.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">P. F.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">Y. X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>An</surname>
+                           <forename type="first">G. H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">G. M.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1002/asia.201501191</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem.
+- Asian J.</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">11</biblScope>
+                        <biblScope from="555" unit="page">555</biblScope>
+                        <biblScope to="560" unit="page">560</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref15">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Wu</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Du</surname>
+                           <forename type="first">S.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C5TC04432D</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Mater.
+Chem. C</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">4</biblScope>
+                        <biblScope from="3364" unit="page">3364</biblScope>
+                        <biblScope to="3374" unit="page">3374</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref16">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Shan</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhou</surname>
+                           <forename type="first">L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lin</surname>
+                           <forename type="first">P.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">R.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Ma</surname>
+                           <forename type="first">E.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Guo</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Du</surname>
+                           <forename type="first">S.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C2TC00414C</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Mater. Chem. C</title>
+                     <imprint>
+                        <date type="year" when="2013">2013</date>
+                        <biblScope unit="vol">1</biblScope>
+                        <biblScope from="888" unit="page">888</biblScope>
+                        <biblScope to="891" unit="page">891</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref17">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhou</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/ic402900x</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Inorg.
+Chem.</title>
+                     <imprint>
+                        <date type="year" when="2014">2014</date>
+                        <biblScope unit="vol">53</biblScope>
+                        <biblScope from="3456" unit="page">3456</biblScope>
+                        <biblScope to="3463" unit="page">3463</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref18">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Lu</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C4CC07852G</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem.
+Commun.</title>
+                     <imprint>
+                        <date type="year" when="2014">2014</date>
+                        <biblScope unit="vol">50</biblScope>
+                        <biblScope from="15443" unit="page">15443</biblScope>
+                        <biblScope to="15446" unit="page">15446</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref19">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Yang</surname>
+                           <forename type="first">Z. R.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">M. M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>wang</surname>
+                           <forename type="first">X. S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yin</surname>
+                           <forename type="first">X. B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/acs.analchem.6b04421</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Anal. Chem.</title>
+                     <imprint>
+                        <date type="year" when="2017">2017</date>
+                        <biblScope unit="vol">89</biblScope>
+                        <biblScope from="1930" unit="page">1930</biblScope>
+                        <biblScope to="1936" unit="page">1936</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref20">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Lu</surname>
+                           <forename type="first">L. X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">C. X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">D.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Sun</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yang</surname>
+                           <forename type="first">X. R.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/acs.analchem.5b03593</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Anal. Chem.</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">88</biblScope>
+                        <biblScope from="1238" unit="page">1238</biblScope>
+                        <biblScope to="1245" unit="page">1245</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref21">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Shi</surname>
+                           <forename type="first">P. F.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Hu</surname>
+                           <forename type="first">H. C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">Z. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Xiong</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C4CC09081K</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem. Commun.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">51</biblScope>
+                        <biblScope from="3985" unit="page">3985</biblScope>
+                        <biblScope to="3988" unit="page">3988</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref22">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Hou</surname>
+                           <forename type="first">S. L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Dong</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Jiang</surname>
+                           <forename type="first">X. L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Jiao</surname>
+                           <forename type="first">Z. H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">C. M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/acs.analchem.7b05088</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Anal.
+Chem.</title>
+                     <imprint>
+                        <date type="year" when="2018">2018</date>
+                        <biblScope unit="vol">90</biblScope>
+                        <biblScope from="1516" unit="page">1516</biblScope>
+                        <biblScope to="1519" unit="page">1519</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref23">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">X. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cheng</surname>
+                           <forename type="first">P.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liao</surname>
+                           <forename type="first">D. Z.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">S. P.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Jiang</surname>
+                           <forename type="first">Z. H.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/ja047141b</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Am. Chem. Soc.</title>
+                     <imprint>
+                        <date type="year" when="2004">2004</date>
+                        <biblScope unit="vol">126</biblScope>
+                        <biblScope from="15394" unit="page">15394</biblScope>
+                        <biblScope to="15395" unit="page">15395</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref24">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">D.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Ma</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cheng</surname>
+                           <forename type="first">P.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1002/chem.201502033</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem. - Eur. J.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">21</biblScope>
+                        <biblScope from="15854" unit="page">15854</biblScope>
+                        <biblScope to="15859" unit="page">15859</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref25">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Hou</surname>
+                           <forename type="first">Y. L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Xu</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cheng</surname>
+                           <forename type="first">R. R.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C5CC01181G</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem.
+Commun.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">51</biblScope>
+                        <biblScope from="6769" unit="page">6769</biblScope>
+                        <biblScope to="6772" unit="page">6772</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref26">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Cui</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Song</surname>
+                           <forename type="first">R.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yu</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liu</surname>
+                           <forename type="first">M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">Z.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wu</surname>
+                           <forename type="first">C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yang</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">Z.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Qian</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1002/adma.201404700</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Adv. Mater.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">27</biblScope>
+                        <biblScope from="1420" unit="page">1420</biblScope>
+                        <biblScope to="1425" unit="page">1425</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref27">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Rao</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Song</surname>
+                           <forename type="first">T.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Gao</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cui</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yang</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wu</surname>
+                           <forename type="first">C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Qian</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/ja407219k</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Am. Chem. Soc.</title>
+                     <imprint>
+                        <date type="year" when="2013">2013</date>
+                        <biblScope unit="vol">135</biblScope>
+                        <biblScope from="15559" unit="page">15559</biblScope>
+                        <biblScope to="15564" unit="page">15564</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref28">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Xu</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cao</surname>
+                           <forename type="first">C. S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Kang</surname>
+                           <forename type="first">X. M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C6DT02213H</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Dalton.
+Trans.</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">45</biblScope>
+                        <biblScope from="18003" unit="page">18003</biblScope>
+                        <biblScope to="18017" unit="page">18017</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref29">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Xu</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Fang</surname>
+                           <forename type="first">M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cao</surname>
+                           <forename type="first">C. S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Qiao</surname>
+                           <forename type="first">W. Z.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/acs.inorgchem.6b00190</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Inorg. Chem.</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">55</biblScope>
+                        <biblScope from="4790" unit="page">4790</biblScope>
+                        <biblScope to="4794" unit="page">4794</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref30">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Kang</surname>
+                           <forename type="first">X. M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cheng</surname>
+                           <forename type="first">R. R.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Xu</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">W. M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1002/chem.201702533</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem. - Eur. J.</title>
+                     <imprint>
+                        <date type="year" when="2017">2017</date>
+                        <biblScope unit="vol">23</biblScope>
+                        <biblScope from="13289" unit="page">13289</biblScope>
+                        <biblScope to="13293" unit="page">13293</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref31">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Hao</surname>
+                           <forename type="first">J. N.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C6NR02446G</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Nanoscale</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">8</biblScope>
+                        <biblScope from="12047" unit="page">12047</biblScope>
+                        <biblScope to="53" unit="page">53</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref32">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Lin</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Hong</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Huang</surname>
+                           <forename type="first">R.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lin</surname>
+                           <forename type="first">W.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C5CC06453H</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem.
+Commun.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">51</biblScope>
+                        <biblScope from="16996" unit="page">16996</biblScope>
+                        <biblScope to="16999" unit="page">16999</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref33">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Xu</surname>
+                           <forename type="first">X. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lian</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Hao</surname>
+                           <forename type="first">J. N.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1002/adma.201702298</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Adv. Mater.</title>
+                     <imprint>
+                        <date type="year" when="2017">2017</date>
+                        <biblScope unit="vol">29</biblScope>
+                        <biblScope from="1702298" unit="page">1702298</biblScope>
+                        <biblScope to="1702306" unit="page">1702306</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref34">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Dong</surname>
+                           <forename type="first">M. J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Ou</surname>
+                           <forename type="first">S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zou</surname>
+                           <forename type="first">C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wu</surname>
+                           <forename type="first">C. D.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1002/anie.201307331</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Angew. Chem.,
+Int. Ed.</title>
+                     <imprint>
+                        <date type="year" when="2014">2014</date>
+                        <biblScope unit="vol">53</biblScope>
+                        <biblScope from="1575" unit="page">1575</biblScope>
+                        <biblScope to="1579" unit="page">1579</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref35">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Dunning</surname>
+                           <forename type="first">S. G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Nuñez</surname>
+                           <forename type="first">A. J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Moore</surname>
+                           <forename type="first">M. D.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Steiner</surname>
+                           <forename type="first">A.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lynch</surname>
+                           <forename type="first">V. M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Sessler</surname>
+                           <forename type="first">J. L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Holliday</surname>
+                           <forename type="first">B. J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Humphrey</surname>
+                           <forename type="first">S. M.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1016/j.chempr.2017.02.010</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem.</title>
+                     <imprint>
+                        <date type="year" when="2017">2017</date>
+                        <biblScope unit="vol">2</biblScope>
+                        <biblScope from="579" unit="page">579</biblScope>
+                        <biblScope to="589" unit="page">589</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref36">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">Y. X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">S. J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">P. F.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">X. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yao</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>An</surname>
+                           <forename type="first">G. H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">G. M.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C7CC00258K</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem. Commun.</title>
+                     <imprint>
+                        <date type="year" when="2017">2017</date>
+                        <biblScope unit="vol">53</biblScope>
+                        <biblScope from="5067" unit="page">5067</biblScope>
+                        <biblScope to="5070" unit="page">5070</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref37">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">S. Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Shi</surname>
+                           <forename type="first">W.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cheng</surname>
+                           <forename type="first">P.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zaworotko</surname>
+                           <forename type="first">M. J.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/jacs.5b06929</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Am. Chem. Soc.</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">137</biblScope>
+                        <biblScope from="12203" unit="page">12203</biblScope>
+                        <biblScope to="12206" unit="page">12206</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref38">
+                  <analytic>
+                     <title level="a" type="main">A short
+history of SHELX</title>
+                     <author>
+                        <persName>
+                           <surname>Sheldrick</surname>
+                           <forename type="first">G. M.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1107/S0108767307043930</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Acta Crystallogr., Sect. A:
+Found. Crystallogr.</title>
+                     <imprint>
+                        <date type="year" when="2008">2008</date>
+                        <biblScope unit="vol">64</biblScope>
+                        <biblScope from="112" unit="page">112</biblScope>
+                        <biblScope to="122" unit="page">122</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref39">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Rohlíček</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Hušák</surname>
+                           <forename type="first">M.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1107/S0021889807018894</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Appl. Crystallogr.</title>
+                     <imprint>
+                        <date type="year" when="2007">2007</date>
+                        <biblScope unit="vol">40</biblScope>
+                        <biblScope from="600" unit="page">600</biblScope>
+                        <biblScope to="601" unit="page">601</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref40">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Blatov</surname>
+                           <forename type="first">V. A.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Shevchenko</surname>
+                           <forename type="first">A. P.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Serezhkin</surname>
+                           <forename type="first">V. N.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1107/S0021889800007202</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Appl. Crystallogr.</title>
+                     <imprint>
+                        <date type="year" when="2000">2000</date>
+                        <biblScope unit="vol">33</biblScope>
+                        <biblScope from="1193" unit="page">1193</biblScope>
+                        <biblScope to="1193" unit="page">1193</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref41">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Falcaro</surname>
+                           <forename type="first">P.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Furukawa</surname>
+                           <forename type="first">S.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1002/anie.201203719</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Angew. Chem., Int. Ed.</title>
+                     <imprint>
+                        <date type="year" when="2012">2012</date>
+                        <biblScope unit="vol">51</biblScope>
+                        <biblScope from="8431" unit="page">8431</biblScope>
+                        <biblScope to="8433" unit="page">8433</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref42">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Shang</surname>
+                           <forename type="first">M.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">C.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lin</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C3CS60314H</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem. Soc. Rev.</title>
+                     <imprint>
+                        <date type="year" when="2014">2014</date>
+                        <biblScope unit="vol">43</biblScope>
+                        <biblScope from="1372" unit="page">1372</biblScope>
+                        <biblScope to="1386" unit="page">1386</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref43">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">M. S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Guo</surname>
+                           <forename type="first">G. C.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C6CC03184F</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem. Commun.</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">52</biblScope>
+                        <biblScope from="13194" unit="page">13194</biblScope>
+                        <biblScope to="13204" unit="page">13204</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref44">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Tan</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Chen</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/c1cc16003f</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Chem.
+Commun.</title>
+                     <imprint>
+                        <date type="year" when="2011">2011</date>
+                        <biblScope unit="vol">47</biblScope>
+                        <biblScope from="12373" unit="page">12373</biblScope>
+                        <biblScope to="12375" unit="page">12375</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref45">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Tang</surname>
+                           <forename type="first">Q.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liu</surname>
+                           <forename type="first">S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liu</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Miao</surname>
+                           <forename type="first">J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Shi</surname>
+                           <forename type="first">Z.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zheng</surname>
+                           <forename type="first">Z.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/ic400029p</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Inorg.
+Chem.</title>
+                     <imprint>
+                        <date type="year" when="2013">2013</date>
+                        <biblScope unit="vol">52</biblScope>
+                        <biblScope from="2799" unit="page">2799</biblScope>
+                        <biblScope to="2801" unit="page">2801</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref46">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Hao</surname>
+                           <forename type="first">J.-N.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C4TA03990D</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J.
+Mater. Chem. A</title>
+                     <imprint>
+                        <date type="year" when="2014">2014</date>
+                        <biblScope unit="vol">2</biblScope>
+                        <biblScope from="18018" unit="page">18018</biblScope>
+                        <biblScope to="18025" unit="page">18025</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref47">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Hao</surname>
+                           <forename type="first">J.-N.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C4TA06462C</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J.
+Mater. Chem. A</title>
+                     <imprint>
+                        <date type="year" when="2015">2015</date>
+                        <biblScope unit="vol">3</biblScope>
+                        <biblScope from="4788" unit="page">4788</biblScope>
+                        <biblScope to="4792" unit="page">4792</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref48">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Yang</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lin</surname>
+                           <forename type="first">X.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhao</surname>
+                           <forename type="first">Y. S.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">D.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1002/anie.201703917</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Angew. Chem., Int. Ed.</title>
+                     <imprint>
+                        <date type="year" when="2017">2017</date>
+                        <biblScope unit="vol">56</biblScope>
+                        <biblScope from="7853" unit="page">7853</biblScope>
+                        <biblScope to="7857" unit="page">7857</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref49">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Ma</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Jiang</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Song</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Luo</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C6TC01022A</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J.
+Mater. Chem. C</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">4</biblScope>
+                        <biblScope from="7294" unit="page">7294</biblScope>
+                        <biblScope to="7301" unit="page">7301</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref50">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Li</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Ma</surname>
+                           <forename type="first">H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zheng</surname>
+                           <forename type="first">Y.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1016/j.bios.2016.05.020</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Biosens. Bioelectron.</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">85</biblScope>
+                        <biblScope from="287" unit="page">287</biblScope>
+                        <biblScope to="293" unit="page">293</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref51">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Hao</surname>
+                           <forename type="first">J. N.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yan</surname>
+                           <forename type="first">B.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1039/C5NR06066D</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Nanoscale</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">8</biblScope>
+                        <biblScope from="2881" unit="page">2881</biblScope>
+                        <biblScope to="2886" unit="page">2886</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="journal" xml:id="ref52">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Zhou</surname>
+                           <forename type="first">L. J.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Deng</surname>
+                           <forename type="first">W. H.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Wang</surname>
+                           <forename type="first">Y. L.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Xu</surname>
+                           <forename type="first">G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yin</surname>
+                           <forename type="first">S. G.</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Liu</surname>
+                           <forename type="first">Q. Y.</forename>
+                        </persName>
+                     </author>
+                     <idno type="doi">10.1021/acs.inorgchem.6b00928</idno>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Inorg. Chem.</title>
+                     <imprint>
+                        <date type="year" when="2016">2016</date>
+                        <biblScope unit="vol">55</biblScope>
+                        <biblScope from="6271" unit="page">6271</biblScope>
+                        <biblScope to="6277" unit="page">6277</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

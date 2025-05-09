@@ -1,0 +1,109 @@
+{
+    "languages": null,
+    "filetype": "pdf",
+    "pdf_toc": [],
+    "pages": 11,
+    "ocr_stats": {
+        "ocr_pages": 0,
+        "ocr_failed": 0,
+        "ocr_success": 0,
+        "ocr_engine": "none"
+    },
+    "block_stats": {
+        "header_footer": 25,
+        "code": 0,
+        "table": 24,
+        "equations": {
+            "successful_ocr": 0,
+            "unsuccessful_ocr": 0,
+            "equations": 0
+        }
+    },
+    "computed_toc": [
+        {
+            "title": "Comment",
+            "level": 1,
+            "page": 0
+        },
+        {
+            "title": "metal-organic compounds",
+            "level": 1,
+            "page": 1
+        },
+        {
+            "title": "Experimental",
+            "level": 1,
+            "page": 1
+        },
+        {
+            "title": "Compound (I)",
+            "level": 4,
+            "page": 1
+        },
+        {
+            "title": "Data collection",
+            "level": 4,
+            "page": 2
+        },
+        {
+            "title": "Re®nement",
+            "level": 4,
+            "page": 2
+        },
+        {
+            "title": "Table 1",
+            "level": 4,
+            "page": 2
+        },
+        {
+            "title": "Compound (II)",
+            "level": 1,
+            "page": 2
+        },
+        {
+            "title": "Data collection",
+            "level": 4,
+            "page": 2
+        },
+        {
+            "title": "Re®nement",
+            "level": 4,
+            "page": 2
+        },
+        {
+            "title": "Table 4",
+            "level": 4,
+            "page": 2
+        },
+        {
+            "title": "References",
+            "level": 1,
+            "page": 2
+        },
+        {
+            "title": "metal-organic compounds",
+            "level": 1,
+            "page": 2
+        },
+        {
+            "title": "supporting information",
+            "level": 1,
+            "page": 3
+        },
+        {
+            "title": "Special details",
+            "level": 1,
+            "page": 4
+        },
+        {
+            "title": "(II) ",
+            "level": 1,
+            "page": 7
+        },
+        {
+            "title": "Special details",
+            "level": 1,
+            "page": 8
+        }
+    ]
+}
