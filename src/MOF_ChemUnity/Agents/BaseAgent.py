@@ -13,7 +13,7 @@ from langchain.chains.retrieval import create_retrieval_chain
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
+from MOF_ChemUnity.utils.DocProcessor import DocProcessor
 
 QA_PROMPT = (
     "Answer the user question using the information provided in the documents."

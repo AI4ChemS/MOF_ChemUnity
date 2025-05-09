@@ -52,14 +52,16 @@ class Application(BaseModel):
     
 class Synthesis(BaseModel):
     metal_precursor: str = Field(description="The name of the metal precursor(s) used in the synthesis")
+    organic_linker: str = Field(description="The name of the organic linker used in the MOF's synthesis")
     solvent: str = Field(description="The name of the solvent used in the synthesis. Include all relevant solvents and their ratios if provided.")
     temperature: str = Field(description = "The temperature at which the synthesis was conducted. Include the units as well.")
+    reaction_type: str = Field(description = "The general synthesis method used, such as solvothermal, hydrothermal, mechanochemical, etc. Include all types mentioned, in order.")
     reaction_time: str = Field(description = "The duration for which the synthesis reaction was carried out. Include units and correct formatting.")
     synthesis_procedure: str = Field(description = "A summarized step-by-step description of how the MOF was synthesized. Be as brief as you can without missing any key details.")
     additional_conditions: str = Field(description = "Any other experimental parameters mentioned, such as pH, pressure, additives, or special conditions. Be as brief as you can without missing any key details.")
     justification:str = Field(description = "All of the exact sentences that were used to obtain the knowledge and answer the user questions about the application and recommendation")
     def __str__(self):
-        return f"Metal Precursor: {self.metal_precursor}\nSolvent: {self.solvent}\nTemperature: {self.temperature}\nReaction Time: {self.reaction_time}\nSummarized Procedure: {self.synthesis_procedure}\nAdditional Conditions: {self.additional_conditions}\nExact Sentences: {self.justification}"
+        return f"Metal Precursor: {self.metal_precursor}\nOrganic Linker: {self.organic_linker}\nSolvent: {self.solvent}\nTemperature: {self.temperature}\nReaction Type: {self.reaction_type}\nReaction Time: {self.reaction_time}\nSummarized Procedure: {self.synthesis_procedure}\nAdditional Conditions: {self.additional_conditions}\nExact Sentences: {self.justification}"
 
 class ListApplications(BaseModel):
     app_list: List[Application]

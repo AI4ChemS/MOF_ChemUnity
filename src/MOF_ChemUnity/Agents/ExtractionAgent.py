@@ -7,9 +7,9 @@ from thefuzz import fuzz
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
-from src.MOF_ChemUnity.Agents.BaseAgent import BaseAgent
-from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
-from src.MOF_ChemUnity.utils.DataModels import Property, Verification, PropertyList
+from MOF_ChemUnity.Agents.BaseAgent import BaseAgent
+from MOF_ChemUnity.utils.DocProcessor import DocProcessor
+from MOF_ChemUnity.utils.DataModels import Property, Verification, PropertyList
 
 PROPERTIES = ["chemical formula", "density", "crystal system", "cell volume", "unit cell volume", "volume", "space group", "molecular weight", "material color", 
         "thermal stability", "decomposition temperature", "magnetic susceptibility", "surface area", "pore volume", "pore diameter", "porosity", "topology",

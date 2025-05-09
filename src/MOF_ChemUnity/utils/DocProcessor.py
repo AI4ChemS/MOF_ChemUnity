@@ -18,8 +18,8 @@ from langchain_community.document_loaders import (
 )
 
 import xml.etree.ElementTree as ET
-from src.MOF_ChemUnity.utils.XML_to_MD import TEI_Parser
-from src.MOF_ChemUnity.utils.XML_to_MD import Elsevier_Parser
+from MOF_ChemUnity.utils.XML_to_MD import TEI_Parser
+from MOF_ChemUnity.utils.XML_to_MD import Elsevier_Parser
 
 class DocProcessor:
     def __init__(
