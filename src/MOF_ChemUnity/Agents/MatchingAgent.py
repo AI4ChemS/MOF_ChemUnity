@@ -1,7 +1,7 @@
-from src.MOF_ChemUnity.utils.DataModels import MOFRefCode, MOFRefCodeList, RefCodeJustification
-from src.MOF_ChemUnity.Prompts.Matching_Prompts import MATCH_REFCODES, CHECK_JUSTIFICATION, RECHECK, MATCH_REFCODES_SHORT, CHECK_JUSTIFICATION_SHORT
-from src.MOF_ChemUnity.utils.DocProcessor import DocProcessor
-from src.MOF_ChemUnity.Agents.BaseAgent import BaseAgent
+from MOF_ChemUnity.utils.DataModels import MOFRefCode, MOFRefCodeList, RefCodeJustification
+from MOF_ChemUnity.Prompts.Matching_Prompts import MATCH_REFCODES, CHECK_JUSTIFICATION, RECHECK, MATCH_REFCODES_SHORT, CHECK_JUSTIFICATION_SHORT
+from MOF_ChemUnity.utils.DocProcessor import DocProcessor
+from MOF_ChemUnity.Agents.BaseAgent import BaseAgent
 
 from os import path
 from typing import List, Optional
