@@ -21,10 +21,6 @@ class Data_Prep:
     Markdown files are named by their DOI's - .xml files are now
     '''
 
-
-
-    import xml.etree.ElementTree as ET
-
     def doi_from_xml(self, file_path):
         """
         Extracts the DOI from an XML file, first attempting to extract it from the TEI namespace, 
@@ -76,7 +72,6 @@ class Data_Prep:
                 if file_name.endswith('.md'):
                     # Extract DOI from file name by replacing underscores with "/"
                     doi = file_name.rsplit('.', 1)[0].replace('_', '/')
-
                     # Extract file format from the file extension
                     file_format = file_name.rsplit('.', 1)[-1]
                     
