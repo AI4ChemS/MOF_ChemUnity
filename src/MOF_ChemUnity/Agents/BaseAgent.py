@@ -46,39 +46,39 @@ class BaseAgent:
         self,
         doc_path: str,
         processor: Optional[DocProcessor] = None,
-        store_vs=False,
-        store_folder: Optional[str] = None,  # This is the vs_destination
+        store_vs: bool = False,
+        store_folder: Optional[str] = None  # This is the vs_destination (root)
     ):
+        # Use provided processor or the default one
         if processor:
-            pages = processor.process(doc_path)
+            pages, vs_id = processor.process(doc_path)
         else:
-            pages = self.processor.process(doc_path)
+            pages, vs_id = self.processor.process(doc_path)
 
+        # Build the FAISS index from the documents
         faiss_index = FAISS.from_documents(pages, self.embeddings)
 
+        # If no need to store, just return the index
         if not store_vs:
             return faiss_index
 
-        # Extract filename without extension
-        file_name = os.path.splitext(os.path.basename(doc_path))[0]  # e.g., "ac8b00494.tei"
-
-        # Build the correct storage path
-        if store_folder:  # This is the user-provided vs_destination
+        # Construct the base directory for vector store
+        if store_folder:  # user-specified root
             base_vs_dir = os.path.join(store_folder, "vs")
         else:
             doc_dir = os.path.dirname(doc_path)
-            base_vs_dir = os.path.join(doc_dir, "..", "vs")  # One level up from doc
+            base_vs_dir = os.path.normpath(os.path.join(doc_dir, "..", "vs"))
 
-        store_folder = os.path.normpath(os.path.join(base_vs_dir, file_name))
+        # Final full path to store the index
+        final_store_path = os.path.join(base_vs_dir, vs_id)
+        os.makedirs(final_store_path, exist_ok=True)
 
-        # Make sure the directory exists
-        os.makedirs(store_folder, exist_ok=True)
-
-        # Save FAISS index
-        faiss_index.save_local(store_folder)
-        print(f"Saved vector store for {doc_path} in {store_folder}")
+        # Save the vector store
+        faiss_index.save_local(final_store_path)
+        print(f"Saved vector store for {doc_path} in {final_store_path}")
 
         return faiss_index
+
 
 
 

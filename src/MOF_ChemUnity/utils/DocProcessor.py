@@ -115,31 +115,23 @@ class DocProcessor:
     def process(
         self,
         file_name: str,
-    ) -> List[Document] | str:
-        
-        '''
-        The process function prepares the input file for vectore storage. 
-        This includes loading the file based off its location, and initially splitting the text using "load_and_split".
-        This will use a RecursiveCharacterTextSplitter to split a file up based off of its section headers.
-        Following this, irrelevant text is filtered out based off given "headers" that are irrelevant.
-        Lastly, the text is furhter split down using the CharacterTextSplitter.
-        '''
-
-        # Check file extension, assign appropriate loader, load and split text
+    ) -> tuple[List[Document], str]:
         extension = file_name.split(".")[-1].lower()
+        
+        # --- PDF ---
         if extension == "pdf":
             self.loader = PDFPlumberLoader(file_path=file_name, extract_images=False)
+            vs_id = os.path.splitext(os.path.basename(file_name))[0]
 
+        # --- Markdown ---
         elif extension == "md":
-            self.loader = UnstructuredMarkdownLoader(file_path = file_name)
-        
-        elif extension == "xml":
-            # if extension is .xml - we have to first convert the xml to a md file, then load it with the UnstructuredMarkdownLoader
+            self.loader = UnstructuredMarkdownLoader(file_path=file_name)
+            vs_id = os.path.splitext(os.path.basename(file_name))[0]
 
+        # --- XML ---
+        elif extension == "xml":
             if "/XML/" not in file_name:
                 print("Error: The input file is not located in a parent folder named 'XML'.")
-                print("Please ensure all XML files are organized in a folder named 'XML' with subdirectories as needed.")
-                print("All corresponding Markdown files will be placed in a similar structure under a folder named 'MD'.")
                 sys.exit(1)
 
             output_subdir = os.path.join(os.path.dirname(file_name), "Parsed_XML")
@@ -150,29 +142,29 @@ class DocProcessor:
                 root = tree.getroot()
 
                 namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
-
-                # Try extracting DOI from TEI namespace
                 idno_tag = root.find(".//tei:idno[@type='doi']", namespaces)
+
                 if idno_tag is not None:
                     print(f"Detected TEI XML format in '{file_name}'")
-
-                    # Extract and clean the DOI for safe filename
-                    doi = idno_tag.text.strip()
                     import re
+                    doi = idno_tag.text.strip()
                     doi_clean = re.sub(r'[^\w\-_.]', '_', doi)
-
                     md_file_location = os.path.join(output_subdir, f"{doi_clean}.md")
+                    vs_id = doi_clean  # ✅ use this for vector store
                     xml_processor = TEI_Parser()
                     xml_processor.xml_to_markdown(file_name, md_file_location)
                     print(f"Converted '{file_name}' to Markdown at '{md_file_location}'")
 
                 else:
-                    # Fallback to Elsevier logic
                     namespaces.update({'xocs': 'http://www.elsevier.com/xml/xocs/dtd'})
                     xocs_doi_tag = root.find(".//xocs:doi", namespaces)
                     if xocs_doi_tag is not None:
                         print(f"Detected Elsevier XML format in '{file_name}'")
-                        md_file_location = os.path.join(output_subdir, os.path.basename(file_name).replace(".xml", ".md"))
+                        md_file_location = os.path.join(
+                            output_subdir,
+                            os.path.basename(file_name).replace(".xml", ".md")
+                        )
+                        vs_id = os.path.splitext(os.path.basename(file_name))[0]  # fallback
                         xml_processor = Elsevier_Parser()
                         xml_processor.xml_to_markdown(file_name, md_file_location)
                         print(f"Converted '{file_name}' to Markdown at '{md_file_location}'")
@@ -186,34 +178,26 @@ class DocProcessor:
 
             self.loader = UnstructuredMarkdownLoader(file_path=md_file_location)
 
+        # --- Unsupported extension ---
         else:
             print("file is not supported")
             raise AssertionError()
-        
+
         self.pages = self.loader.load_and_split()
-        
-        # Filter documents using the provided "headers" as filter words
+
         try:
-            # Attempt to filter the documents
             sliced_pages = self.filter_documents(self.pages, self.headers)
-            
-            # Check if the entire page_content got filtered out - this will be the case if a filter word like "references" appears first in the document
             if not sliced_pages[0].page_content.strip():
-                print("Filtering out irrelvant sections resulted in empty page_content. Unfiltered pages will be used instead.")
+                print("Filtering removed all content. Reverting to unfiltered.")
                 sliced_pages = self.pages
         except Exception as e:
-            # Handle potential exceptions from the filter_documents method
-            print(f"An error occurred while filtering documents: {e}")
-            sliced_pages = self.pages  # Fall back to original pages in case of an exception
+            print(f"Filter error: {e}")
+            sliced_pages = self.pages
 
-        # If a chunk size is provided, split the documents up further
-        text_splitter = CharacterTextSplitter(
-            chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap
-        ) 
-
+        text_splitter = CharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
         sliced_pages = text_splitter.split_documents(sliced_pages)
 
-        return sliced_pages
+        return sliced_pages, vs_id  # ✅ return both
 
 
 
