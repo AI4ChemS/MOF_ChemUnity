@@ -134,64 +134,58 @@ class DocProcessor:
             self.loader = UnstructuredMarkdownLoader(file_path = file_name)
         
         elif extension == "xml":
-        # if extension is .xml - we have to first convert the xml to a md file, then load it with the UnstructuredMarkdownLoader
+            # if extension is .xml - we have to first convert the xml to a md file, then load it with the UnstructuredMarkdownLoader
 
-            # Check if the input file path contains the expected 'XML' folder
             if "/XML/" not in file_name:
                 print("Error: The input file is not located in a parent folder named 'XML'.")
                 print("Please ensure all XML files are organized in a folder named 'XML' with subdirectories as needed.")
                 print("All corresponding Markdown files will be placed in a similar structure under a folder named 'MD'.")
-                sys.exit(1)  # Exit the program with an error code
+                sys.exit(1)
 
-            # Dynamically create the output directory for Markdown files
-            # Make Parsed_XML a subfolder in the same directory as the original file
             output_subdir = os.path.join(os.path.dirname(file_name), "Parsed_XML")
             os.makedirs(output_subdir, exist_ok=True)
 
-            # Construct the new path with the original filename inside Parsed_XML
-            md_base_path = os.path.join(output_subdir, os.path.basename(file_name))
-
-            # Parse the XML file to check for namespaces
             try:
                 tree = ET.parse(file_name)
                 root = tree.getroot()
 
-                # Define the TEI and Elsevier namespaces
                 namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
-                
-                # Try extracting DOI from the TEI namespace
+
+                # Try extracting DOI from TEI namespace
                 idno_tag = root.find(".//tei:idno[@type='doi']", namespaces)
                 if idno_tag is not None:
-                    # If TEI namespace is found, use the TEI parser
                     print(f"Detected TEI XML format in '{file_name}'")
-                    md_file_location = os.path.join(output_subdir, os.path.basename(file_name).replace(".tei.xml", ".md"))
+
+                    # Extract and clean the DOI for safe filename
+                    doi = idno_tag.text.strip()
+                    import re
+                    doi_clean = re.sub(r'[^\w\-_.]', '_', doi)
+
+                    md_file_location = os.path.join(output_subdir, f"{doi_clean}.md")
                     xml_processor = TEI_Parser()
                     xml_processor.xml_to_markdown(file_name, md_file_location)
                     print(f"Converted '{file_name}' to Markdown at '{md_file_location}'")
-                
+
                 else:
-                    # If no DOI in TEI, try the Elsevier namespace
-                    namespaces.update({'xocs': 'http://www.elsevier.com/xml/xocs/dtd'})  # Add the Elsevier namespace
+                    # Fallback to Elsevier logic
+                    namespaces.update({'xocs': 'http://www.elsevier.com/xml/xocs/dtd'})
                     xocs_doi_tag = root.find(".//xocs:doi", namespaces)
                     if xocs_doi_tag is not None:
-                        # If Elsevier namespace is found, use the Elsevier parser
                         print(f"Detected Elsevier XML format in '{file_name}'")
                         md_file_location = os.path.join(output_subdir, os.path.basename(file_name).replace(".xml", ".md"))
-                        xml_processor = Elsevier_Parser()  # Assume Elsevier_Parser is defined elsewhere
+                        xml_processor = Elsevier_Parser()
                         xml_processor.xml_to_markdown(file_name, md_file_location)
                         print(f"Converted '{file_name}' to Markdown at '{md_file_location}'")
-
                     else:
-                        # If neither namespace is found
                         print(f"Error: No recognized DOI tag found in '{file_name}'")
-                        sys.exit(1)  # Exit with an error code if neither namespace is found
+                        sys.exit(1)
 
             except Exception as e:
                 print(f"Error processing the XML file '{file_name}': {e}")
                 sys.exit(1)
 
-            # Now we can instantiate the UnstructuredMarkdownLoader
             self.loader = UnstructuredMarkdownLoader(file_path=md_file_location)
+
         else:
             print("file is not supported")
             raise AssertionError()
