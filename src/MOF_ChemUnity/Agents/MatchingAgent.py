@@ -37,14 +37,14 @@ class MatchingAgent(BaseAgent):
         return result
 
     # This is the main function of the class, generating the matching agent response
-    def agent_response(self, csd_data, paper_file, read_prompt=MATCH_REFCODES, vector_store=None, ret_docs = False, store_vs = True):
+    def agent_response(self, csd_data, paper_file, read_prompt=MATCH_REFCODES, vector_store=None, ret_docs = False, store_vs = True, vs_destination=None):
         # Set up vector store
         if vector_store:
             print('Loading Pre-Existing Vector Store')
             vs = FAISS.load_local(vector_store, OpenAIEmbeddings(model = 'text-embedding-ada-002'), allow_dangerous_deserialization = True)
         else:
-            vs = self.create_vector_store(paper_file, store_vs=store_vs)   
-        
+            vs = self.create_vector_store(paper_file, store_vs=store_vs, store_folder=vs_destination)
+  
         # Define Parsers
         single_parser = self.Parse_Output(MOFRefCode)
 

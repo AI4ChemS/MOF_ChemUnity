@@ -47,7 +47,7 @@ class BaseAgent:
         doc_path: str,
         processor: Optional[DocProcessor] = None,
         store_vs=False,
-        store_folder: Optional[str] = None,
+        store_folder: Optional[str] = None,  # This is the vs_destination
     ):
         if processor:
             pages = processor.process(doc_path)
@@ -59,24 +59,28 @@ class BaseAgent:
         if not store_vs:
             return faiss_index
 
-        # Generate the storage folder path
-        file_name = os.path.basename(doc_path).rsplit(".", 1)[0]
-        if not store_folder:
-            dirn = os.path.dirname(doc_path).rsplit("/", 1)[0]
-            store_folder = os.path.join(dirn, "vs", file_name)
+        # Extract filename without extension
+        file_name = os.path.splitext(os.path.basename(doc_path))[0]  # e.g., "ac8b00494.tei"
 
-        # Ensure the folder exists
-        if not os.path.exists(store_folder):
-            os.makedirs(store_folder)
+        # Build the correct storage path
+        if store_folder:  # This is the user-provided vs_destination
+            base_vs_dir = os.path.join(store_folder, "vs")
+        else:
+            doc_dir = os.path.dirname(doc_path)
+            base_vs_dir = os.path.join(doc_dir, "..", "vs")  # One level up from doc
 
-        # Save the vector store
+        store_folder = os.path.normpath(os.path.join(base_vs_dir, file_name))
+
+        # Make sure the directory exists
+        os.makedirs(store_folder, exist_ok=True)
+
+        # Save FAISS index
         faiss_index.save_local(store_folder)
-
-        print(
-            f"Saved vector store for {doc_path} in {store_folder}"
-        )
+        print(f"Saved vector store for {doc_path} in {store_folder}")
 
         return faiss_index
+
+
 
     def RAG_Chain_Output(
         self,
