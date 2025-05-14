@@ -144,9 +144,12 @@ class DocProcessor:
                 sys.exit(1)  # Exit the program with an error code
 
             # Dynamically create the output directory for Markdown files
-            md_base_dir = file_name.replace("/XML/", "/MD/")  # Replace the 'XML' base directory with 'MD'
-            output_subdir = os.path.dirname(md_base_dir)  # Extract the subdirectory path for the output
-            os.makedirs(output_subdir, exist_ok=True)  # Create the directory only if it doesn't already exist
+            # Make Parsed_XML a subfolder in the same directory as the original file
+            output_subdir = os.path.join(os.path.dirname(file_name), "Parsed_XML")
+            os.makedirs(output_subdir, exist_ok=True)
+
+            # Construct the new path with the original filename inside Parsed_XML
+            md_base_path = os.path.join(output_subdir, os.path.basename(file_name))
 
             # Parse the XML file to check for namespaces
             try:
