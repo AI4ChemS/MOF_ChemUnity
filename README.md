@@ -87,7 +87,7 @@ note = {},
 We do not collect any user information in this work. You must use your own OpenAI API key and we do not store nor see any inputs or outputs.
 
 # Full Data Availability
-For copyright reasons, the complete dataset is not hosted. Please contact [mohamad.moosavi@mail.utoronto.ca](mohamad.moosavi@mail.utoronto.ca) for the full data and project collaborations.
+For copyright reasons, the complete dataset is not hosted. Please contact the project supervisor for the full data and project collaborations.
 
 # Credits
 This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) project template.
