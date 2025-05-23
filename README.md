@@ -8,6 +8,22 @@ MOF-ChemUnity uses Neo4J as the graph database engine. Installation instructions
 pip install neo4j
 ```
 
+# Installation
+To keep your local Python environment clean, it is recommended that you create a new environment before installing this package. You can use [virtualenv](https://virtualenv.pypa.io/en/latest/) to create the environment then activate it.
+
+```bash
+virtualenv chemunity_env
+source chemunity_env/bin/activate
+```
+
+Once you have activate the virtual environment, you simply use `pip` to install this package.
+
+```bash
+pip install mof-chemunity
+```
+
+Whenever you intend to use the classes and functions in this package, ensure that you have your virtual environment in which you have installed this package activated!
+
 # Usage
 Most users who are interested in querying the knowledge graph can simply import MOF-ChemUnity to their local Neo4J engine then use the `QueryAgent`. In this repository, you can find sample data in this [folder](https://github.com/AI4ChemS/MOF_ChemUnity/tree/main/src/Examples/KG_Data/) as CSV files. Additionally, you can use [`neo4j_import.py`](https://github.com/AI4ChemS/MOF_ChemUnity/tree/main/src/KnowledgeGraph/neo4j_import.py) to help import MOF-ChemUnity to your local instance of Neo4J.
 
