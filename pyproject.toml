@@ -1,0 +1,55 @@
+[build-system]                    # PEP 517: tell build front-ends how to build
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PEP 621 project metadata
+# ──────────────────────────────────────────────────────────────────────────────
+[project]
+name = "mof-chemunity"                # must be unique on PyPI
+version = "0.1.0"                 # or use setuptools-scm later
+description = "LLM workflows to create and query the MOF ChemUnity knowledge graph"       # single-line summary
+readme = {file = "docs/README.md", content-type = "text/markdown"}
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+authors = [
+  {name = "Amro Aswad", email = "amro.aswad@mail.utoronto.ca"},
+  {name = "Thomas Pruyn", email = "thomas.pruyn@mail.utoronto.ca"},
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+# Runtime dependencies (one per line)
+dynamic = ["dependencies"]
+
+
+# PyPI sidebar links
+[project.urls]
+Homepage = "https://github.com/AI4ChemS/MOF_ChemUnity"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Setuptools-specific configuration (src-layout discovery, package data, …)
+# ──────────────────────────────────────────────────────────────────────────────
+[tool.setuptools]
+package-dir = {"" = "src"}        # ← the src-layout directive
+include-package-data = true       # allow MANIFEST.in & package-data to work
+
+[tool.setuptools.packages.find]
+where    = ["src"]
+exclude  = ["Examples*", "KnowledgeGraph*", "Cross_Document_Linking*", "ChatGPT Comparison*", "info*"]          # keep notebooks out of the wheel
+
+# 3. Data files to *exclude* from wheels (the notebooks)
+[tool.setuptools.exclude-package-data]
+"*" = ["*.ipynb", "*.csv"]
+
+# 4. Source-distribution (sdist) pruning – keep notebooks out of the .tar.gz too
+[tool.setuptools.sdist]
+exclude = ["**/*.ipynb", "**/*.csv", "**/*.pkl", "**/*.faiss", "**/*.pdf", "**/*.xml",]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
