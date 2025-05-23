@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/AmroAswad/MOF_ChemUnity
+    $ git clone git://github.com/AI4ChemS/MOF_ChemUnity
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/AmroAswad/MOF_ChemUnity/tarball/master
+    $ curl -OJL https://github.com/AI4ChemS/MOF_ChemUnity/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,4 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/AmroAswad/MOF_ChemUnity
-.. _tarball: https://github.com/AmroAswad/MOF_ChemUnity/tarball/master
+.. _Github repo: https://github.com/AI4ChemS/MOF_ChemUnity
