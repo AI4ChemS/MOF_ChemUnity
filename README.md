@@ -1,12 +1,6 @@
-# MOF_ChemUnity
+# MOF-ChemUnity 
+
 Knowledge graph database containing computational and experimental information for more than 15,000 metal-organic frameworks developed using large language models. For more details, please refer to our paper
-
-# Prerequisites
-MOF-ChemUnity uses Neo4J as the graph database engine. Installation instructions can be found [here](https://neo4j.com/pricing/). If interested in using python, please install the Neo4J python driver using
-
-```bash
-pip install neo4j
-```
 
 # Installation
 To keep your local Python environment clean, it is recommended that you create a new environment before installing this package. You can use [virtualenv](https://virtualenv.pypa.io/en/latest/) to create the environment then activate it.
@@ -14,6 +8,13 @@ To keep your local Python environment clean, it is recommended that you create a
 ```bash
 virtualenv chemunity_env
 source chemunity_env/bin/activate
+```
+
+## Prerequisites
+MOF-ChemUnity uses Neo4J as the graph database engine. Installation instructions can be found [here](https://neo4j.com/pricing/). If interested in using python, please install the Neo4J python driver using
+
+```bash
+pip install neo4j
 ```
 
 Once you have activate the virtual environment, you simply use `pip` to install this package.
