@@ -105,7 +105,18 @@ We do not collect any user information in this work. You must use your own OpenA
 # Full Data Availability
 For copyright reasons, the complete dataset is not hosted. Please contact the project supervisor for the full data and project collaborations.
 
-# Credits
-This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) project template.
+## License
 
+This repository uses a dual-license model:
 
+- **Code** is licensed under the [MIT License](LICENSE_CODE).
+- **Non-code content** (e.g., datasets, figures, documents, notebooks, and text in this repository) is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE_DATA).
+
+> 🚫 **Commercial use is not permitted without prior written consent.**  
+> Please contact [mohamad.moosavi@utoronto.ca] for inquiries.
+
+## Contact
+
+For questions, collaborations, or commercial licensing, reach out to:
+
+📧 [mohamad.moosavi@utoronto.ca]
