@@ -17,10 +17,25 @@ MOF-ChemUnity uses Neo4J as the graph database engine. Installation instructions
 pip install neo4j
 ```
 
-Once you have activate the virtual environment, you simply use `pip` to install this package.
+Once you have activate the virtual environment, you can install MOF-ChemUnity agents using the following commands.
+
+First, clone the github repository to a local folder
+```bash
+git clone https://github.com/AI4ChemS/MOF_ChemUnity.git
+cd MOF_ChemUnity
+```
+
+Then, you need to upgrade the build tools and build the package wheel (whl)
+```bash
+python -m pip install --upgrade pip setuptools wheel build
+
+python -m build 
+```
+
+finally, the package can be installed using the following command
 
 ```bash
-pip install mof-chemunity
+pip install dist/*.whl 
 ```
 
 Whenever you intend to use the classes and functions in this package, ensure that you have your virtual environment in which you have installed this package activated!
