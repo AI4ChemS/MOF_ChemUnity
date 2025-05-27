@@ -10,11 +10,11 @@ NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 # ========== FILE PATHS ==========
-MATCHING_CSV = "src/Examples/KG_Data/matching.csv"
-EXPERIMENTAL_CSV = "src/Examples/KG_Data/filtered_props.csv"
-WATER_CSV = "src/Examples/KG_Data/ws.csv"
-APPLICATIONS_CSV = "src/Examples/KG_Data/applications.csv"
-SYNTHESIS_CSV = "src/Examples/KG_Data/synthesis.csv"
+MATCHING_CSV = "Untracked/full_graph/matching_results.csv"
+EXPERIMENTAL_CSV = "Untracked/full_graph/filtered_properties_v4.csv"
+WATER_CSV = "Untracked/full_graph/water_stability_v1.csv"
+APPLICATIONS_CSV = "Untracked/full_graph/applications_filtered_v4.csv"
+SYNTHESIS_CSV = "Untracked/full_graph/synthesis_extractions.csv"
 DESCRIPTOR_CSV = "src/Examples/KG_Data/descriptors.csv"
 COMP_PROP_CSV = "src/Examples/KG_Data/computational_properties.csv"
 
@@ -76,6 +76,7 @@ def import_experimental_properties(session, csv_path):
             r.units = row.Units,
             r.condition = row.Condition,
             r.summary = row.Summary,
+            r.justification = row.Justification,
             r.reference = row.Reference
     """
     batch_run(session, query, rows)
@@ -91,7 +92,7 @@ def import_applications(session):
         MERGE (m)-[r:has_application]->(a)
         SET r.recommendation = row.Recommendation,
             r.justification = row.Justification,
-            r.source = row.Source
+            r.reference = row.Source
     """
     batch_run(session, query, rows)
 
@@ -128,7 +129,7 @@ def import_computational_properties(session, csv_path, add_descriptor_label=Fals
         ref_col = "name"
         df = df[df[ref_col].notna() & ~df[ref_col].str.lower().isin(["not provided", "not applicable"])]
     else:
-        ref_col = "CSD code"  # <- explicitly correct based on original script
+        ref_col = "CSD code"
 
     for col in df.columns:
         if col == ref_col:
@@ -152,7 +153,6 @@ def import_computational_properties(session, csv_path, add_descriptor_label=Fals
                 SET r.value = row.value
             """
             batch_run(session, query, rows)
-
 
 def print_graph_stats(session):
     for label in ["MOF", "Property", "Application", "Reference", "MOF_Name"]:
