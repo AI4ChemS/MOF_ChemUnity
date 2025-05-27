@@ -12,7 +12,7 @@ In this work, Chain-of-Verification (CoV) from Ansari et al. 2024 is implemented
 The extraction methodology for water stability is also shown in this [notebook](https://github.com/AI4ChemS/MOF_ChemUnity/tree/main/src/ChemUnity_Extraction.ipynb).
 
 ### Benchmark Results
-The results from the extraction can be found [here](https://github.com/AI4ChemS/MOF_ChemUnity/tree/main/tests/water_stability_benchmark/eunomia_edit5.csv). Additionally, the confusion matrix below shows that our implementation of CoV acheives similar performance to Ansari et al. 2024. 
+The results from the extraction can be found [here](https://github.com/AI4ChemS/MOF_ChemUnity/tree/main/tests/water_stability_benchmark/water_stability_Ansari_benchmark_results.csv). Additionally, the confusion matrix below shows that our implementation of CoV acheives similar performance to Ansari et al. 2024. 
 
 <p align="center">
   <img width="490" alt="New_eunomia_benchmark" src="https://github.com/user-attachments/assets/3ef71ee8-cabf-4b98-b6c4-458ab689e279" />
