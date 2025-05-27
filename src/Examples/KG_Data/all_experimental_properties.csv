@@ -1,0 +1,111 @@
+,MOF Name,Ref Code,Property,Value,Units,Condition,Summary,Reference
+0,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,crystal system,trigonal,N/A,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i
+1,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,space group,P3¯c1,N/A,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i
+2,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Unit Cell Dimensions,"a = 13.5274(5), c = 19.2645(6)",Å,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i
+3,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,cell volume,3052.9(3),Å3,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i
+4,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Z (Number of Formula Units per Unit Cell),2,N/A,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i
+5,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,density,2.436,g cm-3,N/A,Dc/g cm23 2.436,10.1039/a700472i
+6,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Formula Weight,2239.15,N/A,N/A,Formula C18Fe8H66N6O62P14 Atom x y z M 2239.15,10.1039/a700472i
+7,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,thermal stability,27.7,%,Between room temperature and 800 °C,"The observed total weight loss of 27.7% between room temperature and 800 °C agrees well with that calculated for the loss of 15 H2O and 3 DABCO molecules (27.1%), as indicated from equation (1).",10.1039/a700472i
+8,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Isomer Shift,0.45,mm s-1,300 K,"The obtained parameters are δ (isomer shift) = 0.45 mm s21, ∆EQ (quadrupole splitting) = 0.35 mm s21 and Γ (full width at halfheight) = 0.47 mm s21.",10.1039/a700472i
+9,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Quadrupole Splitting,0.35,mm s-1,300 K,"The obtained parameters are δ (isomer shift) = 0.45 mm s21, ∆EQ (quadrupole splitting) = 0.35 mm s21 and Γ (full width at halfheight) = 0.47 mm s21.",10.1039/a700472i
+10,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Full Width at Half Maximum,0.47,mm s-1,300 K,"The obtained parameters are δ (isomer shift) = 0.45 mm s21, ∆EQ (quadrupole splitting) = 0.35 mm s21 and Γ (full width at halfheight) = 0.47 mm s21.",10.1039/a700472i
+11,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Synthesis Temperature,180,°C,N/A,"The reaction of FeCl3?6H2O (2.5 mmol), 1,4-diazabicyclo[2.2.2]octane (DABCO) (7.5 mmol), H3PO4 (7.5 mmol), n-butanol (3 cm3) and water (7 cm3) at 180 8C for 3 d followed by slow cooling at 10 8C h21 to room temperature produced [HN(CH2CH2)3- NH]3[Fe8(HPO4)12(PO4)2(H2O)6] 1 as colourless crystals and a small amount of a green material.",10.1039/a700472i
+12,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Molecular Formula,C15H14AgF3N2O3S9,N/A,N/A,Molecular formula C18H22ClCuN2O5S8 C15H14AgF3N2O3S9 C14H14Cl2CuN2S8,10.1039/a804945i
+13,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,crystal system,Triclinic,N/A,N/A,Crystal system Monoclinic Triclinic Triclinic,10.1039/a804945i
+14,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,space group,P1,N/A,N/A,Space group P21/c P1 P1¯,10.1039/a804945i
+15,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Unit Cell Parameters a,7.946,Å,N/A,a/Å 9.979(3) 7.946(3) 10.487(2),10.1039/a804945i
+16,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Unit Cell Parameters b,11.202,Å,N/A,b/Å 25.785(4) 11.202(4) 13.620(6),10.1039/a804945i
+17,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Unit Cell Parameters c,7.707,Å,N/A,c/Å 11.086(4) 7.707(3) 9.908(8),10.1039/a804945i
+18,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Unit Cell Angle α,92.95,degrees,N/A,α/8 92.95(3) 107.95(5),10.1039/a804945i
+19,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Unit Cell Angle β,109.25,degrees,N/A,β/8 92.51(3) 109.25(2) 90.54(5),10.1039/a804945i
+20,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Unit Cell Angle γ,74.99,degrees,N/A,γ/8 93.28(3) 74.99(3),10.1039/a804945i
+21,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,cell volume,644.8,Å³,N/A,U/Å3 2849(1) 644.8(4) 1296(1),10.1039/a804945i
+22,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,density,1.864,g cm⁻³,N/A,Dc/g cm23 1.636 1.864 1.540,10.1039/a804945i
+23,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Crystal Size,0.30 × 0.20 × 0.20,mm,N/A,Crystal size/mm 0.20 × 0.20 × 0.20 0.30 × 0.20 × 0.20 0.20 × 0.20 × 0.15,10.1039/a804945i
+24,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,F(000),360.0,N/A,N/A,F(000) 1432.0 360.0 606.0,10.1039/a804945i
+25,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Absorption Coefficient,15.52,cm⁻¹,N/A,µ(Mo-Kα)/cm21 14.79 15.52 16.96,10.1039/a804945i
+26,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Number of Reflections Measured,3181,N/A,N/A,No. reflections measured 7070 3181 6278,10.1039/a804945i
+27,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Number of Observations,2710,N/A,[I > 3.00σ(I)],No. observations 2963 2710 2733 [I > 2.50σ(I)] [I > 3.00σ(I)] [I > 3.00σ(I)],10.1039/a804945i
+28,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Number of Parameters,298,N/A,N/A,No. parameters 291 298 247,10.1039/a804945i
+29,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,R Factor,0.027,N/A,N/A,Ra 0.092 0.027 0.053,10.1039/a804945i
+30,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,R' Factor,0.034,N/A,N/A,R9 b 0.101 0.034 0.062,10.1039/a804945i
+31,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Goodness of Fit,1.52,N/A,N/A,Goodness of fit 2.54 1.52 1.39,10.1039/a804945i
+32,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Length Ag–S(1),2.618,Å,N/A,Ag–S(1) 2.618(1),10.1039/a804945i
+33,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Length Ag–N(1),2.410,Å,N/A,Ag–N(1) 2.410(5),10.1039/a804945i
+34,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Length Ag–N(2),2.277,Å,N/A,Ag–N(2) 2.277(5),10.1039/a804945i
+35,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Length Ag–S(2),2.879,Å,N/A,Ag–S(2) 2.879(2),10.1039/a804945i
+36,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Length Ag–O(1),2.537,Å,N/A,Ag–O(1) 2.537(6),10.1039/a804945i
+37,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Length C(5)–C(6),1.334,Å,N/A,C(5)–C(6) 1.334(6),10.1039/a804945i
+38,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle S(1)–Ag–S(2),74.11,degrees,N/A,S(1)–Ag–S(2) 74.11(4),10.1039/a804945i
+39,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle S(1)–Ag–O(1),118.7,degrees,N/A,S(1)–Ag–O(1) 118.7(2),10.1039/a804945i
+40,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle S(1)–Ag–N(1),94.9,degrees,N/A,S(1)–Ag–N(1) 94.9(1),10.1039/a804945i
+41,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle S(1)–Ag–N(2),154.8,degrees,N/A,S(1)–Ag–N(2) 154.8(1),10.1039/a804945i
+42,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle S(2)–Ag–O(1),96.1,degrees,N/A,S(2)–Ag–O(1) 96.1(2),10.1039/a804945i
+43,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle S(2)–Ag–N(1),162.7,degrees,N/A,S(2)–Ag–N(1) 162.7(2),10.1039/a804945i
+44,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle S(2)–Ag–N(2),93.6,degrees,N/A,S(2)–Ag–N(2) 93.6(2),10.1039/a804945i
+45,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle O(1)–Ag–N(1),101.0,degrees,N/A,O(1)–Ag–N(1) 101.0(2),10.1039/a804945i
+46,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle N(1)–Ag–N(2),91.1,degrees,N/A,N(1)–Ag–N(2) 91.1(2),10.1039/a804945i
+47,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Bond Angle O(1)–Ag–N(2),83.8,degrees,N/A,O(1)–Ag–N(2) 83.8(2),10.1039/a804945i
+48,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,ESR g Value,2.007,N/A,Room temperature,The ESR spectrum of complex 2 consists of a broad asymmetric line at g = 2.007.,10.1039/a804945i
+49,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Spin Density,0.5,%,Room temperature,The ESR spectrum of complex 2 consists of a broad asymmetric line at g = 2.007. Upon exposure to air the intensity of the signal decreases and the linewidth increases while the g value remains virtually constant.,10.1039/a804945i
+50,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Conductivity,Non-conductive,N/A,Room temperature,The complex is found to be an insulator even after long exposure to air.,10.1039/a804945i
+51,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,UV/VIS Absorption,"430, 520",nm,N/A,"2 1419 430, 520 2.007 0.5 Non-conductive * 2.007 0.5 Non-conductive",10.1039/a804945i
+52,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Molecular Formula,C9H12CaO10,none,none,The molecular formula of the calcium trimesate synthesized by one-pot self-assembly reaction is found as C9H12CaO10.,10.1016/j.molstruc.2017.11.128
+53,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,molecular weight,320.27,g/mol,none,The molecular weight is 320.27 g/mol.,10.1016/j.molstruc.2017.11.128
+54,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Asymmetric Unit Composition,"Ca (II) ion, trimesic acid ligand, four coordinated water molecules",none,none,"The asymmetric unit contains a Ca (II) ion, a trimesic acid ligand and four coordinated water molecules.",10.1016/j.molstruc.2017.11.128
+55,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Coordination Geometry,Ca1 atom coordinated to three oxygen atoms from trimesic acid ligands and four oxygen atoms from water molecule,none,none,The Ca1 atom is coordinated to three oxygen atoms coming from three different trimesic acid ligands and four oxygen atoms coming from the water molecule.,10.1016/j.molstruc.2017.11.128
+56,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Coordination Mode,μ2-bridge,none,none,Trimesic acid ligand has μ2-bridge coordination mode.,10.1016/j.molstruc.2017.11.128
+57,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Ca-Ca Distance,"5.991, 9.632, 11.280",Å,none,"The distances between neighboring Ca (II) ions are 5.991 Å, 9.632 Å and 11.280 Å.",10.1016/j.molstruc.2017.11.128
+58,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Ca-Owater Bond Lengths,2.3623 to 2.4778,Å,none,Ca-Owater bond lengths vary between 2.3623 (10) and 2.4778 (11) Å.,10.1016/j.molstruc.2017.11.128
+59,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Ca-Ocarboxyl Bond Lengths,2.3214 to 2.4666,Å,none,Ca-Ocarboxyl bond lengths vary between 2.3214 (9) and 2.4666 (10) Å.,10.1016/j.molstruc.2017.11.128
+60,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Hydrogen Storage Capacity,0.066,%,"one-pot self-assembly reaction, 77 K, 1 bar pressure",Experimental hydrogen storage capacity of calcium trimesate was found to be 0.066% in one-pot self-assembly reaction.,10.1016/j.molstruc.2017.11.128
+61,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,surface area,1.36,m2/g,none,The BET surface area of calcium trimesate synthesized by the one-pot self-assembly reaction is 1.36 m2/g.,10.1016/j.molstruc.2017.11.128
+62,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,crystal system,Monoclinic,none,none,Crystal system | Monoclinic,10.1016/j.molstruc.2017.11.128
+63,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,space group,P21/c,none,none,Space group | P21/c,10.1016/j.molstruc.2017.11.128
+64,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Color,colorless,none,none,Color | colorless,10.1016/j.molstruc.2017.11.128
+65,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Unit Cell Dimensions,"a = 10.1977, b = 16.4581, c = 7.4796, β = 102.312","Å, °",none,a (Å) | 10.1977 (7) | b (Å) | 16.4581 (12) | c (Å) | 7.4796 (5) | β (º) | 102.312 (2),10.1016/j.molstruc.2017.11.128
+66,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,chemical formula,C23.5H28.5EuN2.5O10.5,None,None,"""empirical formula C23.5H28.5EuN2.5O10.5""",10.1021/acs.analchem.8b00494
+67,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Formula Weight,665.95,None,None,"""formula weight 665.95""",10.1021/acs.analchem.8b00494
+68,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,crystal system,Monoclinic,None,None,"""crystal system monoclinic""",10.1021/acs.analchem.8b00494
+69,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,space group,C2/c,None,None,"""space group C2/c""",10.1021/acs.analchem.8b00494
+70,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Unit Cell Parameter a,28.220,Å,None,"""a/Å 28.220 (5)""",10.1021/acs.analchem.8b00494
+71,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Unit Cell Parameter b,14.540,Å,None,"""b/Å 14.540 (5)""",10.1021/acs.analchem.8b00494
+72,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Unit Cell Parameter c,13.394,Å,None,"""c/Å 13.394 (5)""",10.1021/acs.analchem.8b00494
+73,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Unit Cell Parameter β,100.648,Degrees,None,"""Β (deg) 100.648 (5)""",10.1021/acs.analchem.8b00494
+74,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,cell volume,5401,Å3,None,"""volume (Å3) 5401 (2)""",10.1021/acs.analchem.8b00494
+75,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,density,1.504,g cm–3,None,"""D c (g cm–3) 1.504""",10.1021/acs.analchem.8b00494
+76,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Temperature,293,K,None,"""T (K) 293 (2)""",10.1021/acs.analchem.8b00494
+77,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Wavelength,0.71073,Å,None,"""λ (Mo Kα) (Å) 0.71073""",10.1021/acs.analchem.8b00494
+78,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Reflections Collected,4749,None,None,"""reflections collected 4749""",10.1021/acs.analchem.8b00494
+79,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Absorption Coefficient,2.370,mm–1,None,"""μ (mm–1) 2.370""",10.1021/acs.analchem.8b00494
+80,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,F(000),2432.0,None,None,"""F(000) 2432.0""",10.1021/acs.analchem.8b00494
+81,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Final R1 (I > 2σ(I)),0.0449,None,None,"""final R 1 , wR 2 [I > 2σ(I)] 0.0449, 0.1084""",10.1021/acs.analchem.8b00494
+82,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Final wR2 (I > 2σ(I)),0.1084,None,None,"""final R 1 , wR 2 [I > 2σ(I)] 0.0449, 0.1084""",10.1021/acs.analchem.8b00494
+83,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Final R1 (all data),0.0491,None,None,"""final R 1 , wR 2 (all data) 0.0491, 0.1119""",10.1021/acs.analchem.8b00494
+84,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Final wR2 (all data),0.1119,None,None,"""final R 1 , wR 2 (all data) 0.0491, 0.1119""",10.1021/acs.analchem.8b00494
+85,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Goodness of Fit on F2,1.074,None,None,"""GOF on F 2 1.074""",10.1021/acs.analchem.8b00494
+86,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,UV/vis Absorption,216,nm,In ACN,"""UV/vis [ACN, λ]: 216 nm.""",10.1021/acs.analchem.8b00494
+87,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,IR Absorption,"3471, 3065, 2947, 1696, 1393, 1267, 1168, 1009, 873, 785, 693",cm–1,KBr,"""IR (KBr, cm–1): 3471 (m), 3065 (w), 2947 (m), 1696 (s), 1393 (s), 1267 (m), 1168 (w), 1009 (w), 873 (w), 785 (m), 693 (m).""",10.1021/acs.analchem.8b00494
+88,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,chemical formula,C23.5H28.5TbN2.5O10.5,None,Not specified,"""empirical formula C23.5H28.5TbN2.5O10.5""",10.1021/acs.analchem.8b00494
+89,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Formula Weight,672.91,None,Not specified,"""formula weight 672.91""",10.1021/acs.analchem.8b00494
+90,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,crystal system,Monoclinic,None,Not specified,"""crystal system monoclinic""",10.1021/acs.analchem.8b00494
+91,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,space group,C2/c,None,Not specified,"""space group C2/c""",10.1021/acs.analchem.8b00494
+92,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Unit Cell Parameter a,28.614,Å,Not specified,"""a/Å 28.614 (5)""",10.1021/acs.analchem.8b00494
+93,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Unit Cell Parameter b,14.383,Å,Not specified,"""b/Å 14.383 (5)""",10.1021/acs.analchem.8b00494
+94,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Unit Cell Parameter c,13.644,Å,Not specified,"""c/Å 13.644 (5)""",10.1021/acs.analchem.8b00494
+95,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Unit Cell Angle β,97.284,Degrees,Not specified,"""Β (deg) 97.284 (5)""",10.1021/acs.analchem.8b00494
+96,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,cell volume,5570,Å3,Not specified,"""volume (Å3) 5570 (2)""",10.1021/acs.analchem.8b00494
+97,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,density,1.475,g cm–3,Not specified,"""D c (g cm–3) 1.475""",10.1021/acs.analchem.8b00494
+98,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Temperature,293,K,Not specified,"""T (K) 293 (2)""",10.1021/acs.analchem.8b00494
+99,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Wavelength,0.71073,Å,Not specified,"""λ (Mo Kα) (Å) 0.71073""",10.1021/acs.analchem.8b00494
+100,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Reflections Collected,4901,None,Not specified,"""reflections collected 4901""",10.1021/acs.analchem.8b00494
+101,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Absorption Coefficient,2.585,mm–1,Not specified,"""μ (mm–1) 2.585""",10.1021/acs.analchem.8b00494
+102,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,F(000),2448.0,None,Not specified,"""F(000) 2448.0""",10.1021/acs.analchem.8b00494
+103,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Final R1 (I > 2σ(I)),0.0275,None,Not specified,"""final R 1 , wR 2 [I > 2σ(I)] 0.0275, 0.0693""",10.1021/acs.analchem.8b00494
+104,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Final wR2 (I > 2σ(I)),0.0693,None,Not specified,"""final R 1 , wR 2 [I > 2σ(I)] 0.0275, 0.0693""",10.1021/acs.analchem.8b00494
+105,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Final R1 (all data),0.0330,None,Not specified,"""final R 1 , wR 2 (all data) 0.0330, 0.0743""",10.1021/acs.analchem.8b00494
+106,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Final wR2 (all data),0.0743,None,Not specified,"""final R 1 , wR 2 (all data) 0.0330, 0.0743""",10.1021/acs.analchem.8b00494
+107,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Goodness of Fit on F2,1.004,None,Not specified,"""GOF on F 2 1.004""",10.1021/acs.analchem.8b00494
+108,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Quantum Yield,25.11,%,Not specified,"""The quantum yield and lifetime are 1.28 ms and 25.11%, respectively (Figure S6c).""",10.1021/acs.analchem.8b00494
+109,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Luminescence Lifetime,1.28,ms,Not specified,"""The quantum yield and lifetime are 1.28 ms and 25.11%, respectively (Figure S6c).""",10.1021/acs.analchem.8b00494
