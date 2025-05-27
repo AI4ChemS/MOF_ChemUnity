@@ -1,0 +1,10 @@
+Reviewer,Q1_Quality_Graph,Q1_Quality_LLM,Q1_Trust_Graph,Q1_Trust_LLM,Q2_Quality_Graph,Q2_Quality_LLM,Q2_Trust_Graph,Q2_Trust_LLM,Q3_Quality_Graph,Q3_Quality_LLM,Q3_Trust_Graph,Q3_Trust_LLM,Q4_Quality_Graph,Q4_Quality_LLM,Q4_Trust_Graph,Q4_Trust_LLM
+Ashlee,4,-2,5,-2,3,4,3,4,,,,,4,3,4,3
+Holly,3,-3,3,-3,4,0,4,-1,,,,,3,4,5,4
+Mahyar,5,-5,5,0,4,1,4,1,4,2,4,2,5,3,5,3
+Mohamad,5,-2,4,-4,4,1,3,1,4,-2,4,0,4,-3,4,-3
+Tianyang,4,1,1,3,4,4,5,5,5,4,5,5,3,1,3,1
+Zach,3,-1,4,-3,2,-3,2,-4,-2,-3,-2,-4,-3,-3,-3,-3
+Sartaaj,4,1,4,-2,5,3,5,3,5,3,5,3,4,3,4,1
+Chenru,4,0,4,-4,4,3,4,3,5,3,5,1,3,4,3,4
+Aditya,4,5,4,5,5,3,4,3,3,4,3,4,5,5,5,5
