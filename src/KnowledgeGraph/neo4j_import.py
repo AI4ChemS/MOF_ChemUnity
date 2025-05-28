@@ -10,11 +10,11 @@ NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 # ========== FILE PATHS ==========
-MATCHING_CSV = "Untracked/full_graph/matching_results.csv"
-EXPERIMENTAL_CSV = "Untracked/full_graph/filtered_properties_v4.csv"
-WATER_CSV = "Untracked/full_graph/water_stability_v1.csv"
-APPLICATIONS_CSV = "Untracked/full_graph/applications_filtered_v4.csv"
-SYNTHESIS_CSV = "Untracked/full_graph/synthesis_extractions.csv"
+MATCHING_CSV = "src/Examples/KG_Data/matching.csv"
+EXPERIMENTAL_CSV = "src/Examples/KG_Data/filtered_experimental_properties.csv"
+WATER_CSV = "src/Examples/KG_Data/water_stability.csv"
+APPLICATIONS_CSV = "src/Examples/KG_Data/applications.csv"
+SYNTHESIS_CSV = "src/Examples/KG_Data/synthesis.csv"
 DESCRIPTOR_CSV = "src/Examples/KG_Data/descriptors.csv"
 COMP_PROP_CSV = "src/Examples/KG_Data/computational_properties.csv"
 
