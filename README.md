@@ -106,14 +106,10 @@ Absolutely! In [this demo](link to cross-document demo) we show how the MOF name
 
 # Citation
 ```bibtex
-@article{yettobedecided,
-title = {idk yet},
-author = {Aswad, Amro and Pruyn, Thomas and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
-year = {2025},
-journal = {},
-doi = {},
-url = {},
-note = {},
+@article{pruyn2025unifying,
+title = {Unifying metal-organic framework data using large language models},
+author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
+year = {2025}
 }
 ```
 
