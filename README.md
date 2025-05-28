@@ -107,7 +107,7 @@ Absolutely! In [this demo](link to cross-document demo) we show how the MOF name
 # Citation
 ```bibtex
 @article{pruyn2025unifying,
-title = {Unifying metal-organic framework data using large language models},
+title = {Unifying Metal-Organic Framework Data for Scientific Research},
 author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
 year = {2025}
 }
