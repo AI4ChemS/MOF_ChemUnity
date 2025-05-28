@@ -24,11 +24,6 @@ class ExtractionAgent(BaseAgent):
         self.llm = llm if llm else ChatOpenAI(model="gpt-4o", temperature=0.1)
         self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         super().__init__(llm, embeddings, parser_llm, structured_llm, processor= processor)
-
-        if not properties:
-            self.properties = PROPERTIES
-        else:
-            self.properties = properties
             
         pass
     

@@ -1,24 +1,35 @@
-,MOF Name,Ref Code,Property,Value,Units,Condition,Summary,Reference
-0,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,density,2.436,g cm-3,N/A,Dc/g cm23 2.436,10.1039/a700472i
-1,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,crystal system,trigonal,N/A,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i
-2,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,cell volume,3052.9(3),Å3,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i
-3,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,space group,P3¯c1,N/A,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i
-4,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,thermal stability,27.7,%,Between room temperature and 800 °C,"The observed total weight loss of 27.7% between room temperature and 800 °C agrees well with that calculated for the loss of 15 H2O and 3 DABCO molecules (27.1%), as indicated from equation (1).",10.1039/a700472i
-5,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,density,1.864,g cm⁻³,N/A,Dc/g cm23 1.636 1.864 1.540,10.1039/a804945i
-6,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,crystal system,Triclinic,N/A,N/A,Crystal system Monoclinic Triclinic Triclinic,10.1039/a804945i
-7,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,cell volume,644.8,Å³,N/A,U/Å3 2849(1) 644.8(4) 1296(1),10.1039/a804945i
-8,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,space group,P1,N/A,N/A,Space group P21/c P1 P1¯,10.1039/a804945i
-9,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,crystal system,Monoclinic,none,none,Crystal system | Monoclinic,10.1016/j.molstruc.2017.11.128
-10,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,space group,P21/c,none,none,Space group | P21/c,10.1016/j.molstruc.2017.11.128
-11,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,molecular weight,320.27,g/mol,none,The molecular weight is 320.27 g/mol.,10.1016/j.molstruc.2017.11.128
-12,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,surface area,1.36,m2/g,none,The BET surface area of calcium trimesate synthesized by the one-pot self-assembly reaction is 1.36 m2/g.,10.1016/j.molstruc.2017.11.128
-13,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,chemical formula,C23.5H28.5EuN2.5O10.5,None,None,"""empirical formula C23.5H28.5EuN2.5O10.5""",10.1021/acs.analchem.8b00494
-14,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,density,1.504,g cm–3,None,"""D c (g cm–3) 1.504""",10.1021/acs.analchem.8b00494
-15,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,crystal system,Monoclinic,None,None,"""crystal system monoclinic""",10.1021/acs.analchem.8b00494
-16,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,cell volume,5401,Å3,None,"""volume (Å3) 5401 (2)""",10.1021/acs.analchem.8b00494
-17,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,space group,C2/c,None,None,"""space group C2/c""",10.1021/acs.analchem.8b00494
-18,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,chemical formula,C23.5H28.5TbN2.5O10.5,None,Not specified,"""empirical formula C23.5H28.5TbN2.5O10.5""",10.1021/acs.analchem.8b00494
-19,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,density,1.475,g cm–3,Not specified,"""D c (g cm–3) 1.475""",10.1021/acs.analchem.8b00494
-20,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,crystal system,Monoclinic,None,Not specified,"""crystal system monoclinic""",10.1021/acs.analchem.8b00494
-21,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,cell volume,5570,Å3,Not specified,"""volume (Å3) 5570 (2)""",10.1021/acs.analchem.8b00494
-22,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,space group,C2/c,None,Not specified,"""space group C2/c""",10.1021/acs.analchem.8b00494
+,MOF Name,Ref Code,Property,Value,Units,Condition,Summary,Reference,Original Property Name
+0,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Crystal System,trigonal,N/A,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i,Crystal System
+1,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Space Group,P3¯c1,N/A,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i,Space Group
+3,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Cell Volume,3052.9(3),Å3,N/A,"The compound crystallizes in the trigonal space group P3¯c1 (no. 165) with a = 13.5274(5), c = 19.2645(6) Å, U = 3052.9(3) Å3 and Z = 2.",10.1039/a700472i,Unit Cell Volume
+4,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Density,2.436,g cm−3,N/A,Dc/g cm23 2.436,10.1039/a700472i,Density
+5,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Formula Weight,2239.15,N/A,N/A,Formula C18Fe8H66N6O62P14 Atom x y z M 2239.15,10.1039/a700472i,Formula Weight
+6,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Thermal Stability,27.7,%,Between room temperature and 800 °C,"The observed total weight loss of 27.7% between room temperature and 800 8C agrees well with that calculated for the loss of 15 H2O and 3 DABCO molecules (27.1%), as indicated from equation (1).",10.1039/a700472i,Thermal Stability
+11,[HN(CH2CH2)3NH]3[Fe8(HPO4)12(PO4)2(H2O)6]<|>compound 1,NAVCAO,Synthesis Yield,70,%,Based on iron,The yield was 70% based on iron.,10.1039/a700472i,Yield
+12,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Chemical Formula,C15H14AgF3N2O3S9,N/A,N/A,Molecular formula C18H22ClCuN2O5S8 C15H14AgF3N2O3S9 C14H14Cl2CuN2S8,10.1039/a804945i,Molecular Formula
+13,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Crystal System,Triclinic,N/A,N/A,Crystal system Monoclinic Triclinic Triclinic,10.1039/a804945i,Crystal System
+14,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Space Group,P1,N/A,N/A,Space group P21/c P1 P1¯,10.1039/a804945i,Space Group
+21,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Cell Volume,644.8,Å³,N/A,U/Å3 2849(1) 644.8(4) 1296(1),10.1039/a804945i,Unit Cell Volume
+22,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Density,1.864,g cm⁻³,N/A,Dc/g cm23 1.636 1.864 1.540,10.1039/a804945i,Density
+25,[Ag(CM-TTF)(CF3SO3)]<|>complex 2,FEKDAA,Light Absorption Coefficient,15.52,cm⁻¹,N/A,µ(Mo-Kα)/cm21 14.79 15.52 16.96,10.1039/a804945i,Absorption Coefficient
+41,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Chemical Formula,C9H12CaO10,N/A,Synthesized by one-pot self-assembly reaction,The molecular formula of the calcium trimesate synthesized by one-pot self-assembly reaction is found as C9H12CaO10.,10.1016/j.molstruc.2017.11.128,Molecular Formula
+42,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Formula Weight,320.27,g/mol,Synthesized by one-pot self-assembly reaction,The molecular weight is 320.27 g/mol.,10.1016/j.molstruc.2017.11.128,Molecular Weight
+44,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Coordination Geometry,"Three oxygen atoms from trimesic acid ligands, four oxygen atoms from water molecules",N/A,Synthesized by one-pot self-assembly reaction,The Ca1 atom is coordinated to three oxygen atoms coming from three different trimesic acid ligands and four oxygen atoms coming from the water molecule.,10.1016/j.molstruc.2017.11.128,Coordination Geometry
+46,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Crystal System,Monoclinic,N/A,Synthesized by one-pot self-assembly reaction,Crystal system | Monoclinic,10.1016/j.molstruc.2017.11.128,Crystal System
+47,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Space Group,P21/c,N/A,Synthesized by one-pot self-assembly reaction,Space group | P21/c,10.1016/j.molstruc.2017.11.128,Space Group
+48,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,BET Surface Area,1.36,m2/g,Synthesized by one-pot self-assembly reaction,The BET surface area of calcium trimesate synthesized by the one-pot self-assembly reaction is 1.36 m2/g.,10.1016/j.molstruc.2017.11.128,BET Surface Area
+49,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,H2 Uptake,0.066,%,"Synthesized by one-pot self-assembly reaction, measured at 77 K and 1 bar pressure",Experimental hydrogen storage capacity of calcium trimesate was found to be 0.066% in one-pot self-assembly reaction.,10.1016/j.molstruc.2017.11.128,Hydrogen Storage Capacity
+50,C9H12CaO10<|>calcium trimesate synthesized by one-pot self-assembly reaction,OWZEW01,Thermal Stability,53.55,%,"Synthesized by one-pot self-assembly reaction, measured at 800 °C",The total mass loss in calcium trimesate synthesized by the one-pot self-assembly reaction was 53.55% while the total mass loss in the ion exchange method was 52.97% at 800 °C.,10.1016/j.molstruc.2017.11.128,Thermal Stability
+51,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Chemical Formula,C23.5H28.5EuN2.5O10.5,None,Not specified,empirical formula C23.5H28.5EuN2.5O10.5,10.1021/acs.analchem.8b00494,Empirical Formula
+52,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Formula Weight,665.95,None,Not specified,formula weight 665.95,10.1021/acs.analchem.8b00494,Formula Weight
+53,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Crystal System,Monoclinic,None,Not specified,crystal system monoclinic,10.1021/acs.analchem.8b00494,Crystal System
+54,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Space Group,C2/c,None,Not specified,space group C2/c,10.1021/acs.analchem.8b00494,Space Group
+55,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Cell Volume,5401,Å3,Not specified,volume (Å3) 5401 (2),10.1021/acs.analchem.8b00494,Unit Cell Volume
+56,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Density,1.504,g cm–3,Not specified,D c (g cm–3) 1.504,10.1021/acs.analchem.8b00494,Density
+60,C23.5H28.5EuN2.5O10.5<|>complex 2,CIJBEF,Light Absorption Coefficient,2.370,mm–1,Not specified,μ (mm–1) 2.370,10.1021/acs.analchem.8b00494,Absorption Coefficient
+69,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Chemical Formula,C23.5H28.5TbN2.5O10.5,None,Not specified,empirical formula C23.5H28.5TbN2.5O10.5,10.1021/acs.analchem.8b00494,Empirical Formula
+70,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Formula Weight,672.91,None,Not specified,formula weight 672.91,10.1021/acs.analchem.8b00494,Formula Weight
+71,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Crystal System,Monoclinic,None,Not specified,crystal system monoclinic,10.1021/acs.analchem.8b00494,Crystal System
+72,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Space Group,C2/c,None,Not specified,space group C2/c,10.1021/acs.analchem.8b00494,Space Group
+78,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Density,1.475,g cm–3,Not specified,D c (g cm–3) 1.475,10.1021/acs.analchem.8b00494,Density
+82,C23.5H28.5TbN2.5O10.5<|>complex 3,CIJBIJ,Light Absorption Coefficient,2.585,mm–1,Not specified,μ (mm–1) 2.585,10.1021/acs.analchem.8b00494,Absorption Coefficient
