@@ -1,7 +1,7 @@
 # MOF-ChemUnity 
 
 <p align="center">
-    <img src="raw/MOF-ChemUnity_logo.png" alt="MOF-ChemUnity Logo" width="200"/>
+    <img src="raw/MOF-ChemUnity_logo.png" alt="MOF-ChemUnity Logo" width="400"/>
 </p>
 
 Knowledge graph database containing computational and experimental information for more than 15,000 metal-organic frameworks developed using large language models. For more details, please refer to our paper
