@@ -1,5 +1,9 @@
 # MOF-ChemUnity 
 
+<p align="center">
+    <img src="raw/MOF-ChemUnity_logo.png" alt="MOF-ChemUnity Logo" width="200"/>
+</p>
+
 Knowledge graph database containing computational and experimental information for more than 15,000 metal-organic frameworks developed using large language models. For more details, please refer to our paper
 
 # Installation
@@ -91,7 +95,7 @@ Absolutely! In [this demo](link to cross-document demo) we show how the MOF name
 ```bibtex
 @article{yettobedecided,
 title = {idk yet},
-author = {Aswad, Amro and Pruyn, Thomas and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
+author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
 year = {2025},
 journal = {},
 doi = {},
@@ -114,7 +118,6 @@ This repository uses a dual-license model:
 - **Non-code content** (e.g., datasets, figures, documents, notebooks, and text in this repository) is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE_DATA).
 
 > 🚫 **Commercial use is not permitted without prior written consent.**  
-> Please contact [mohamad.moosavi@utoronto.ca] for inquiries.
 
 ## Contact
 
