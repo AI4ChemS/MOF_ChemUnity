@@ -110,21 +110,10 @@ Absolutely! In [this demo](link to cross-document demo) we show how the MOF name
 
 # Citation
 ```bibtex
-<<<<<<< HEAD
-@article{yettobedecided,
-title = {idk yet},
-author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
-year = {2025},
-journal = {},
-doi = {},
-url = {},
-note = {},
-=======
 @article{pruyn2025unifying,
-title = {Unifying Metal-Organic Framework Data for Scientific Research},
+title = {MOF-ChemUnity: Unifying metal-organic framework data using large language models},
 author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
 year = {2025}
->>>>>>> 6f3d10f07de28c7d09498803f6efbcdab489cd2f
 }
 ```
 
