@@ -21,10 +21,25 @@ MOF-ChemUnity uses Neo4J as the graph database engine. Installation instructions
 pip install neo4j
 ```
 
-Once you have activate the virtual environment, you simply use `pip` to install this package.
+Once you have activate the virtual environment, you can install MOF-ChemUnity agents using the following commands.
+
+First, clone the github repository to a local folder
+```bash
+git clone https://github.com/AI4ChemS/MOF_ChemUnity.git
+cd MOF_ChemUnity
+```
+
+Then, you need to upgrade the build tools and build the package wheel (whl)
+```bash
+python -m pip install --upgrade pip setuptools wheel build
+
+python -m build 
+```
+
+finally, the package can be installed using the following command
 
 ```bash
-pip install mof-chemunity
+pip install dist/*.whl 
 ```
 
 Whenever you intend to use the classes and functions in this package, ensure that you have your virtual environment in which you have installed this package activated!
@@ -36,15 +51,18 @@ You need to have the following CSV files **(Note - all files contain CSD referen
 | CSV File Name | Description |
 | :-------------: | ----------- |
 | matching.csv | Contains the MOF name associated with each CSD reference code from a given paper (DOI) |
-| filtered_props.csv | Contains the properties extracted from literature  |
-| applications.csv | Contains the applications for associated with each CSD reference code extracted from literature |
+| filtered_experimental_properties.csv | Contains the properties extracted from literature |
+| computational_properties.csv | Contains computational labels and properties from CSD, CoRE MOF 2019 and QMOF |
+| filtered_applications.csv | Contains the applications for associated with each CSD reference code extracted from literature |
 | synthesis.csv | Contains the synthesis protocols for each MOF extracted from a given paper |
-| ws.csv | Contains the water stability for MOFs extracted from literature |
+| water_stability.csv | Contains the water stability for MOFs extracted from literature |
+| descriptors.csv | Computed geometric descriptors and revised autocorrelations (RACs) |
+| all_props.csv | Pre-filter and pre-standardization result for properties extraction |
+| applications.csv | Pre-filter and pre-standardization result for application extraction |
 
 In your script, you can first set the environment variables to access Neo4J:
 
 ```python
-
 import os
 
 os.environ["NEO4J_URI"] = "your neo4j uri"
@@ -52,13 +70,12 @@ os.environ["NEO4J_USER"] = "your neo4j user name (should have read/write access)
 os.environ["NEO4J_PASSWORD"] = "your neo4j password"
 ```
 
-Then you can import the data from CSV files into Neo4J using **(NOTE - the CSV files must be in the same folder that you are running the following script from!)**:
+Then you can import the data from CSV files into Neo4J using the `neo4j_import.py` script file. Simply run the script file and the same folder as the matching and extraction notebooks:
 
-```python
-from neo4j_import import run_queries
-
-run_queries()
+```bash
+python3 neo4j_import.py
 ```
+
 Once this is done, you should not run the previous steps again unless you have new data from new CSV files that you want to add to the knowledge graph.
 At this point, you have a sample of MOF-ChemUnity available for you to use.
 
@@ -93,6 +110,7 @@ Absolutely! In [this demo](link to cross-document demo) we show how the MOF name
 
 # Citation
 ```bibtex
+<<<<<<< HEAD
 @article{yettobedecided,
 title = {idk yet},
 author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
@@ -101,6 +119,12 @@ journal = {},
 doi = {},
 url = {},
 note = {},
+=======
+@article{pruyn2025unifying,
+title = {Unifying Metal-Organic Framework Data for Scientific Research},
+author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
+year = {2025}
+>>>>>>> 6f3d10f07de28c7d09498803f6efbcdab489cd2f
 }
 ```
 

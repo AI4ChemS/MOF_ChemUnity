@@ -10,16 +10,17 @@ NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 # ========== FILE PATHS ==========
-MATCHING_CSV = "Untracked/full_graph/matching_results.csv"
-EXPERIMENTAL_CSV = "Untracked/full_graph/filtered_properties_v4.csv"
-WATER_CSV = "Untracked/full_graph/water_stability_v1.csv"
-APPLICATIONS_CSV = "Untracked/full_graph/applications_filtered_v4.csv"
-SYNTHESIS_CSV = "Untracked/full_graph/synthesis_extractions.csv"
+MATCHING_CSV = "src/Examples/KG_Data/matching.csv"
+EXPERIMENTAL_CSV = "src/Examples/KG_Data/filtered_experimental_properties.csv"
+WATER_CSV = "src/Examples/KG_Data/water_stability.csv"
+APPLICATIONS_CSV = "src/Examples/KG_Data/filtered_applications.csv"
+SYNTHESIS_CSV = "src/Examples/KG_Data/synthesis.csv"
 DESCRIPTOR_CSV = "src/Examples/KG_Data/descriptors.csv"
 COMP_PROP_CSV = "src/Examples/KG_Data/computational_properties.csv"
 
 # ========== SETUP ==========
 driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
+valid_refcodes = set(pd.read_csv(MATCHING_CSV)["CSD Ref Code"].dropna().unique())
 
 def batch_run(session, query, rows, batch_size=1000):
     for i in range(0, len(rows), batch_size):
@@ -65,6 +66,8 @@ def import_matching(session):
 def import_experimental_properties(session, csv_path):
     print(f"🔄 Importing experimental props from {csv_path}...")
     df = pd.read_csv(csv_path)
+    if "Justification" not in df.columns and "Summary" in df.columns:
+        df["Justification"] = df["Summary"]
     rows = df.to_dict("records")
     query = """
         UNWIND $rows AS row
@@ -84,6 +87,8 @@ def import_experimental_properties(session, csv_path):
 def import_applications(session):
     print("🔄 Importing applications.csv...")
     df = pd.read_csv(APPLICATIONS_CSV)
+    if "Reference" not in df.columns and "Source" in df.columns:
+        df["Reference"] = df["Source"]
     rows = df.to_dict("records")
     query = """
         UNWIND $rows AS row
@@ -92,7 +97,7 @@ def import_applications(session):
         MERGE (m)-[r:has_application]->(a)
         SET r.recommendation = row.Recommendation,
             r.justification = row.Justification,
-            r.reference = row.Source
+            r.reference = row.Reference
     """
     batch_run(session, query, rows)
 
@@ -136,10 +141,13 @@ def import_computational_properties(session, csv_path, add_descriptor_label=Fals
             continue
         rows = []
         for _, row in df.iterrows():
+            ref = row[ref_col]
+            if ref not in valid_refcodes:
+                continue
             val = row[col]
             if pd.notna(val):
                 rows.append({
-                    "refcode": row[ref_col],
+                    "refcode": ref,
                     "property": col,
                     "value": val
                 })

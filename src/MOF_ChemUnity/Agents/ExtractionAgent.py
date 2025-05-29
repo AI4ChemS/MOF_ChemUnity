@@ -11,15 +11,6 @@ from MOF_ChemUnity.Agents.BaseAgent import BaseAgent
 from MOF_ChemUnity.utils.DocProcessor import DocProcessor
 from MOF_ChemUnity.utils.DataModels import Property, Verification, PropertyList
 
-PROPERTIES = ["chemical formula", "density", "crystal system", "cell volume", "unit cell volume", "volume", "space group", "molecular weight", "material color", 
-        "thermal stability", "decomposition temperature", "magnetic susceptibility", "surface area", "pore volume", "pore diameter", "porosity", "topology",
-         "magnetic moment", "melting point", "proton conductivity", "elastic constant", "thermal expansion coefficient", "heat capacity",
-         "thermal conductivity coefficient", "density", "ρ", "ρcalc", "ρ/g·cm-3"]
-PROPERTY_NAME_MAPPING = {
-    "density": ["density", "ρ", "ρcalc", "ρ/g·cm-3"],
-    "cell volume": ["cell volume", "unit cell volume", "volume"],
-    "thermal stability": ["decomposition temperature", "thermal stability"]
-}
 class ExtractionAgent(BaseAgent):
     def __init__(
             self,
@@ -33,65 +24,8 @@ class ExtractionAgent(BaseAgent):
         self.llm = llm if llm else ChatOpenAI(model="gpt-4o", temperature=0.1)
         self.embeddings = embeddings if embeddings else OpenAIEmbeddings(model="text-embedding-ada-002")
         super().__init__(llm, embeddings, parser_llm, structured_llm, processor= processor)
-
-        if not properties:
-            self.properties = PROPERTIES
-        else:
-            self.properties = properties
             
         pass
-
-
-    def filter_properties(
-            self,
-            extracted_props: PropertyList,
-            props_filter: Optional[List[str]] = None,
-            mapping: Optional[Dict[str, List[str]]] = None,
-            threshold: int = 90):
-        """This function filters the extracted properties list based on the props_filter list given.
-        It goes over all combinations of extracted_properties and props_filter, then the value with the maximum
-        match score that is higher than the threshold is added to the filtered list.
-        
-        returns a tuple of length 2 containing the following:
-            -filtered properties: the properties that were matched with the filter
-            -remaining properties: the properties that did not get matched """
-
-        # Loop setup
-        i = 0
-        filtered_props = []
-        mapping = mapping if mapping else PROPERTY_NAME_MAPPING
-
-        # copies the values to prevent list.pop from editing the list
-        props = [i for i in (props_filter if props_filter else self.properties)]
-        all_props = [i for i in extracted_props.properties]
-
-        # loop through all the combinations
-        while(i<len(props)):
-            max_score = -1
-            max_index = -1
-            for j, v in enumerate(all_props):
-                # This matching strategy compares the token sets to each other (Order doesn't matter).
-                # It needs to be changed if there are properties that have the same token set but different order.
-                score = fuzz.ratio(props[i].lower(), v.name.lower())
-                if score>max_score and score>=threshold:
-                    max_score = score
-                    max_index = j
-
-            if max_score >= 0:
-                found_property = all_props.pop(max_index)
-                found_property.name = props[i]
-                filtered_props.append(found_property)
-            
-            i+=1
-
-        # Standardize property names before returning
-        for prop in filtered_props:
-            for standard_name, synonyms in mapping.items():
-                if prop.name.lower() in [s.lower() for s in synonyms]:
-                    prop.name = standard_name
-                    break
-
-        return (filtered_props, props)
     
     def extraction_CoV(
             self,
@@ -174,10 +108,6 @@ class ExtractionAgent(BaseAgent):
             read_prompt: str,
             vector_store,
             ret_docs: bool = False,
-            filtered: bool = True,
-            filter: Optional[List[str]] = None,
-            standard_map: Optional[Dict[str, List[str]]] = None,
-            threshold: int = 90,
             structured_output: BaseModel = PropertyList):
         
         parser = self.Parse_Output(structured_output)
@@ -197,17 +127,7 @@ class ExtractionAgent(BaseAgent):
         print(list_properties)
         print("\n")
 
-        if not filtered: return (list_properties, docs) if ret_docs else list_properties
-
-        filtered, remaining = self.filter_properties(list_properties, filter, standard_map, threshold)
-
-        print("\nFiltered Output: ")
-        for i in filtered:
-            print(i)
-        print("\n")
-
-        return (filtered, list_properties, docs) if ret_docs else (filtered, list_properties)
-
+        return (list_properties, docs) if ret_docs else list_properties
 
     def agent_response(
             self,
@@ -218,14 +138,10 @@ class ExtractionAgent(BaseAgent):
             specific_properties_prompts: Dict[str, List[str]] = None,
             vector_store: Optional[str|FAISS] = None,
             local_vector_store_embeddings: Optional[str] = None,
-            filter: Optional[List[str]] = None,
-            standard_map: Optional[Dict[str, List[str]]] = None,
             ret_docs: bool = False,
-            filtered: bool = True,
             store_vs: bool = False,
             CoV: bool = False,
             skip_general: bool = False,
-            fuzz_threshold: int = 90,
             gen_extraction_structure: BaseModel = PropertyList):
         
         if not vector_store:
@@ -239,7 +155,7 @@ class ExtractionAgent(BaseAgent):
         general_response = None
 
         if not skip_general: 
-            general_response = self.property_extraction(MOF, read_prompt, vector_store, ret_docs, filtered, filter, standard_map, fuzz_threshold, gen_extraction_structure)
+            general_response = self.property_extraction(MOF, read_prompt, vector_store, ret_docs, gen_extraction_structure)
 
         if CoV:
             specific_resposne = self.extraction_CoV(MOF, vector_store, specific_properties, **specific_properties_prompts, ret_docs=ret_docs)
