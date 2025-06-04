@@ -4,7 +4,7 @@
     <img src="raw/MOF-ChemUnity_logo.png" alt="MOF-ChemUnity Logo" width="400"/>
 </p>
 
-Knowledge graph database containing computational and experimental information for more than 15,000 metal-organic frameworks developed using large language models. For more details, please refer to our paper
+Knowledge graph database containing computational and experimental information for more than 15,000 metal-organic frameworks developed using large language models. For more details, please refer to our [paper](https://doi.org/10.26434/chemrxiv-2025-8h5q7)
 
 # Installation
 To keep your local Python environment clean, it is recommended that you create a new environment before installing this package. You can use [virtualenv](https://virtualenv.pypa.io/en/latest/) to create the environment then activate it.
@@ -100,7 +100,7 @@ query_result = agent.run_full_query("your question about MOFs in MOF-ChemUnity")
 ```
 
 # Main
-MOF-ChemUnity is a knowledge graph which combines the available computational information for MOFs and the experimental information within literature in a single database. Computational information includes computed geometric descriptors (using Zeo++), [revised autocorelations (RACs)](ref), and available gas uptake labels and electronic properties from [CoRE-MOF](ref) and [QMOF](ref), respectively. The experimental information was extracted automatically using Large Language Models (LLMs), specifically, GPT-4o. Extracted information includes MOF names, properties, applications, and synthesis protocols mentioned in the literature. Finally, all data is linked together using CSD reference codes. In other words, you can find MOFs using their name or their CSD reference code as this database features a one-to-one link between them. 
+MOF-ChemUnity is a knowledge graph which combines the available computational information for MOFs and the experimental information within literature in a single database. Computational information includes computed geometric descriptors (using Zeo++), [revised autocorelations (RACs)](https://doi.org/10.1038/s41467-020-17755-8), and available gas uptake labels and electronic properties from [CoRE-MOF](https://doi.org/10.1021/acs.jced.9b00835) and [QMOF](https://doi.org/10.1016/j.matt.2021.02.015), respectively. The experimental information was extracted automatically using Large Language Models (LLMs), specifically, GPT-4o. Extracted information includes MOF names, properties, applications, and synthesis protocols mentioned in the literature. Finally, all data is linked together using CSD reference codes. In other words, you can find MOFs using their name or their CSD reference code as this database features a one-to-one link between them. 
 
 ## What can you do with MOF-ChemUnity
 MOF-ChemUnity enables improved querying performance when asking GPT-4o questions about MOFs (See image above). It also includes a wide variety of information that was not easily available before like applications and seemingly links this information to available computation labels via CSD reference codes. This enables finding MOFs similar to other MOFs as shown in [this demo](link to demo). 
@@ -114,6 +114,9 @@ Absolutely! In [this demo](link to cross-document demo) we show how the MOF name
 title = {MOF-ChemUnity: Unifying metal-organic framework data using large language models},
 author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
 year = {2025}
+month = {June}
+doi = {10.26434/chemrxiv-2025-8h5q7}
+url = {https://doi.org/10.26434/chemrxiv-2025-8h5q7}
 }
 ```
 
