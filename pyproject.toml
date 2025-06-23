@@ -47,9 +47,6 @@ exclude  = ["Examples*", "KnowledgeGraph*", "Cross_Document_Linking*", "ChatGPT 
 [tool.setuptools.exclude-package-data]
 "*" = ["*.ipynb", "*.csv"]
 
-# 4. Source-distribution (sdist) pruning – keep notebooks out of the .tar.gz too
-[tool.setuptools.sdist]
-exclude = ["**/*.ipynb", "**/*.csv", "**/*.pkl", "**/*.faiss", "**/*.pdf", "**/*.xml",]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
