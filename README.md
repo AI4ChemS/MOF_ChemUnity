@@ -42,6 +42,12 @@ finally, the package can be installed using the following command
 pip install dist/*.whl 
 ```
 
+alternatively, you can specify which wheel file you want to be installed.
+
+```bash
+pip install dist/your_mof_chemunity_wheel_file_name.whl
+```
+
 Whenever you intend to use the classes and functions in this package, ensure that you have your virtual environment in which you have installed this package activated!
 
 # Usage
