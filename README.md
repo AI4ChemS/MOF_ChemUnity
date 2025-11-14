@@ -4,7 +4,7 @@
     <img src="raw/MOF-ChemUnity_logo.png" alt="MOF-ChemUnity Logo" width="400"/>
 </p>
 
-Knowledge graph database containing computational and experimental information for more than 15,000 metal-organic frameworks developed using large language models. For more details, please refer to our [paper](https://doi.org/10.26434/chemrxiv-2025-8h5q7)
+Knowledge graph database containing computational and experimental information for more than 15,000 metal-organic frameworks developed using large language models. For more details, please refer to our [paper](https://doi.org/10.1021/jacs.5c11789)
 
 # Installation
 To keep your local Python environment clean, it is recommended that you create a new environment before installing this package. You can use [virtualenv](https://virtualenv.pypa.io/en/latest/) to create the environment then activate it.
@@ -15,7 +15,7 @@ source chemunity_env/bin/activate
 ```
 
 ## Prerequisites
-MOF-ChemUnity uses Neo4J as the graph database engine. Installation instructions can be found [here](https://neo4j.com/pricing/). If interested in using python, please install the Neo4J python driver using
+MOF-ChemUnity uses Neo4J as the graph database engine. Installation instructions can be found [here](https://neo4j.com/). If interested in using python, please install the Neo4J python driver using
 
 ```bash
 pip install neo4j
@@ -116,13 +116,13 @@ Absolutely! In [this demo](link to cross-document demo) we show how the MOF name
 
 # Citation
 ```bibtex
-@article{pruyn2025unifying,
-title = {MOF-ChemUnity: Unifying metal-organic framework data using large language models},
-author = {Pruyn, Thomas and Aswad, Amro and Khan, Sartaaj Takrim and Black, Robert and Moosavi, Seyed Mohamad},
-year = {2025}
-month = {June}
-doi = {10.26434/chemrxiv-2025-8h5q7}
-url = {https://doi.org/10.26434/chemrxiv-2025-8h5q7}
+@article{pruyn2025mof,
+  title={MOF-ChemUnity: Literature-Informed Large Language Models for Metal--Organic Framework Research},
+  author={Pruyn, Thomas Michael and Aswad, Amro and Khan, Sartaaj Takrim and Huang, Ju and Black, Robert and Moosavi, Seyed Mohamad},
+  journal={Journal of the American Chemical Society},
+  year={2025},
+  publisher={ACS Publications},
+  doi={https://doi.org/10.1021/jacs.5c11789}
 }
 ```
 
